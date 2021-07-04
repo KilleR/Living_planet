@@ -1,0 +1,84 @@
+namespace = lp_pop
+
+
+# Planetary Pop creation
+planet_event = {
+	id = lp_pop.001
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		this = {
+			is_capital = no
+		}
+		from = {
+			has_origin = origin_living_planet
+		}
+		fromfrom = {
+			has_trait = trait_living_planet
+		}
+	}
+	
+	immediate = {
+		this = {
+			every_owned_pop = {
+				limit = {
+					has_trait = trait_living_planet
+				}
+				kill_pop = yes
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = lp_pop.010
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		owner = {
+			has_origin = origin_living_planet
+		}
+	}
+
+	immediate = {
+		remove_modifier = living_planet_system_shift_crime
+		set_variable = { which = "lp_system_shift_crime_pops" value = 0 }
+		every_owned_pop = {
+			limit = { pop_has_trait = trait_living_planet }
+			planet = { change_variable = { which = "lp_system_shift_crime_pops" value = 1 } }
+		}
+		if = {
+			limit = {
+				has_deposit = d_living_planet_system_unity
+			}
+			add_modifier = {
+				modifier = living_planet_system_shift_crime
+				days = -1
+				multiplier = lp_system_shift_crime_pops
+			}
+		}
+	}
+}
+
+# A pop has been added to the planet
+# Root = pop
+# From = planet
+#on_pop_added
+pop_event = {
+	id = lp_pop.011
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		Root = { pop_has_trait = trait_living_planet }
+	}
+	
+	immediate = {
+		From = {
+			planet_event = { id = lp_pop.010 days = 1 }
+		}
+	}
+}

@@ -1,0 +1,87 @@
+# Main event that sets up the living planet
+on_game_start_country = {
+	events = {
+		lp_colony.001
+		lp_game_start.1
+		lp_game_start.2
+	}
+}
+
+# Add army tech for non LP
+empire_init_add_technologies = {
+	events = {
+		lp_game_start.1
+	}
+}
+
+# Configure possible out-of-date effects
+on_single_player_save_game_load = {
+	events = {
+		lp_game_start.2
+	}
+}
+
+on_monthly_pulse = {
+	events = {
+		lp_planet.001
+		lp_planet.004
+	}
+}
+
+
+on_planet_attackers_win = {
+	events = {
+	
+	}
+}
+
+
+# A pop has been added to the planet
+# Root = pop
+# From = planet
+on_pop_added = {
+	events = {
+	
+	}
+}
+# A pop has finished growing
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+on_pop_grown = {
+	events = {
+		lp_pop.001
+		lp_pop.010
+	}
+}
+
+# A pop has finished assembling
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+on_pop_assembled = {
+	events = {
+		lp_pop.001
+		lp_pop.010
+	}
+}
+
+#Fired whenever a new owner is set for a planet,
+#be it after a war or through a trade
+#From = Country scope (new owner)
+#This = Planet scope
+on_planet_transfer = {
+	events = {
+		#lp_planet.002
+	}
+}
+
+# Executed when a megastructure has a new owner
+# this = new owner
+# from = megastructure
+# fromfrom = old owner (if existing)
+on_megastructure_change_owner = {
+	events = {
+		lp_megastructure.1
+	}
+}

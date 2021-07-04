@@ -1,0 +1,171 @@
+﻿l_english:
+###################################
+### Living Planet #################
+###################################
+
+  living_planet_home_system_NAME:0 "Living Planet"
+  living_planet_home_system_DESC:0 "You are a Living Planet, which has devoured all the resources in its home system."
+  origin_living_planet: "Living Planet"
+  origin_living_planet_desc: "This planet is a giant organic neural network, functioning similarly to a hive mind. Its surface is covered in semi autonomous drones and giant digestive vats into which it funnels resources. As the network grows more and more habitable worlds will be consumed to fuel its growth."
+  origin_living_planet_effects: "Start on a special $pc_hive$ with the ability consume other habitable worlds to increase the size of your homeworld.\n- Enables the §H$decision_lp_devour_biomass$§! planetary decision:.\n  * Moves £planetsize£ from an empty habitable world to the §GLiving Planet§! at a cost of £influence£ 1 per month until the planet is entirely consumed.\n  * £planetsize£ Size requirement to grow the §GLiving Planet§! starts at 4 biomass consumed.\n  * Planetary features consumed will add related features to the §GLiving Planet§! .\n- Owned £pops£ will automatically be moved to the §GLiving Planet§! from other worlds.\n- Gain an additional £job_synapse_drone£ $job_synapse_drone$, £job_spawning_drone£ $job_spawning_drone$ Job and £job_brain_drone£ $job_brain_drone$ on your homeworld for every £pops£ 20.\n- Gain unique planetary decisions to add additional jobs to your homeworld to help manage deviancy and fleet cap for £influence£ 100.\n- §RDue to the nature and size of the neural network, your drones are unable to live outside of your homeworld§!.\n"
+  
+  trait_living_planet: "Living Planet"
+  trait_living_planet_desc: "This species exists as part of a great whole, a single active part of a Living Planet"
+  
+  building_giga_gas_giant_habitation_module: "Gas Giant Habitation Module"
+  building_giga_gas_giant_habitation_module_desc: "Collection of facilities necessary to maintain a colony on a gas giant assembled by the original population of this planet. These facilities include reactors to provide power for the colony, docking bays to unload minerals collected from local moons and large climate-controlled hangars that can be used for hydroponic farms. In addition to that, these facilities serve as headquarters for resource distribution network and provide various services to the local populations."
+  
+  lp_colony.011.name: "Biomass Consumed"
+  lp_colony.011.desc: "Biomass has been extracted from the planet, and added to the size of our living world"
+
+  pc_living_planet: "Living Planet"
+  pc_living_planet_desc: "A single hive mind so vast that it resembles a planet."
+  
+  district_living_planet_core:0 "Living Planet Core"
+  district_living_planet_core_desc:0 "Coordinated core of the planet's brain"
+  district_living_planet_core_plural:0 "Living Planet Cores"
+  district_living_planet_core_max:0 "Max$district_living_planet_core_plural$"
+  
+  planet_devourer: "Biomass Extractor"
+  planet_devourer_DESC: "A collection of excavator drones, who's sole purpose is scouring plenetary bodies for biomass, and returning them to the Living Planet."
+  
+  mod_planet_researchers_energy_upkeep_add: "§R£energy£ $energy$ upkeep for £job_researcher£ $job_researcher_plural$§!"
+
+  ##################
+  ### Modifiers ####
+  ##################
+  living_planet_growth_disabled: "Growth Disabled"
+  living_planet_growth_disabled_desc: "The planet has grown recently, and must process the biomass before growing again"
+  
+  living_planet_devoured: "Planetery Biomass Consumed"
+  living_planet_devoured_desc: "This planet has recently been scoured for biomass"
+
+  ##################
+  ### Decisions ####
+  ##################
+  
+  decision_lp_devour_biomass: "Consume Biomass"
+  decision_lp_devour_biomass_desc: "Consume this planet's biomass, and use it to grow the Living Planet $homeworld$.\nThis will cost 1 £influence£ $influence$ per month until the planet is totally consumed."
+  
+  decision_lp_add_brain_district: "Evolve: Integrate Introspection Clusters"
+  decision_lp_add_brain_district_desc: "Neuroplastic remodelling for advanced thought, and scientific exploration."
+  decision_lp_add_patrol_district: "Evolve: Integrate Harmonization Clusters"
+  decision_lp_add_patrol_district_desc: "Neuroplastic remodelling to weed out intrustive thought, and process rogue ideas."
+  decision_lp_add_warrior_district: "Evolve: Grow Defensive Spines"
+  decision_lp_add_warrior_district_desc: "Grow muscular spines to aid in destroying surface parasites."
+  
+  ####################
+  ### Events #########
+  ####################
+  
+  lp_empire.001.name: "The Planet Grows"
+  lp_empire.001.desc: "Having consumed enough biomass, the planet has increased in size and capabilities"
+  
+  lp_planet.011.name: "Evolutionary Shift"
+  lp_planet.011.desc: "We have gathered enough mass to make a choice about the future of our development.\nWe can pick a direction for our evolution, which will shape the future of our living planet.\n"
+  lp_planet.011.a: "Begin the shift!"
+  lp_planet.011.a.tooltip: "Increasing complexity of our planet's neurostructure makes it more costly to integrate additional biomass.\n\n§EEffect:\n§!§RPlanetary biomass required to grow has increased by 1.§!\n\n"
+  
+  lp_planet.011.a.name: "Evolutionary Shift Completed"
+  lp_planet.011.a.desc: "New pathways have been integrated"
+  
+  lp_evo_shift_chain_title: "Evolutionary Shift"
+  lp_evo_shift_chain_desc: "Sufficient biomass growth permits us to integrate a specific addition to our biosphere."
+
+  LP_EVO_SHIFT_GENERAL: "Biomass Processing"
+  LP_EVO_SHIFT_GENERAL_DESC: "Spend our efforts in facilitating more efficient planetary biomass processing.\n\n§EEffect:\n§G-2§! £planetsize£ §YPlanetary Biomass§! consumption required to increase §GLiving Planet§! £planetsize£ size.§!\n"
+  LP_EVO_SHIFT_PHYSICS: "Physics Specialisation"
+  LP_EVO_SHIFT_PHYSICS_DESC: "Spend our efforts increasing our ability to understand the way the universe works.\n\n§EEffect:\n§G+1§! £physics£ $physics_research$ from £job_brain_drone£ $job_brain_drone_plural$.§!\n§R+1£energy£ $energy$ upkeep for £job_brain_drone£ $job_brain_drone_plural$.§!\n"
+  LP_EVO_SHIFT_SOCIETY: "Society Specialisation"
+  LP_EVO_SHIFT_SOCIETY_DESC: "Spend our efforts on our evolutionary patterns.\n\n§EEffect:\n§G+1§! £society£ $society_research$ from £job_brain_drone£ $job_brain_drone_plural$.§!\n§R+1£energy£ $energy$ upkeep for £job_brain_drone£ $job_brain_drone_plural$.§!\n"
+  LP_EVO_SHIFT_ENGINEERING: "Engineering Specialisation"
+  LP_EVO_SHIFT_ENGINEERING_DESC: "Spend our efforts generating new manufacturing patterns.\n\n§EEffect:\n§G+1§! £engineering£ $engineering_research$ from £job_brain_drone£ $job_brain_drone_plural$.§!\n§R+1£energy£ $energy$ upkeep for £job_brain_drone£ $job_brain_drone_plural$.§!\n"
+  LP_EVO_SHIFT_ENERGY: "Energy Specialisation"
+  LP_EVO_SHIFT_ENERGY_DESC: "Spend our efforts increasing the inductive potential of our synapses.\n\n§EEffect:\n§G+1.5§! £energy£ $energy$ from £job_technician_drone£ $job_technician_drone_plural$.§!\n"
+  LP_EVO_SHIFT_MINERALS: "Minerals Specialisation"
+  LP_EVO_SHIFT_MINERALS_DESC: "Spend our efforts enhancing our mineral separation membranes.\n\n§EEffect:\n§G+1§! £minerals£ $minerals$ from £job_mining_drone£ $job_mining_drone_plural$.§!\n"
+  LP_EVO_SHIFT_FOOD: "Food Specialisation"
+  LP_EVO_SHIFT_FOOD_DESC: "Spend our efforts developing more efficient digestive acids.\n\n§EEffect:\n§G+1.5§! £food£ $food$ from £job_agri_drone£ $job_agri_drone_plural$.§!\n"
+  LP_EVO_SHIFT_GROWTH: "Growth Specialisation"
+  LP_EVO_SHIFT_GROWTH_DESC: "Spend our efforts improving the speed we grow new planetary linkages.\n\n§EEffect:\n§G+25%§! £mod_pop_assembly_speed£ §Y$MOD_POP_ASSEMBLY_SPEED$§!.§!\n"
+  
+  lp_lunar_shift_chain_title: "Evolutionary Shift - Consume The Moon!"
+  lp_lunar_shift_chain_desc: "We have grown strong enough that we are able to pull our nearest moon into a controlled impact.\nWe expect its integration to bring a significant step forwards in our evolution."
+  
+  LP_LUNAR_SHIFT_GENERAL: "Pure Thought"
+  LP_LUNAR_SHIFT_GENERAL_DESC: "Process the lunar mass into a network fast-adapting synapses.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_general$ to the planet.\n§G+1§! £job_brain_drone£ $job_brain_drone$ Job per 10 £pops£ pops.§!\n"
+  LP_LUNAR_SHIFT_PHYSICS: "Physics Specialisation"
+  LP_LUNAR_SHIFT_PHYSICS_DESC: "Process the lunar mass into a physics-specialised synaptic cluster.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_physics$ to the planet.\n§G+1§! £job_brain_drone£ $job_brain_drone$ Job per 20 £pops£ pops.\n§G+2§! £physics£ $physics_research$ from £job_brain_drone£ $job_brain_drone_plural$.§!\n"
+  LP_LUNAR_SHIFT_SOCIETY: "Society Specialisation"
+  LP_LUNAR_SHIFT_SOCIETY_DESC: "Process the lunar mass into a society-specialised synaptic cluster.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_society$ to the planet.\n§G+1§! £job_brain_drone£ $job_brain_drone$ Job per 20 £pops£ pops.\n§G+2§! £society£ $society_research$ from £job_brain_drone£ $job_brain_drone_plural$.§!\n"
+  LP_LUNAR_SHIFT_ENGINEERING: "Engineering Specialisation"
+  LP_LUNAR_SHIFT_ENGINEERING_DESC: "Process the lunar mass into a engineering-specialised synaptic cluster.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_engineering$ to the planet.\n§G+1§! £job_brain_drone£ $job_brain_drone$ Job per 20 £pops£ pops.\n§G+2§! £engineering£ $engineering_research$ from £job_brain_drone£ $job_brain_drone_plural$.§!\n"
+
+  ####################
+  ### Deposits #######
+  ####################
+  
+  d_living_planet_neural_net: "Living Planet Central Cluster"
+  d_living_planet_neural_net_desc: "The beating heart of the living planet, providing the neural network required to coordinate all the planet's drones"
+
+  # From Devouring
+  d_living_planet_minerals: "Mineral Processing Nodules"
+  d_living_planet_minerals_desc: "Crystalline and metallic nodes where planetary biomass is collected for later use in production efforts"
+  d_living_planet_food: "Organic Slurry Vats"
+  d_living_planet_food_desc: "Great vats the size of cities which continually process organic matter from planetary biomass to provide sustenance for the Living Planet"
+  d_living_planet_energy: "Energetic Ganglia"
+  d_living_planet_energy_desc: "Cohesive neural networks which constantly pulse with power, amplifying the strength of the Living Planet's own neurons"
+  d_living_planet_rare: "Exotic Matter Sifters"
+  d_living_planet_rare_desc: "Cascading sheets of connective tissue which filter out particulates of exotic matter and condense them into portable vesicles"
+  d_living_planet_unity: "Planetary Preservation Vacuoles"
+  d_living_planet_unity_desc: "Great chambers within the Living Planet, dedicated to preserving curious indigestible parts of consumed planets."
+  d_living_planet_megastructure: "Artificial Geostrata"
+  d_living_planet_megastructure_desc: "Veins and layers of deposits harvested from artificial ecosystems"
+  
+  # Planetary 'district' decisions
+  d_living_planet_brain_district: "Introspection Clusters"
+  d_living_planet_brain_district_desc: "Delegated neuronal clusters for advanced thought, and scientific exploration."
+  d_living_planet_patrol_district: "Harmonization Clusters"
+  d_living_planet_patrol_district_desc: "Delegated neuronal clusters who's purpose is to weed out intrusive thought, and process rogue ideas."
+  d_living_planet_warrior_district: "Defensive Spines"
+  d_living_planet_warrior_district_desc: "Large muscular spines for destroying surface parasites."
+  
+  # Evo shift deposits
+  d_living_planet_evo_shift_physics: "Evolutionary Shift - Physics Specialisation"
+  d_living_planet_evo_shift_physics_desc: "Specialised neuronal pathways"
+  d_living_planet_evo_shift_society: "Evolutionary Shift - Society Specialisation"
+  d_living_planet_evo_shift_society_desc: "Specialised neuronal pathways"
+  d_living_planet_evo_shift_engineering: "Evolutionary Shift - Engineering Specialisation"
+  d_living_planet_evo_shift_engineering_desc: "Specialised neuronal pathways"
+  d_living_planet_evo_shift_growth: "Evolutionary Shift - Growth Rate"
+  d_living_planet_evo_shift_growth_desc: "Maturation vats"
+  d_living_planet_evo_shift_energy: "Evolutionary Shift - Energy Specialisation"
+  d_living_planet_evo_shift_energy_desc: "Energetic relays"
+  d_living_planet_evo_shift_minerals: "Evolutionary Shift - Minerals Specialisation"
+  d_living_planet_evo_shift_minerals_desc: "Mineral sifters"
+  d_living_planet_evo_shift_food: "Evolutionary Shift - Food Specialisation"
+  d_living_planet_evo_shift_food_desc: "Digestive vats"
+
+  # Lunar evo shift deposits
+  d_living_planet_neural_net_general: "Living Planet Neural Network"
+  d_living_planet_neural_net_general_desc: "A network of fast-adapting neurons, suitable for any kind of research"
+  d_living_planet_neural_net_physics: "Living Planet Neural Network - Physics"
+  d_living_planet_neural_net_physics_desc: "A network of physics-specialised neurons, suitable expanding understanding of the universe"
+  d_living_planet_neural_net_society: "Living Planet Neural Network - Society"
+  d_living_planet_neural_net_society_desc: "A network of society-specialised neurons, suitable producing advanced genetic resequencing"
+  d_living_planet_neural_net_engineering: "Living Planet Neural Network - Engineering"
+  d_living_planet_neural_net_engineering_desc: "A network of engineering-specialised neurons, suitable for designing complicated physical structures"
+
+  ####################
+  ### Bombardment ####
+  ####################
+
+  bombardment_consumption: "Consumption"
+  bombardment_consumption_desc: "Transport pops to the Living Planet to be consumed. This stance can take the last pop from a planet"
+
+  #################
+  ### Messages ####
+  #################
+
+  MESSAGE_LP_POP_RELOCATED_TITLE:0 "Offworlders relocated"
+  MESSAGE_LP_POP_RELOCATED:0 "A $SPECIES|Y$ has been relocated from $ORIGIN|Y$ to $CAPITAL|Y$"

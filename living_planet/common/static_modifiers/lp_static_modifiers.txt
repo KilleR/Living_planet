@@ -1,0 +1,41 @@
+living_planet_growth_disabled = {
+	icon_frame = 2
+	icon = "gfx/interface/icons/modifiers/mod_planet_border_mult.dds"
+}
+
+living_planet_devoured = {
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_starvation.dds"
+}
+
+living_planet_evo_shift_physics = {
+	icon_frame = 1
+	icon = "gfx/interface/icons/modifiers/mod_resource_physics_research_mult.dds"
+	
+	planet_researchers_physics_research_produces_add = 1
+}
+living_planet_evo_shift_society = {
+	icon_frame = 1
+	icon = "gfx/interface/icons/modifiers/mod_resource_society_research_mult.dds"
+	
+	planet_researchers_society_research_produces_add = 1
+}
+living_planet_evo_shift_engineering = {
+	icon_frame = 1
+	icon = "gfx/interface/icons/modifiers/mod_resource_engineering_research_mult.dds"
+	
+	planet_researchers_engineering_research_produces_add = 1
+}
+living_planet_evo_shift_growth = {
+	icon_frame = 1
+	icon = "gfx/interface/icons/modifiers/mod_pop_assembly_speed.dds"
+	
+	planet_pop_assembly_organic_mult = 1
+}
+
+living_planet_system_shift_crime = {
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	
+	planet_crime_no_happiness_add = 1
+}

@@ -1,0 +1,81 @@
+namespace = lp_game_start
+
+# Add starting tech assault armies for everyone other than Living Planets
+country_event = {
+	id = lp_game_start.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			has_origin = origin_living_planet
+		}
+	}
+	
+	immediate = {
+		give_technology = { message = no tech = tech_colonization_1 }
+	}
+}
+
+## Set up variables for planet growth
+event = {
+	id = lp_game_start.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_origin = origin_living_planet
+			}
+			
+			capital_scope = {
+				if = {
+					limit = {
+						check_variable = {
+							which = lp_evolutionary_shift
+							value < 25
+						}
+					}
+					set_variable = {
+						which = lp_evolutionary_shift
+						value = 25
+					}
+				}
+				
+				if = {
+					limit = {
+						check_variable = {
+							which = lp_growth_factor
+							value < 4
+						}
+					}
+					set_variable = {
+						which = lp_growth_factor
+						value = 4
+					}
+				}
+				
+				if = {
+					limit = {
+						check_variable = {
+							which = lp_planet_size
+							value < 10
+						}
+					}
+					set_variable = {
+						which = lp_planet_size
+						value = 0
+					}
+				}
+				
+				if = {
+					limit = {
+						has_deposit = d_living_planet_neural_net
+					}
+					remove_deposit = d_living_planet_neural_net
+				}
+			}
+		}
+	}
+}

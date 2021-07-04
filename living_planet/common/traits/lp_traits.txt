@@ -1,0 +1,26 @@
+trait_living_planet = {
+	cost = 0
+	sorting_priority = 20
+	
+	initial = no
+	randomized = no
+	modification = no
+	forced_happiness = yes
+	
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	ai_weight = {
+		weight = 0
+	}
+	
+	modifier = {
+		pop_resettlement_cost_mult = 10000
+		pop_resettlement_cost_add = {
+			minerals = 100
+			resources = {
+				minerals 4300
+			}
+		}
+		shipsize_colonizer_build_cost_mult = 1000
+	}
+	icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"
+}

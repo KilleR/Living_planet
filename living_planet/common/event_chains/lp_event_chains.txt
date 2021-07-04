@@ -1,0 +1,14 @@
+lp_evo_shift_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	picture = GFX_evt_baol_grunur
+}
+
+lp_lunar_shift_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	picture = GFX_evt_shattered_planet
+}
+
+lp_system_shift_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	picture = GFX_evt_hive
+}

@@ -1,0 +1,32 @@
+namespace = lp_megastructure
+
+country_event = {
+	id = lp_megastructure.1
+	show_sound = event_super_explosion
+	picture = GFX_evt_supernova
+	location = from
+	hide_window = yes
+	
+	trigger = {
+		this = {
+			NOT = {
+				has_origin = origin_living_planet
+			}
+		}
+		from = { is_megastructure_type = planet_devourer }
+	}
+	
+	abort_trigger = {
+		OR = {
+			NOT = { exists = from }
+			NOT = { exists = from.owner }
+			from.owner = { NOT = { is_same_value = root } }
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_megastructure = from
+	}
+}

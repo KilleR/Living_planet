@@ -1,0 +1,54 @@
+special_project = {
+	key = "LP_SYSTEM_SHIFT_UNITY"
+	event_chain = lp_system_shift_chain
+	picture = GFX_evt_unity_symbol
+	icon = "gfx/interface/icons/situation_log/situation_log_ai.dds"
+	tech_department = society_technology
+	cost = 10000
+	event_scope = planet_event
+	
+	on_success = {
+		this = {
+			add_deposit = d_living_planet_system_unity
+		}
+		planet_event = { id = lp_planet.014 }
+	}
+	
+	on_fail = {}
+}
+special_project = {
+	key = "LP_SYSTEM_SHIFT_PRODUCTION"
+	event_chain = lp_system_shift_chain
+	picture = GFX_evt_physics_research
+	icon = "gfx/interface/icons/situation_log/situation_log_anomaly_levels.dds"
+	tech_department = society_technology
+	cost = 10000
+	event_scope = planet_event
+	
+	on_success = {
+		this = {
+			add_deposit = d_living_planet_system_production
+		}
+		planet_event = { id = lp_planet.014 }
+	}
+	
+	on_fail = {}
+}
+special_project = {
+	key = "LP_SYSTEM_SHIFT_PRODUCTION"
+	event_chain = lp_system_shift_chain
+	picture = GFX_evt_physics_research
+	icon = "gfx/interface/icons/situation_log/situation_log_anomaly_levels.dds"
+	tech_department = society_technology
+	cost = 10000
+	event_scope = planet_event
+	
+	on_success = {
+		this = {
+			add_deposit = d_living_planet_system_production
+		}
+		planet_event = { id = lp_planet.014 }
+	}
+	
+	on_fail = {}
+}

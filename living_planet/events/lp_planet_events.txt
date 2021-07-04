@@ -1,0 +1,626 @@
+namespace = lp_planet
+
+# Planet devouring
+event = {
+	id = lp_planet.001
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_country = {
+			has_origin = origin_living_planet
+			any_megastructure = {
+				is_megastructure_type = planet_devourer
+			}
+		}
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				any_owned_megastructure = {
+					is_megastructure_type = planet_devourer
+				}
+			}
+			every_owned_megastructure = {
+				limit = {
+					is_megastructure_type = planet_devourer
+				}
+				save_event_target_as = event_devourer_megastructure
+				
+				if = {
+					limit = {
+						NOT = {
+							exists = planet
+						}
+					}
+					remove_megastructure = event_target:event_devourer_megastructure
+				}
+				else = {
+					planet = {
+						save_event_target_as = event_devoured_planet
+						space_owner = {
+							capital_scope = {
+								if = {
+									limit = {
+										event_target:event_devoured_planet = {
+											is_artificial = yes
+										}
+									}
+									add_deposit = d_living_planet_megastructure
+									change_variable = {
+										which = biomass_acquired
+										value = 0.5
+									}
+								}
+								else = {
+									change_variable = {
+										which = biomass_acquired
+										value = 1
+									}
+								}
+								save_event_target_as = event_capital
+								if = {
+									limit = {
+										check_variable = {
+											which = biomass_acquired
+											value >= lp_growth_factor
+										}
+									}
+									# grow the planet
+									planet_event = { id = lp_planet.010 }
+									subtract_variable = {
+										which = biomass_acquired
+										value = lp_growth_factor
+									}
+								}
+							}
+						}
+						
+						if = {
+							limit = {
+								planet_size > 1
+							}
+							change_planet_size = -1
+						} else = {
+							remove_planet = yes
+							remove_megastructure = event_target:event_devourer_megastructure
+						}
+						
+						random_deposit = {
+							save_event_target_as = deposit
+							if = {
+								limit = {
+									has_deposit_category = deposit_cat_minerals
+								}
+								event_target:event_capital = {
+									add_deposit = d_living_planet_minerals
+								}
+							}
+							if = {
+								limit = {
+									has_deposit_category = deposit_cat_energy
+								}
+								event_target:event_capital = {
+									add_deposit = d_living_planet_energy
+								}
+							}
+							if = {
+								limit = {
+									has_deposit_category = deposit_cat_food
+								}
+								event_target:event_capital = {
+									add_deposit = d_living_planet_food
+								}
+							}
+							if = {
+								limit = {
+									OR = {
+										has_deposit_category = deposit_cat_rare
+										has_deposit_category = deposit_cat_rare_blocker
+									}
+								}
+								event_target:event_capital = {
+									add_deposit = d_living_planet_rare
+								}
+							}
+							if = {
+								limit = {
+									has_deposit_category = deposit_cat_blockers
+								}
+								event_target:event_capital = {
+									add_deposit = d_living_planet_unity
+								}
+							}
+							remove_deposit = yes
+						}
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+
+# Planet changing ownership
+planet_event = {
+	id = lp_planet.002
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		this = {
+			is_capital = no
+		}
+		from = {
+			has_origin = origin_living_planet
+		}
+		this = {
+			any_pop = {
+				has_trait = trait_living_planet
+			}
+		}
+	}
+	
+	immediate = {
+		this = {
+			every_owned_pop = {
+				limit = {
+					has_trait = trait_living_planet
+				}
+				kill_pop = yes
+			}
+		}
+	}
+}
+
+
+# Planet changing ownership
+planet_event = {
+	id = lp_planet.003
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		this = {
+			is_capital = no
+		}
+		from = {
+			NOT = { has_origin = origin_living_planet }
+		}
+		this = {
+			has_modifier = living_planet_devoured
+		}
+	}
+	
+	immediate = {
+		this = {
+			remove_modifier = living_planet_devoured
+		}
+	}
+}
+
+# Displace a planet pop to the Living Planet
+event = {
+	id = lp_planet.004
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		any_country = {
+			has_origin = origin_living_planet
+			any_owned_planet = {
+				is_capital = no
+				num_pops > 0
+			}
+		}
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_origin = origin_living_planet
+				any_owned_planet = {
+					is_capital = no
+					num_pops > 0
+				}
+			}
+			
+			every_owned_planet = {
+				limit = {
+					is_capital = no
+					num_pops > 0
+				}
+				
+				random_owned_pop = {
+					create_message = {
+						type = MESSAGE_TYPE_LP_POP_RELOCATED
+						localization = MESSAGE_LP_POP_RELOCATED
+						days = 30
+						target = this.planet
+						variable = {
+							type = name
+							localization = SPECIES
+							scope = this.species
+						}
+						variable = {
+							type = name
+							localization = ORIGIN
+							scope = this.planet
+						}
+						variable = {
+							type = name
+							localization = CAPITAL
+							scope = this.owner.capital_scope
+						}
+					}
+					resettle_pop = {
+						pop = this
+						planet = this.owner.capital_scope
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+# Living Planet growth + Evolutionary Shifts
+planet_event = {
+	id = lp_planet.010
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		always = yes
+	}
+	
+	immediate = {
+		change_planet_size = 1
+		
+		if = {
+			limit = {
+				NOT = {
+					space_owner = {
+						has_event_chain = lp_evo_shift_chain
+					}
+				}
+				OR = {
+					AND = {
+						check_variable = {
+							which = lp_evolutionary_shift
+							value = 25
+						}
+						planet_size >= 25
+					}
+					AND = {
+						check_variable = {
+							which = lp_evolutionary_shift
+							value = 50
+						}
+						planet_size >= 50
+					}
+					AND = {
+						check_variable = {
+							which = lp_evolutionary_shift
+							value = 75
+						}
+						planet_size >= 75
+					}
+					AND = {
+						check_variable = {
+							which = lp_evolutionary_shift
+							value = 100
+						}
+						planet_size >= 100
+					}
+					AND = {
+						check_variable = {
+							which = lp_evolutionary_shift
+							value = 125
+						}
+						planet_size >= 125
+					}
+					AND = {
+						check_variable = {
+							which = lp_evolutionary_shift
+							value = 150
+						}
+						planet_size >= 150
+					}
+					AND = {
+						check_variable = {
+							which = lp_evolutionary_shift
+							value = 175
+						}
+						planet_size >= 175
+					}
+					AND = {
+						check_variable = {
+							which = lp_evolutionary_shift
+							value = 200
+						}
+						planet_size >= 200
+					}
+					AND = {
+						check_variable = {
+							which = lp_evolutionary_shift
+							value = 225
+						}
+						planet_size >= 225
+					}
+					AND = {
+						check_variable = {
+							which = lp_evolutionary_shift
+							value = 250
+						}
+						planet_size >= 250
+					}
+					AND = {
+						check_variable = {
+							which = lp_evolutionary_shift
+							value = 275
+						}
+						planet_size >= 275
+					}
+					AND = {
+						check_variable = {
+							which = lp_evolutionary_shift
+							value = 300
+						}
+						planet_size >= 300
+					}
+					AND = {
+						check_variable = {
+							which = lp_evolutionary_shift
+							value = 325
+						}
+						planet_size >= 325
+					}
+					AND = {
+						check_variable = {
+							which = lp_evolutionary_shift
+							value = 350
+						}
+						planet_size >= 350
+					}
+					AND = {
+						check_variable = {
+							which = lp_evolutionary_shift
+							value = 375
+						}
+						planet_size >= 375
+					}
+					AND = {
+						check_variable = {
+							which = lp_evolutionary_shift
+							value = 400
+						}
+						planet_size >= 400
+					}
+				}
+			}
+			planet_event = { id = lp_planet.011 }
+		}
+		
+		# fuck this in particular
+		#		export_trigger_value_to_variable = {
+		#			trigger = planet_size
+		#			variable = lp_planet_size
+		#			round = yes
+		#		}
+		#		if = {
+		#			limit = {
+		#				check_variable = {
+		#					which = lp_evolutionary_shift
+		#					value <= lp_planet_size
+		#				}
+		#			}
+		#
+		#			planet_event = { id = lp_planet.011 }
+		#		}
+	}
+}
+# Evo shift
+planet_event = {
+	id = lp_planet.011
+	title = lp_planet.011.name
+	desc = lp_planet.011.desc
+	is_triggered_only = yes
+	picture = GFX_evt_genetic_modification
+	
+	immediate = {
+		change_variable = {
+			which = lp_evolutionary_shift
+			value = 25
+		}
+		change_variable = {
+			which = lp_growth_factor
+			value = 1
+		}
+	}
+	
+	option = {
+		name = lp_planet.011.a
+		custom_tooltip = lp_planet.011.a.tooltip
+		if = {
+			limit = {
+				check_variable = {
+					which = lp_evolutionary_shift
+					value >= 75
+				}
+				NOT = {
+					has_planet_flag = lp_lunar_shift_done
+				}
+			}
+			set_planet_flag = lp_lunar_shift_done
+			begin_event_chain = {
+				event_chain = lp_lunar_shift_chain
+				target = ROOT
+			}
+			enable_special_project = {
+				name = LP_LUNAR_SHIFT_GENERAL
+				location = this
+				owner = root
+			}
+			enable_special_project = {
+				name = LP_LUNAR_SHIFT_PHYSICS
+				location = this
+				owner = root
+			}
+			enable_special_project = {
+				name = LP_LUNAR_SHIFT_SOCIETY
+				location = this
+				owner = root
+			}
+			enable_special_project = {
+				name = LP_LUNAR_SHIFT_ENGINEERING
+				location = this
+				owner = root
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = lp_evolutionary_shift
+					value >= 150
+				}
+				NOT = {
+					has_planet_flag = lp_system_shift_done
+				}
+			}
+			has_planet_flag = lp_system_shift_done
+			begin_event_chain = {
+				event_chain = lp_system_shift_chain
+				target = ROOT
+			}
+		}
+		else = {
+			begin_event_chain = {
+				event_chain = lp_evo_shift_chain
+				target = ROOT
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = lp_growth_factor
+						value > 5
+					}
+				}
+				enable_special_project = {
+					name = LP_EVO_SHIFT_GENERAL
+					location = this
+					owner = root
+				}
+			}
+			enable_special_project = {
+				name = LP_EVO_SHIFT_PHYSICS
+				location = this
+				owner = root
+			}
+			enable_special_project = {
+				name = LP_EVO_SHIFT_SOCIETY
+				location = this
+				owner = root
+			}
+			enable_special_project = {
+				name = LP_EVO_SHIFT_ENGINEERING
+				location = this
+				owner = root
+			}
+			enable_special_project = {
+				name = LP_EVO_SHIFT_ENERGY
+				location = this
+				owner = root
+			}
+			enable_special_project = {
+				name = LP_EVO_SHIFT_MINERALS
+				location = this
+				owner = root
+			}
+			enable_special_project = {
+				name = LP_EVO_SHIFT_FOOD
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+# Evo shift complete
+planet_event = {
+	id = lp_planet.012
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		space_owner = {
+			end_event_chain = lp_evo_shift_chain
+			abort_special_project = LP_EVO_SHIFT_GENERAL
+			abort_special_project = LP_EVO_SHIFT_PHYSICS
+			abort_special_project = LP_EVO_SHIFT_SOCIETY
+			abort_special_project = LP_EVO_SHIFT_ENGINEERING
+			abort_special_project = LP_EVO_SHIFT_GROWTH
+			abort_special_project = LP_EVO_SHIFT_ENERGY
+			abort_special_project = LP_EVO_SHIFT_MINERALS
+			abort_special_project = LP_EVO_SHIFT_FOOD
+		}
+	}
+}
+
+# Lunar Evo shift complete
+planet_event = {
+	id = lp_planet.013
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		space_owner = {
+			end_event_chain = lp_lunar_shift_chain
+			abort_special_project = LP_LUNAR_SHIFT_GENERAL
+			abort_special_project = LP_LUNAR_SHIFT_PHYSICS
+			abort_special_project = LP_LUNAR_SHIFT_SOCIETY
+			abort_special_project = LP_LUNAR_SHIFT_ENGINEERING
+		}
+		every_moon = {
+			remove_planet = yes
+		}
+	}
+}
+
+# System Evo shift complete
+planet_event = {
+	id = lp_planet.014
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		space_owner = {
+			end_event_chain = lp_system_shift_chain
+			abort_special_project = LP_SYSTEM_SHIFT_PRODUCTION
+			abort_special_project = LP_SYSTEM_SHIFT_UNITY
+		}
+		every_moon = {
+			remove_planet = yes
+		}
+	}
+}
+
+# Remove asteriod fields
+planet_event = {
+	id = lp_planet.022
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		solar_system = {
+			set_asteroid_belt = {
+				radius = 0
+			}
+		}
+	}
+}

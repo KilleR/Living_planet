@@ -1,0 +1,325 @@
+d_living_planet_neural_net = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_rare
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_infestation
+	
+	planet_modifier = {
+		job_synapse_drone_per_pop = 0.05
+	}
+}
+
+d_living_planet_minerals = {
+	is_for_colonizeable = yes
+	category = deposit_cat_minerals
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_crystalline_caverns
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			minerals = 4
+		}
+	}
+}
+d_living_planet_energy = {
+	is_for_colonizeable = yes
+	category = deposit_cat_energy
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_tempestous_mountain
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			energy = 4
+		}
+	}
+}
+d_living_planet_food = {
+	is_for_colonizeable = yes
+	category = deposit_cat_food
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_fungal_caves
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			food = 4
+		}
+	}
+}
+d_living_planet_rare = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	potential = {
+		always = no
+	}
+	icon = d_organic_landfill
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			exotic_gases = 0.1
+			rare_crystals = 0.1
+			volatile_motes = 0.1
+		}
+	}
+}
+d_living_planet_unity = {
+	is_for_colonizeable = yes
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_city_ruins
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			unity = 2
+		}
+	}
+}
+d_living_planet_megastructure = {
+	is_for_colonizeable = yes
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_mining_tunnels
+	
+	planet_modifier = {
+		planet_metallurgists_alloys_produces_add = 0.1
+		planet_metallurgists_minerals_upkeep_add = 0.1
+	}
+}
+
+##############################
+### Planetary 'Districts' ####
+##############################
+d_living_planet_brain_district = {
+	is_for_colonizeable = yes
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_teeming_reef
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+		job_brain_drone_add = 2
+	}
+	
+}
+
+d_living_planet_patrol_district = {
+	is_for_colonizeable = yes
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_levitating_rocks
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+		job_patrol_drone_add = 2
+	}
+}
+
+d_living_planet_warrior_district = {
+	is_for_colonizeable = yes
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_metal_boneyard
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+		job_warrior_drone_add = 2
+	}
+}
+
+d_living_planet_security = {
+	is_for_colonizeable = yes
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_metal_boneyard
+	
+	planet_modifier = {
+		job_patrol_drone_add = 5
+		job_patrol_drone_per_pop = 0.025
+	}
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			unity = 2
+		}
+	}
+	
+}
+
+###################
+### Evo Shifts ####
+###################
+
+d_living_planet_evo_shift_physics = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_infestation
+	
+	planet_modifier = {
+		planet_researchers_physics_research_produces_add = 1
+		planet_researchers_energy_upkeep_add = 1
+	}
+}
+d_living_planet_evo_shift_society = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_infestation
+	
+	planet_modifier = {
+		planet_researchers_society_research_produces_add = 1
+		planet_researchers_energy_upkeep_add = 1
+	}
+}
+d_living_planet_evo_shift_engineering = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_infestation
+	
+	planet_modifier = {
+		planet_researchers_engineering_research_produces_add = 1
+		planet_researchers_energy_upkeep_add = 1
+	}
+}
+d_living_planet_evo_shift_growth = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_infestation
+	
+	planet_modifier = {
+		planet_pop_assembly_organic_mult = 0.25
+	}
+}
+d_living_planet_evo_shift_energy = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_tempestous_mountain
+	
+	planet_modifier = {
+		planet_technician_energy_produces_add = 1.5
+	}
+}
+d_living_planet_evo_shift_minerals = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_crystalline_caverns
+	
+	planet_modifier = {
+		planet_miners_minerals_produces_add = 1
+	}
+}
+d_living_planet_evo_shift_food = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_fungal_caves
+	
+	planet_modifier = {
+		planet_farmers_food_produces_add = 1.5
+	}
+}
+
+#####################
+### Lunar Shifts ####
+#####################
+
+d_living_planet_neural_net_general = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_infestation
+	
+	planet_modifier = {
+		job_brain_drone_per_pop = 0.1
+	}
+}
+
+d_living_planet_neural_net_physics = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_infestation
+	
+	planet_modifier = {
+		job_brain_drone_per_pop = 0.05
+		planet_researchers_physics_research_produces_add = 2
+	}
+}
+
+d_living_planet_neural_net_society = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_infestation
+	
+	planet_modifier = {
+		job_brain_drone_per_pop = 0.05
+		planet_researchers_society_research_produces_add = 2
+	}
+}
+
+d_living_planet_neural_net_engineering = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_infestation
+	
+	planet_modifier = {
+		job_brain_drone_per_pop = 0.05
+		planet_researchers_engineering_research_produces_add = 2
+	}
+}
+
+######################
+### System Shifts ####
+######################
+
+d_living_planet_system_unity = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_infestation
+	
+	planet_modifier = {
+		pop_category_drones_unity_produces_add = 1
+	}
+}
+
+d_living_planet_system_production = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_infestation
+	
+	planet_modifier = {
+		planet_jobs_upkeep_mult = 0.1
+		planet_jobs_produces_mult = 0.1
+	}
+}

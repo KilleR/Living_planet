@@ -1,0 +1,153 @@
+special_project = {
+	key = "LP_EVO_SHIFT_GENERAL"
+	event_chain = lp_evo_shift_chain
+	picture = GFX_evt_gray_gooed_planet
+	tech_department = society_technology
+	cost = 10000
+	event_scope = planet_event
+
+	on_success = {
+		change_variable = {
+			which = lp_growth_factor
+			value = -2
+		}
+		planet_event = { id = lp_planet.012 }
+	}
+
+	on_fail = {}
+}
+
+special_project = {
+	key = "LP_EVO_SHIFT_PHYSICS"
+	event_chain = lp_evo_shift_chain
+	picture = GFX_evt_circuitry_modification
+	icon = "gfx/interface/icons/situation_log/situation_log_physics.dds"
+	tech_department = society_technology
+	cost = 10000
+	event_scope = planet_event
+	
+	same_option_group_as = { LP_EVO_SHIFT_GENERAL }
+	
+	on_success = {
+		this = {
+			add_deposit = d_living_planet_evo_shift_physics
+		}
+		planet_event = { id = lp_planet.012 }
+	}
+	
+	on_fail = {}
+}
+
+special_project = {
+	key = "LP_EVO_SHIFT_SOCIETY"
+	event_chain = lp_evo_shift_chain
+	picture = GFX_evt_circuitry_modification
+	icon = "gfx/interface/icons/situation_log/situation_log_society.dds"
+	tech_department = society_technology
+	cost = 10000
+	event_scope = planet_event
+	
+	same_option_group_as = { LP_EVO_SHIFT_GENERAL }
+	
+	on_success = {
+		add_deposit = d_living_planet_evo_shift_society
+		planet_event = { id = lp_planet.012 }
+	}
+	
+	on_fail = {}
+}
+
+special_project = {
+	key = "LP_EVO_SHIFT_ENGINEERING"
+	event_chain = lp_evo_shift_chain
+	picture = GFX_evt_clones
+	icon = "gfx/interface/icons/situation_log/situation_log_engineering.dds"
+	tech_department = society_technology
+	cost = 10000
+	event_scope = planet_event
+	
+	same_option_group_as = { LP_EVO_SHIFT_GENERAL }
+	
+	on_success = {
+		add_deposit = d_living_planet_evo_shift_engineering
+		planet_event = { id = lp_planet.012 }
+	}
+	
+	on_fail = {}
+}
+
+special_project = {
+	key = "LP_EVO_SHIFT_GROWTH"
+	event_chain = lp_evo_shift_chain
+	picture = GFX_evt_circuitry_modification
+	icon = "gfx/interface/icons/situation_log/situation_log_swarm.dds"
+	tech_department = society_technology
+	cost = 10000
+	event_scope = planet_event
+	
+	same_option_group_as = { LP_EVO_SHIFT_GENERAL }
+	
+	on_success = {
+		add_deposit = d_living_planet_evo_shift_growth
+		planet_event = { id = lp_planet.012 }
+	}
+	
+	on_fail = {}
+}
+
+special_project = {
+	key = "LP_EVO_SHIFT_ENERGY"
+	event_chain = lp_evo_shift_chain
+	picture = GFX_evt_circuitry_modification
+	icon = "gfx/interface/icons/situation_log/situation_log_extradimensional.dds"
+	tech_department = society_technology
+	cost = 10000
+	event_scope = planet_event
+	
+	same_option_group_as = { LP_EVO_SHIFT_GENERAL }
+	
+	on_success = {
+		add_deposit = d_living_planet_evo_shift_energy
+		planet_event = { id = lp_planet.012 }
+	}
+	
+	on_fail = {}
+}
+
+special_project = {
+	key = "LP_EVO_SHIFT_MINERALS"
+	event_chain = lp_evo_shift_chain
+	picture = GFX_evt_circuitry_modification
+	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+	tech_department = society_technology
+	cost = 10000
+	event_scope = planet_event
+	
+	same_option_group_as = { LP_EVO_SHIFT_GENERAL }
+	
+	on_success = {
+		add_deposit = d_living_planet_evo_shift_minerals
+		planet_event = { id = lp_planet.012 }
+	}
+	
+	on_fail = {}
+}
+
+special_project = {
+	key = "LP_EVO_SHIFT_FOOD"
+	event_chain = lp_evo_shift_chain
+	picture = GFX_evt_circuitry_modification
+	icon = "gfx/interface/icons/situation_log/situation_log_archaeology.dds"
+	tech_department = society_technology
+	cost = 10000
+	event_scope = planet_event
+	
+	same_option_group_as = { LP_EVO_SHIFT_GENERAL }
+	
+	on_success = {
+		add_deposit = d_living_planet_evo_shift_food
+		planet_event = { id = lp_planet.012 }
+	}
+	
+	on_fail = {}
+}

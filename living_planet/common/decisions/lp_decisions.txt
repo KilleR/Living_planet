@@ -1,0 +1,116 @@
+decision_lp_devour_biomass = {
+	icon = decision_planet_beam
+	owned_planets_only = no
+	
+	potential = {
+		is_colonizable = yes
+		NOT = { has_modifier = living_planet_devoured }
+		exists = space_owner
+		space_owner = {
+			is_same_value = from
+			has_origin = origin_living_planet
+		}
+	}
+	
+	effect = {
+		add_modifier = { modifier = living_planet_devoured }
+		
+		solar_system = {
+			spawn_megastructure = {
+				type = planet_devourer
+				planet = ROOT
+				owner = space_owner
+			}
+		}
+	}
+}
+
+####################################
+### Planetary Feature Additions ####
+####################################
+decision_lp_add_brain_district = {
+	icon = decision_engineering_research
+	owned_planets_only = yes
+	
+	potential = {
+		is_capital = yes
+		space_owner = {
+			has_origin = origin_living_planet
+		}
+	}
+	
+	allow = {
+		num_free_districts = {
+			type = any
+			value > 0
+		}
+	}
+	
+	resources = {
+		cost = {
+			influence = 100
+		}
+	}
+	
+	effect = {
+		add_deposit = d_living_planet_brain_district
+	}
+}
+
+decision_lp_add_patrol_district = {
+	icon = decision_deal
+	owned_planets_only = yes
+	
+	potential = {
+		is_capital = yes
+		space_owner = {
+			has_origin = origin_living_planet
+		}
+	}
+	
+	allow = {
+		num_free_districts = {
+			type = any
+			value > 0
+		}
+	}
+	
+	resources = {
+		cost = {
+			influence = 100
+		}
+	}
+	
+	effect = {
+		add_deposit = d_living_planet_patrol_district
+	}
+}
+
+decision_lp_add_warrior_district = {
+	icon = decision_martial_law_machine
+	owned_planets_only = yes
+	
+	potential = {
+		is_capital = yes
+		space_owner = {
+			has_origin = origin_living_planet
+		}
+	}
+	
+	allow = {
+		num_free_districts = {
+			type = any
+			value > 0
+		}
+	}
+	
+	resources = {
+		cost = {
+			influence = 100
+		}
+	}
+	
+	effect = {
+		add_deposit = d_living_planet_warrior_district
+	}
+}

@@ -1,0 +1,11 @@
+
+
+message_type = {
+	key = MESSAGE_TYPE_LP_POP_RELOCATED
+	icon = "GFX_message_founder_species_put_on_market"
+	icon_frame = 1
+	
+	name = "MESSAGE_LP_POP_RELOCATED_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+}
