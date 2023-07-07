@@ -1,8 +1,8 @@
 namespace = lp_empire
 
 # Handle devouring multiple planets
-empire_event = {
-	id = lp_empire.001
-	title = "lp_empire.001.name"
-	desc = "lp_empire.001.desc"
-}
+#empire_event = {
+#	id = lp_empire.001
+#	title = "lp_empire.001.name"
+#	desc = "lp_empire.001.desc"
+#}

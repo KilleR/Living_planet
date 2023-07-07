@@ -493,7 +493,7 @@ planet_event = {
 					has_planet_flag = lp_system_shift_done
 				}
 			}
-			has_planet_flag = lp_system_shift_done
+			set_planet_flag = lp_system_shift_done
 			begin_event_chain = {
 				event_chain = lp_system_shift_chain
 				target = ROOT
@@ -604,6 +604,7 @@ planet_event = {
 			abort_special_project = LP_SYSTEM_SHIFT_PRODUCTION
 			abort_special_project = LP_SYSTEM_SHIFT_UNITY
 		}
+		planet_event = { id = lp_planet.022 }
 		every_moon = {
 			remove_planet = yes
 		}
@@ -620,6 +621,13 @@ planet_event = {
 		solar_system = {
 			set_asteroid_belt = {
 				radius = 0
+			}
+			every_planet = {
+				limit = {
+					is_capital = no
+					is_star = no
+				}
+				remove_planet = yes
 			}
 		}
 	}

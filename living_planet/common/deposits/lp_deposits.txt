@@ -1,5 +1,5 @@
 d_living_planet_neural_net = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	use_for_min_max_adjustments = yes
 	category = deposit_cat_rare
 	drop_weight = { weight = 0 }
@@ -12,7 +12,7 @@ d_living_planet_neural_net = {
 }
 
 d_living_planet_minerals = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_minerals
 	drop_weight = { weight = 0 }
 	potential = { always = no }
@@ -26,7 +26,7 @@ d_living_planet_minerals = {
 	}
 }
 d_living_planet_energy = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_energy
 	drop_weight = { weight = 0 }
 	potential = { always = no }
@@ -40,7 +40,7 @@ d_living_planet_energy = {
 	}
 }
 d_living_planet_food = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_food
 	drop_weight = { weight = 0 }
 	potential = { always = no }
@@ -54,7 +54,7 @@ d_living_planet_food = {
 	}
 }
 d_living_planet_rare = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare
 	potential = {
 		always = no
@@ -71,7 +71,7 @@ d_living_planet_rare = {
 	}
 }
 d_living_planet_unity = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_city_ruins
@@ -84,7 +84,7 @@ d_living_planet_unity = {
 	}
 }
 d_living_planet_megastructure = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_mining_tunnels
@@ -99,7 +99,7 @@ d_living_planet_megastructure = {
 ### Planetary 'Districts' ####
 ##############################
 d_living_planet_brain_district = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_teeming_reef
@@ -112,7 +112,7 @@ d_living_planet_brain_district = {
 }
 
 d_living_planet_patrol_district = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_levitating_rocks
@@ -124,7 +124,7 @@ d_living_planet_patrol_district = {
 }
 
 d_living_planet_warrior_district = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_metal_boneyard
@@ -135,24 +135,16 @@ d_living_planet_warrior_district = {
 	}
 }
 
-d_living_planet_security = {
-	is_for_colonizeable = yes
+d_living_planet_sentient_metal_district = {
+	is_for_colonizable = yes
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_metal_boneyard
 	
 	planet_modifier = {
-		job_patrol_drone_add = 5
-		job_patrol_drone_per_pop = 0.025
+		planet_max_districts_add = -1
+		job_ehof_cultivation_drone_add = 2
 	}
-	
-	resources = {
-		category = planet_deposits
-		produces = {
-			unity = 2
-		}
-	}
-	
 }
 
 ###################
@@ -160,7 +152,7 @@ d_living_planet_security = {
 ###################
 
 d_living_planet_evo_shift_physics = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare
 	drop_weight = { weight = 0 }
 	potential = { always = no }
@@ -172,7 +164,7 @@ d_living_planet_evo_shift_physics = {
 	}
 }
 d_living_planet_evo_shift_society = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare
 	drop_weight = { weight = 0 }
 	potential = { always = no }
@@ -184,7 +176,7 @@ d_living_planet_evo_shift_society = {
 	}
 }
 d_living_planet_evo_shift_engineering = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare
 	drop_weight = { weight = 0 }
 	potential = { always = no }
@@ -196,7 +188,7 @@ d_living_planet_evo_shift_engineering = {
 	}
 }
 d_living_planet_evo_shift_growth = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare
 	drop_weight = { weight = 0 }
 	potential = { always = no }
@@ -207,7 +199,7 @@ d_living_planet_evo_shift_growth = {
 	}
 }
 d_living_planet_evo_shift_energy = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare
 	drop_weight = { weight = 0 }
 	potential = { always = no }
@@ -218,7 +210,7 @@ d_living_planet_evo_shift_energy = {
 	}
 }
 d_living_planet_evo_shift_minerals = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare
 	drop_weight = { weight = 0 }
 	potential = { always = no }
@@ -229,7 +221,7 @@ d_living_planet_evo_shift_minerals = {
 	}
 }
 d_living_planet_evo_shift_food = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare
 	drop_weight = { weight = 0 }
 	potential = { always = no }
@@ -245,7 +237,7 @@ d_living_planet_evo_shift_food = {
 #####################
 
 d_living_planet_neural_net_general = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare
 	drop_weight = { weight = 0 }
 	potential = { always = no }
@@ -257,7 +249,7 @@ d_living_planet_neural_net_general = {
 }
 
 d_living_planet_neural_net_physics = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare
 	drop_weight = { weight = 0 }
 	potential = { always = no }
@@ -270,7 +262,7 @@ d_living_planet_neural_net_physics = {
 }
 
 d_living_planet_neural_net_society = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare
 	drop_weight = { weight = 0 }
 	potential = { always = no }
@@ -283,7 +275,7 @@ d_living_planet_neural_net_society = {
 }
 
 d_living_planet_neural_net_engineering = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare
 	drop_weight = { weight = 0 }
 	potential = { always = no }
@@ -300,7 +292,7 @@ d_living_planet_neural_net_engineering = {
 ######################
 
 d_living_planet_system_unity = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare
 	drop_weight = { weight = 0 }
 	potential = { always = no }
@@ -312,14 +304,30 @@ d_living_planet_system_unity = {
 }
 
 d_living_planet_system_production = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_infestation
 	
 	planet_modifier = {
-		planet_jobs_upkeep_mult = 0.1
-		planet_jobs_produces_mult = 0.1
+		planet_jobs_upkeep_mult = 0.5
+		planet_jobs_produces_mult = 0.5
+		planet_pops_upkeep_mult = 0.5
+	}
+}
+
+d_living_planet_system_ships = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	drop_weight = { weight = 0 }
+	potential = { always = no }
+	icon = d_infestation
+	
+	country_modifier = {
+		country_ship_upgrade_cost_mult = -0.2
+		country_ship_cost_mult = -0.5
+		pop_category_drones_unity_produces_add = 1
+		ship_cost_mult = -0.5
 	}
 }

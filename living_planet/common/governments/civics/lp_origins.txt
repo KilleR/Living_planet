@@ -9,9 +9,6 @@ origin_living_planet = {
 	initializers = { living_planet_home_system }
 	possible = {
 		authority = { value = auth_hive_mind }
-		civics = {
-			NOT = { value = civic_hive_subsumed_will }
-		}
 	}
 	
 	traits = {

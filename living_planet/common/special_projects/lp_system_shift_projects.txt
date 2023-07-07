@@ -35,7 +35,7 @@ special_project = {
 	on_fail = {}
 }
 special_project = {
-	key = "LP_SYSTEM_SHIFT_PRODUCTION"
+	key = "LP_SYSTEM_SHIFT_EVOLUTION"
 	event_chain = lp_system_shift_chain
 	picture = GFX_evt_physics_research
 	icon = "gfx/interface/icons/situation_log/situation_log_anomaly_levels.dds"

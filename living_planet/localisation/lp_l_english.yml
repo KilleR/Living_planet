@@ -9,6 +9,8 @@
   origin_living_planet_desc: "This planet is a giant organic neural network, functioning similarly to a hive mind. Its surface is covered in semi autonomous drones and giant digestive vats into which it funnels resources. As the network grows more and more habitable worlds will be consumed to fuel its growth."
   origin_living_planet_effects: "Start on a special $pc_hive$ with the ability consume other habitable worlds to increase the size of your homeworld.\n- Enables the §H$decision_lp_devour_biomass$§! planetary decision:.\n  * Moves £planetsize£ from an empty habitable world to the §GLiving Planet§! at a cost of £influence£ 1 per month until the planet is entirely consumed.\n  * £planetsize£ Size requirement to grow the §GLiving Planet§! starts at 4 biomass consumed.\n  * Planetary features consumed will add related features to the §GLiving Planet§! .\n- Owned £pops£ will automatically be moved to the §GLiving Planet§! from other worlds.\n- Gain an additional £job_synapse_drone£ $job_synapse_drone$, £job_spawning_drone£ $job_spawning_drone$ Job and £job_brain_drone£ $job_brain_drone$ on your homeworld for every £pops£ 20.\n- Gain unique planetary decisions to add additional jobs to your homeworld to help manage deviancy and fleet cap for £influence£ 100.\n- §RDue to the nature and size of the neural network, your drones are unable to live outside of your homeworld§!.\n"
   
+  trait_pc_living_planet_preference: "Living Planet"
+  trait_pc_living_planet_desc: "This species is part of a living planet, and cannot inhabit other worlds"
   trait_living_planet: "Living Planet"
   trait_living_planet_desc: "This species exists as part of a great whole, a single active part of a Living Planet"
   
