@@ -1,0 +1,71 @@
+lp_situation_biomass_accumulation = {
+	picture = GFX_evt_friendly_enlightenment
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+	category = positive
+	
+	on_progress_complete = {
+		custom_tooltip = situation_insight_gain
+		hidden_effect = {
+			situation_event = { id = lp_situation.01 }
+		}
+	}
+	
+	stages = {
+		lp_stage_nascence = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 100
+			#custom_tooltip = lp_stage_nascence_desc
+		}
+	}
+	monthly_progress = {
+		base = 0
+		modifier = {
+			add = owner.biomass_gain_rate
+			desc = string_observation_post_insight_gain
+		}
+	}
+	approach = {
+		name = approach_favor_insights
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = favor_insights_tt
+			owner = {
+				set_country_flag = favored_insights
+				remove_country_flag = favored_mission
+			}
+		}
+		modifier = {
+			station_observers_produces_mult = -0.5
+		}
+	}
+	approach = {
+		name = approach_study_insights
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = studying_insights_tt
+			owner = {
+				remove_country_flag = favored_insights
+				remove_country_flag = favored_mission
+			}
+		}
+	}
+	approach = {
+		name = approach_favor_mission
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_red
+		on_select = {
+			custom_tooltip = favor_mission_tt
+			owner = {
+				remove_country_flag = favored_insights
+				set_country_flag = favored_mission
+			}
+		}
+		modifier = {
+			station_observers_produces_mult = 0.5
+		}
+	}
+}

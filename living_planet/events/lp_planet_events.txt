@@ -10,9 +10,6 @@ event = {
 	trigger = {
 		any_country = {
 			has_origin = origin_living_planet
-			any_megastructure = {
-				is_megastructure_type = planet_devourer
-			}
 		}
 	}
 	
@@ -77,17 +74,7 @@ event = {
 								}
 							}
 						}
-						
-						if = {
-							limit = {
-								planet_size > 1
-							}
-							change_planet_size = -1
-						} else = {
-							remove_planet = yes
-							remove_megastructure = event_target:event_devourer_megastructure
-						}
-						
+
 						random_deposit = {
 							save_event_target_as = deposit
 							if = {
@@ -135,9 +122,26 @@ event = {
 							}
 							remove_deposit = yes
 						}
+						
+						if = {
+							limit = {
+								planet_size > 1
+							}
+							change_planet_size = -1
+						} else = {
+							remove_planet = yes
+							remove_megastructure = event_target:event_devourer_megastructure
+						}
 					}
 				}
 			}
+		}
+		
+		every_country = {
+			limit = {
+				has_origin = origin_living_planet
+			}
+			country_event = { id = lp_empire.001 }
 		}
 		
 	}
@@ -159,7 +163,7 @@ planet_event = {
 			has_origin = origin_living_planet
 		}
 		this = {
-			any_pop = {
+			any_owned_pop = {
 				has_trait = trait_living_planet
 			}
 		}
@@ -483,22 +487,22 @@ planet_event = {
 				owner = root
 			}
 		}
-		else_if = {
-			limit = {
-				check_variable = {
-					which = lp_evolutionary_shift
-					value >= 150
-				}
-				NOT = {
-					has_planet_flag = lp_system_shift_done
-				}
-			}
-			set_planet_flag = lp_system_shift_done
-			begin_event_chain = {
-				event_chain = lp_system_shift_chain
-				target = ROOT
-			}
-		}
+		#else_if = {
+		#	limit = {
+		#		check_variable = {
+		#			which = lp_evolutionary_shift
+		#			value >= 150
+		#		}
+		#		NOT = {
+		#			has_planet_flag = lp_system_shift_done
+		#		}
+		#	}
+		#	set_planet_flag = lp_system_shift_done
+		#	begin_event_chain = {
+		#		event_chain = lp_system_shift_chain
+		#		target = ROOT
+		#	}
+		#}
 		else = {
 			begin_event_chain = {
 				event_chain = lp_evo_shift_chain

@@ -1,8 +1,77 @@
 namespace = lp_empire
 
-# Handle devouring multiple planets
-#empire_event = {
-#	id = lp_empire.001
-#	title = "lp_empire.001.name"
-#	desc = "lp_empire.001.desc"
-#}
+# Calcuate devouring growth rate
+country_event = {
+	id = lp_empire.001
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		clear_variable = biomass_gain_rate
+		if = {
+			limit = {
+				NOT = { is_variable_set = biomass_gain_rate }
+			}
+			set_variable = {
+				which = biomass_gain_rate
+				value = 0
+			}
+		}
+
+#		if = {
+#			limit = {
+#				count_situation = {
+#					limit = {
+#						is_situation_type = lp_situation_biomass_accumulation
+#					}
+#					count = 0
+#				}
+#			}
+#			start_situation = {
+#				type = lp_situation_biomass_accumulation
+#				target = this
+#				effect = {
+#					owner = {
+#						switch = {
+#							trigger = has_country_flag
+#							favored_insights = {
+#								prev = { set_situation_approach = approach_favor_insights }
+#							}
+#							favored_mission = {
+#								prev = { set_situation_approach = approach_favor_mission }
+#							}
+#							default = {
+#								prev = { set_situation_approach = approach_study_insights }
+#							}
+#						}
+#					}
+#				}
+#			}
+#		}
+
+		every_owned_megastructure = {
+			limit = {
+				is_megastructure_type = planet_devourer
+			}
+			save_event_target_as = event_devourer_megastructure
+
+			if = {
+				limit = {
+					NOT = {
+						exists = planet
+					}
+				}
+				remove_megastructure = event_target:event_devourer_megastructure
+			}
+			else = {
+				prev = {
+					change_variable = {
+						which = biomass_gain_rate
+						value = 1
+					}
+				}
+			}
+		}
+	}
+}

@@ -4,23 +4,23 @@ trait_living_planet = {
 	
 	initial = no
 	randomized = no
-	modification = no
+	species_possible_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_potential_add = {
+		always = no
+	}
 	forced_happiness = yes
 	
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	ai_weight = {
 		weight = 0
 	}
-	
-	modifier = {
-		pop_resettlement_cost_mult = 10000
-		pop_resettlement_cost_add = {
-			minerals = 100
-			resources = {
-				minerals 4300
-			}
-		}
-		shipsize_colonizer_build_cost_mult = 1000
-	}
+
+	custom_tooltip = trait_living_planet_custom_tooltip
+
 	icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"
 }

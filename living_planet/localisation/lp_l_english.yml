@@ -7,12 +7,14 @@
   living_planet_home_system_DESC:0 "You are a Living Planet, which has devoured all the resources in its home system."
   origin_living_planet: "Living Planet"
   origin_living_planet_desc: "This planet is a giant organic neural network, functioning similarly to a hive mind. Its surface is covered in semi autonomous drones and giant digestive vats into which it funnels resources. As the network grows more and more habitable worlds will be consumed to fuel its growth."
-  origin_living_planet_effects: "Start on a special $pc_hive$ with the ability consume other habitable worlds to increase the size of your homeworld.\n- Enables the §H$decision_lp_devour_biomass$§! planetary decision:.\n  * Moves £planetsize£ from an empty habitable world to the §GLiving Planet§! at a cost of £influence£ 1 per month until the planet is entirely consumed.\n  * £planetsize£ Size requirement to grow the §GLiving Planet§! starts at 4 biomass consumed.\n  * Planetary features consumed will add related features to the §GLiving Planet§! .\n- Owned £pops£ will automatically be moved to the §GLiving Planet§! from other worlds.\n- Gain an additional £job_synapse_drone£ $job_synapse_drone$, £job_spawning_drone£ $job_spawning_drone$ Job and £job_brain_drone£ $job_brain_drone$ on your homeworld for every £pops£ 20.\n- Gain unique planetary decisions to add additional jobs to your homeworld to help manage deviancy and fleet cap for £influence£ 100.\n- §RDue to the nature and size of the neural network, your drones are unable to live outside of your homeworld§!.\n"
-  
+  origin_living_planet_effects: "Start on a special $pc_hive$ with the ability consume other habitable worlds to increase the size of your homeworld.\n- Enables the §H$decision_lp_devour_biomass$§! planetary decision:.\n  * Moves £planetsize£ from an empty habitable world to the §GLiving Planet§! at a cost of £influence£ 1 per month until the planet is entirely consumed.\n  * £planetsize£ Size requirement to grow the §GLiving Planet§! starts at 4 biomass consumed.\n  * Planetary features consumed will add related features to the §GLiving Planet§! .\n- Owned £pops£ will automatically be moved to the §GLiving Planet§! from other worlds.\n- Gain an additional £job_synapse_drone£ $job_synapse_drone$, £job_spawning_drone£ $job_spawning_drone$ Job and £job_brain_drone£ $job_brain_drone$ on your homeworld for every £pops£ 20.\n- Gain unique planetary decisions to add additional jobs to your homeworld to help manage deviancy and fleet cap for £influence£ 100.\n"
+  origin_living_planet_negative_effects: "- §RDue to the nature and size of the neural network, your drones are unable to live outside of your homeworld.§!\n- §RCannot settle planets.§!\n"
+
   trait_pc_living_planet_preference: "Living Planet"
   trait_pc_living_planet_desc: "This species is part of a living planet, and cannot inhabit other worlds"
   trait_living_planet: "Living Planet"
   trait_living_planet_desc: "This species exists as part of a great whole, a single active part of a Living Planet"
+  trait_living_planet_custom_tooltip: "- §RCannot colonise or live outside of a Living Planet§!"
   
   building_giga_gas_giant_habitation_module: "Gas Giant Habitation Module"
   building_giga_gas_giant_habitation_module_desc: "Collection of facilities necessary to maintain a colony on a gas giant assembled by the original population of this planet. These facilities include reactors to provide power for the colony, docking bays to unload minerals collected from local moons and large climate-controlled hangars that can be used for hydroponic farms. In addition to that, these facilities serve as headquarters for resource distribution network and provide various services to the local populations."
@@ -60,9 +62,6 @@
   ### Events #########
   ####################
   
-  lp_empire.001.name: "The Planet Grows"
-  lp_empire.001.desc: "Having consumed enough biomass, the planet has increased in size and capabilities"
-  
   lp_planet.011.name: "Evolutionary Shift"
   lp_planet.011.desc: "We have gathered enough mass to make a choice about the future of our development.\nWe can pick a direction for our evolution, which will shape the future of our living planet.\n"
   lp_planet.011.a: "Begin the shift!"
@@ -102,6 +101,14 @@
   LP_LUNAR_SHIFT_SOCIETY_DESC: "Process the lunar mass into a society-specialised synaptic cluster.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_society$ to the planet.\n§G+1§! £job_brain_drone£ $job_brain_drone$ Job per 20 £pops£ pops.\n§G+2§! £society£ $society_research$ from £job_brain_drone£ $job_brain_drone_plural$.§!\n"
   LP_LUNAR_SHIFT_ENGINEERING: "Engineering Specialisation"
   LP_LUNAR_SHIFT_ENGINEERING_DESC: "Process the lunar mass into a engineering-specialised synaptic cluster.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_engineering$ to the planet.\n§G+1§! £job_brain_drone£ $job_brain_drone$ Job per 20 £pops£ pops.\n§G+2§! £engineering£ $engineering_research$ from £job_brain_drone£ $job_brain_drone_plural$.§!\n"
+
+  ####################
+  ### Events #########
+  ####################
+
+  lp_situation_biomass_accumulation: "Living Planet Growth"
+  lp_situation_biomass_accumulation_desc: "As the living planet grows, we will get opportunities to decide various evolutionary paths.\n\nFind habitable planets and devour them to grow."
+  lp_stage_nascence: "We have just achieved sentience. We must grow."
 
   ####################
   ### Deposits #######

@@ -1,25 +1,8 @@
 namespace = lp_game_start
 
-# Add starting tech assault armies for everyone other than Living Planets
-country_event = {
-	id = lp_game_start.1
-	hide_window = yes
-	is_triggered_only = yes
-	
-	trigger = {
-		NOT = {
-			has_origin = origin_living_planet
-		}
-	}
-	
-	immediate = {
-		give_technology = { message = no tech = tech_colonization_1 }
-	}
-}
-
 ## Set up variables for planet growth
 event = {
-	id = lp_game_start.2
+	id = lp_game_start.1
 	hide_window = yes
 	is_triggered_only = yes
 	

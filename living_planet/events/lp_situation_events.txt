@@ -1,0 +1,19 @@
+
+situation_event = {
+	id = lp_situation.01
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		owner = {
+			set_country_flag = pending_insight_tech
+			create_message = {
+				type = MESSAGE_TYPE_PENDING_INSIGHT_TECH
+				localization = MESSAGE_PENDING_INSIGHT_TECH
+				days = 30
+			}
+		}
+	}
+	after = {
+		destroy_situation = this
+	}
+}

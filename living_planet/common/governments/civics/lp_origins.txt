@@ -3,6 +3,7 @@ origin_living_planet = {
 	icon = "gfx/interface/icons/origins/origins_resource_consolidation.dds"
 	picture = GFX_origin_life_seeded
 	description = "origin_living_planet_effects"
+	negative_description = origin_living_planet_negative_effects
 	starting_colony = pc_living_planet
 	habitability_preference = pc_living_planet
 	preferred_planet_class_neighbor = no
@@ -13,11 +14,6 @@ origin_living_planet = {
 	
 	traits = {
 		trait = trait_living_planet
-	}
-	
-	modifier = {
-		shipsize_colonizer_build_speed_mult = -5
-		ship_colonizer_cost_mult = 10000
 	}
 }
 
