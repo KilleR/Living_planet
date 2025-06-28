@@ -1,0 +1,4 @@
+habitat_central_complex = {
+  potential = { NO }
+  possible = { NO }
+}
