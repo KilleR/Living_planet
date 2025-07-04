@@ -1,8 +1,7 @@
-version="0.0.1"
+version="0.1.0"
 tags={
-	"Gameplay"
+	"Crisis"
 }
 picture="thumbnail.png"
-name="No More Habitats"
-supported_version="v3.14.*"
-remote_file_id="3432269801"
+name="Dreaming Deep"
+supported_version="v4.0.*"

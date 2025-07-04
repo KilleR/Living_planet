@@ -1,0 +1,107 @@
+crisis_dreaming_level_1 = {
+	# REQUIREMENTS
+	required_crisis_currency = 0
+
+	# REWARDS
+	perks = {
+		menp_dream_sleepers_1
+		menp_dream_espionage_1
+		menp_dream_objectives_1
+	}
+
+	on_unlock = {
+		add_dreaming_level_1_perks = yes
+		hidden_effect = {
+			owner = {
+				country_event = { id = dream.001 }
+			}
+		}
+	}
+}
+
+crisis_dreaming_level_2 = {
+	# REQUIREMENTS
+	required_crisis_currency = 1000
+
+	# REWARDS
+	perks = {
+		menp_dream_edicts
+		menp_dream_sleepers_2
+		menp_dream_espionage_2
+		menp_dream_objectives_2
+	}
+
+	on_unlock = {
+		add_dreaming_level_2_perks = yes
+		hidden_effect = {
+			owner = {
+				country_event = { id = dream.002 }
+			}
+		}
+	}
+}
+
+crisis_dreaming_level_3 = {
+	# REQUIREMENTS
+	required_crisis_currency = 4000
+
+	# REWARDS
+	perks = {
+		menp_dream_sleepers_3
+		menp_dream_espionage_3
+		menp_dream_objectives_3
+		menp_dream_trait
+	}
+
+	on_unlock = {
+		add_dreaming_level_3_perks = yes
+		hidden_effect = {
+			owner = {
+				country_event = { id = dream.003 }
+			}
+		}
+	}
+}
+
+crisis_dreaming_level_4 = {
+	# REQUIREMENTS
+	required_crisis_currency = 8000
+
+	# REWARDS
+	perks = {
+		menp_dream_colony
+		menp_dream_sleepers_4
+		menp_dream_espionage_4
+		menp_dream_objectives_4
+	}
+
+	on_unlock = {
+		add_dreaming_level_4_perks = yes
+		hidden_effect = {
+			owner = {
+				country_event = { id = dream.004 }
+			}
+		}
+	}
+}
+
+crisis_dreaming_level_5 = {
+	# REQUIREMENTS
+	required_crisis_currency = 16000
+
+	# REWARDS
+	perks = {
+		menp_dream_espionage_5
+		menp_dream_objectives_5
+	}
+
+	on_unlock = {
+		add_dreaming_level_5_perks = yes
+		hidden_effect = {
+			owner = {
+				country_event = { id = dream.005 }
+			}
+		}
+	}
+}
+

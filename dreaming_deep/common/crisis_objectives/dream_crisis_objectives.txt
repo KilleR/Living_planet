@@ -1,0 +1,30 @@
+
+crisobj_dreamers = {
+    #Fire on Monthly?
+    reward = {
+        base = 0
+        add = dreamer_motes_produced
+        round = yes                            #we don't want 3.124 menace
+        min = 0                                #just in case
+    }
+    recurring = yes
+}
+
+crisobj_dreamers_alien = {
+    #Fire on Monthly?
+    reward = {
+        base = 0
+        add = dreamer_motes_produced
+        round = yes                            #we don't want 3.124 menace
+        min = 0                                #just in case
+    }
+    recurring = yes
+}
+
+crisobj_infiltrate_dreams = {
+    reward = {
+        base = 200
+        round = yes                            #we don't want 3.124 menace
+        min = 0                                #just in case
+    }
+}
