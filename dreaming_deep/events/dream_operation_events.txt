@@ -1,0 +1,21 @@
+namespace = dream_operation
+
+### Dreamwalking
+# Resolution
+espionage_operation_event = {
+	id = dream_operation.1000
+	title = dream_operation.1000.name
+	desc = dream_operation.1000.desc
+	espionage_operation = yes
+	picture = GFX_evt_infiltration_neutral
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			complete_crisis_objective = crisobj_infiltrate_dreams
+		}
+	}
+
+	option = { name = EXCELLENT }
+}

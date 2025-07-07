@@ -1,7 +1,15 @@
 
-
-on_monthly_pulse = {
+on_monthly_pulse= {
 	events = {
 		dream.101
+		dream.102
+	}
+}
+
+# THIS = Espionage operation
+# FROM = Operation target
+on_operation_finished = {
+	events = {
+		dream.201
 	}
 }

@@ -13,5 +13,6 @@ dream_path = {
 		crisobj_dreamers
 		crisobj_dreamers_alien
 		crisobj_infiltrate_dreams
+		crisobj_espionage
 	}
 }

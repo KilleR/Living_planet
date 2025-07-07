@@ -6,6 +6,14 @@
 
  CRISIS_TAB_DISABLED:1 "Only available with $TRAD|Y$, §Y$ap_cosmogenesis$§!, §Y$ap_behemoths$§!, or §Y$ap_dreaming_deep$§! Ascension Perk"
 
+ dream.001.name: "Dreaming Deep"
+ dream.001.desc: "The waking world confines us.\n\nOur dreams allow us to explore and create realities in a way no waking race can."
+ dream.001.a: "Something calls to us."
+
+ dreaming_chain_title: "Dreaming Deep"
+ dreaming_chain_desc: "The waking world confines us.\n\nOur dreams allow us to explore and create realities in a way no waking race can."
+ dreaming_level_reached: "Deeper Dreams Reached"
+
  crisis_dreaming_level_1: "To sleep, perchance to dream"
  crisis_dreaming_level_1_desc: "The waking species will fear us."
  crisis_dreaming_level_2: "Adrift, together"
@@ -20,7 +28,8 @@
  dream_motes: "Dream Motes"
  dream_motes_name: "$dream_motes$:"
  dream_motes_value: "£dream_motes£ $VAL|0$"
- dream_motes_gaining: "Complete §HCrisis Objectives§! to gain more £dream_motes£ §YDream Motes§!."
+ r_dream_motes: "£dream_motes£ §YDream Motes§!"
+ dream_motes_gaining: "Complete §HCrisis Objectives§! to gain more $r_dream_motes$!."
  dream_motes_desc: "Dream Motes are acquired from our deepest dreams, and will eventually allow us to move our lives fully into the Everdream."
  dream_motes_crisis_objective: "Crisis Objectives"
  dream_motes_crisis_objective_gained: "Dream Motes gained"
@@ -93,13 +102,34 @@
 
  crisobj_dreamers: "Employ Dreamers"
  crisobj_dreamers_name: "Dreamers"
- crisobj_dreamers_alien: "Dreamers Everywhere"
  crisobj_dreamers_desc: "Our dedicated dreamers help us to understand the pathways of the Everdream"
+ crisobj_dreamers_alien: "Dreamers Everywhere"
  crisobj_dreamers_alien_name: "Alien Dreamers"
  crisobj_dreamers_alien_desc: "Even alien dreamers help to build the Everdream"
  crisobj_infiltrate_dreams: "Perform Espionage action: Infiltrate Dreams"
- crisobj_infiltrate_dreams_name: "Infiltrate Dreams"
+ crisobj_infiltrate_dreams_name: "Use our Shared Dreaming abilities to infiltrate the dreams of other members of the galaxy."
+ crisobj_infiltrate_dreams_desc: "Infiltrate Dreams"
+ crisobj_espionage: "Perform Espionage"
+ crisobj_espionage_name: "Espionage"
+ crisobj_espionage_desc: "Any espionage will help us understand the minds of other empires"
 
  ap_dreaming_deep: "Dreaming Deep"
  ap_dreaming_deep_desc: "The galaxy is your dominion, the waking races fall asleep forever, and that is where you have the ultimate power.\nComplete Crisis espionage mission with every other empire\n"
 
+ operation_dreamwalking: "Dreamwalking"
+ operation_dreamwalking_desc: "Our operatives will find targets susceptible to having their dreams invaded, and create link between them and our Everdream."
+ operation_dreamwalking_on_success: "Gain progress towards our Crisis Objective."
+ dream_operation.1000.name: "Dreams Infiltrated"
+ dream_operation.1000.desc: "We have successfully "
+
+ job_dreamer: "Dreamer"
+ job_dreamer_plural: "Dreamers"
+ job_dreamer_desc: "The highest honour in our society is to be chosen as a Dreamer. To live out your live in the Everdream, shaping our people's future."
+ job_dreamer_effect_desc: ""[dreamer.GetIcon] [dreamer.GetNamePlural] generate $r_unity$ and $r_dream_motes$""
+ mod_job_dreamer_add: "Dreamer Jobs"
+
+ zone_dreaming: "Dreamers Demesne"
+ zone_dreaming_desc: "A place where our Dreamers can rest in luxury."
+
+ example_title: "Title"
+ example_desc: "Description belongs here"

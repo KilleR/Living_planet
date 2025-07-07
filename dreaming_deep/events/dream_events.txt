@@ -1,76 +1,26 @@
 namespace = dream
 
 # On becoming a Crisis Empire (Crisis Level 1)
-country_event = {
-	id = crisis.4140
-	title = "crisis.4140.name"
-	desc = {
-		trigger = { NOT = { has_ethic = ethic_gestalt_consciousness } }
-		text = crisis.4140.desc
-	}
-	desc = {
-		trigger = { is_machine_empire = yes }
-		text = crisis.4140.mach.desc
-	}
-	desc = {
-		trigger = { is_hive_empire = yes }
-		text = crisis.4140.hive.desc
-	}
-	picture = GFX_evt_fleet_from_surface
+country_event = { # Taking the AP - Start level 1
+	id = dream.001
+	title = "dream.001.name"
+	desc = dream.001.desc
+	picture = GFX_evt_surreal_visions
 	show_sound = event_death_cult
-	event_chain = become_the_crisis_chain
-
 	is_triggered_only = yes
-
-	immediate = {
-		begin_event_chain = {
-			event_chain = become_the_crisis_chain
-			target = root
-		}
-	}
+	event_chain = dreaming_chain
 
 	option = {
-		name = crisis.4140.a
-		tooltip = {
-			begin_event_chain = {
-				event_chain = become_the_crisis_chain
-				target = root
-			}
+		name = dream.001.a
+		begin_event_chain = {
+			event_chain = dreaming_chain
+			target = root
 		}
 		add_event_chain_counter = {
-			event_chain = "become_the_crisis_chain"
-			counter = "crisis_level_reached"
+			event_chain = "dreaming_chain"
+			counter = "dreaming_level_reached"
 			amount = 1
 		}
-		if = {
-			limit = {
-				NOT = {
-					has_ethic = ethic_gestalt_consciousness
-				}
-			}
-			enable_special_project = {
-				name = "CRISIS_SPECIAL_PROJECT_1"
-				owner = ROOT
-			}
-		}
-		else_if = {
-			limit = {
-				is_machine_empire = yes
-			}
-			enable_special_project = {
-				name = "CRISIS_SPECIAL_PROJECT_MACH_1"
-				owner = ROOT
-			}
-		}
-		else_if = {
-			limit = {
-				is_hive_empire = yes
-			}
-			enable_special_project = {
-				name = "CRISIS_SPECIAL_PROJECT_HIVE_1"
-				owner = ROOT
-			}
-		}
-		custom_tooltip = new_crisis_perks_tt
+		custom_tooltip = new_cosmogenesis_tech_tt
 	}
 }

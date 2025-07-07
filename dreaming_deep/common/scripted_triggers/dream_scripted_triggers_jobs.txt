@@ -1,0 +1,7 @@
+
+dreamer_is_in_dreaming_deep = {
+	exists = owner
+	owner = {
+		has_ascension_perk = ap_dreaming_deep
+	}
+}

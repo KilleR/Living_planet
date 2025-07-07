@@ -33,6 +33,10 @@ ap_dreaming_deep = {
 		hidden_effect = {
 			set_ai_personality = became_the_crisis
 			country_event = { id = timeline.69 } # Timeline Become the crisis
+			set_variable = {
+				which = dreamer_motes_produced
+				value = 0
+			}
 		}
 		activate_crisis_progression = dream_path
 	}
