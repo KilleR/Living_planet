@@ -1,0 +1,9 @@
+
+dreaming_deep = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_surreal_visions.dds"
+	icon_frame = 2
+	show_only_custom_tooltip = no
+	custom_tooltip = dreaming_deep_tt
+	job_dreamer_per_pop = 0.02
+	job_dreamer_add = 100
+}

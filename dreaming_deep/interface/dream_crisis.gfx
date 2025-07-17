@@ -12,7 +12,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_crisis_dreaming_level_3_btn"
-		texturefile = "gfx/interface/icons/crisis/Crisis_Lvl3_btn.dds"
+		texturefile = "gfx/interface/icons/crisis/Dream_Lvl3_btn.dds"
 		noOfFrames = 2
 	}
 

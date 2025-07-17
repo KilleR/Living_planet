@@ -43,10 +43,10 @@ operation_dreamwalking = {
 	resources = {
 		category = operations
 		cost = {
-			influence = 20
+			influence = 50
 		}
 		upkeep = {
-			energy = 4
+			energy = 10
 		}
 	}
 
@@ -68,6 +68,178 @@ operation_dreamwalking = {
 		difficulty = @diff_t0
 		icon = GFX_espionage_chapter_icon_security
 		event = dream_operation.1000
+	}
+
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = {
+			RANDOM_EVENTS = operation_random_events_low_stakes
+		}
+	}
+	on_create = {
+		target = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}
+
+operation_deep_sleep = {
+	target = none
+	categories = { op_cat_subterfuge }
+	picture = GFX_evt_spymaster
+	desc = {
+		text = operation_deep_sleep_desc
+	}
+	stages = 1
+
+	resources = {
+		category = operations
+		cost = {
+			influence = 25
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	spy_power_cost = 20
+	potential = {
+		this = {
+			owner = {
+				AND = {
+					has_ascension_perk = ap_dreaming_deep
+					has_crisis_level = crisis_dreaming_level_2
+				}
+			}
+		}
+	}
+	allow = {
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+	}
+	stage = {
+		difficulty = @diff_t2
+		icon = GFX_espionage_chapter_icon_target
+		event = dream_operation.1100
+	}
+
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = {
+			RANDOM_EVENTS = operation_random_events_low_stakes
+		}
+	}
+	on_create = {
+		target = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}
+
+
+operation_gate_weave = {
+	target = none
+	categories = { op_cat_subterfuge }
+	picture = GFX_evt_spymaster
+	desc = {
+		text = operation_gate_weave_desc
+	}
+	stages = 1
+
+	resources = {
+		category = operations
+		cost = {
+			influence = 50
+		}
+		upkeep = {
+			energy = 25
+		}
+	}
+
+	spy_power_cost = 30
+	potential = {
+		this = {
+			owner = {
+				AND = {
+					has_ascension_perk = ap_dreaming_deep
+					has_crisis_level = crisis_dreaming_level_3
+				}
+			}
+		}
+	}
+	allow = {
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+	}
+	stage = {
+		difficulty = @diff_t2
+		icon = GFX_espionage_chapter_icon_target
+		event = dream_operation.1200
+	}
+
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = {
+			RANDOM_EVENTS = operation_random_events_low_stakes
+		}
+	}
+	on_create = {
+		target = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}
+
+operation_tide_of_lethargy = {
+	target = none
+	categories = { op_cat_subterfuge }
+	picture = GFX_evt_spymaster
+	desc = {
+		text = operation_tide_of_lethargy_desc
+	}
+	stages = 1
+
+	resources = {
+		category = operations
+		cost = {
+			influence = 100
+		}
+		upkeep = {
+			energy = 50
+		}
+	}
+
+	spy_power_cost = 50
+	potential = {
+		this = {
+			owner = {
+				AND = {
+					has_ascension_perk = ap_dreaming_deep
+					has_crisis_level = crisis_dreaming_level_4
+				}
+			}
+		}
+	}
+	allow = {
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+	}
+	stage = {
+		difficulty = @diff_t2
+		icon = GFX_espionage_chapter_icon_target
+		event = dream_operation.1100
 	}
 
 	on_roll_failed = {

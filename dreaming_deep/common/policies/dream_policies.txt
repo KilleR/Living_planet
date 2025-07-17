@@ -1,0 +1,87 @@
+
+directed_dreaming = {
+	potential = {
+		has_crisis_level = crisis_dreaming_level_2
+	}
+
+	option = {
+		name = "directed_dreaming_abstract"
+
+		policy_flags = {}
+		modifier = {
+			planet_dreamers_unity_produces_add = 4
+		}
+	}
+
+	option = {
+		name = "directed_dreaming_tech"
+
+		policy_flags = {}
+		modifier = {
+			planet_dreamers_physics_research_produces_add = 1
+			planet_dreamers_society_research_produces_add = 1
+			planet_dreamers_engineering_research_produces_add = 1
+		}
+	}
+
+	option = {
+		name = "directed_dreaming_strategy"
+
+		policy_flags = { dreaming_strategy }
+		modifier = {
+			job_dreamer_naval_cap_add = 4
+		}
+	}
+
+	option = {
+		name = "directed_dreaming_stability"
+
+		policy_flags = { dreaming_strategy }
+		modifier = {
+			job_dreamer_stability_add = 2
+		}
+	}
+}
+
+mandatory_downtime = {
+	potential = {
+		has_crisis_level = crisis_dreaming_level_2
+	}
+
+	option = {
+		name = "mandatory_downtime_none"
+		policy_flags = {  }
+	}
+
+	option = {
+		name = "mandatory_downtime_10"
+		policy_flags = {  }
+		modifier = {
+			job_dreamer_per_pop = 0.1
+		}
+	}
+
+	option = {
+		name = "mandatory_downtime_25"
+		policy_flags = {  }
+		modifier = {
+			job_dreamer_per_pop = 0.25
+		}
+	}
+
+	option = {
+		name = "mandatory_downtime_50"
+		policy_flags = {  }
+		modifier = {
+			job_dreamer_per_pop = 0.5
+		}
+	}
+
+	option = {
+		name = "mandatory_downtime_all"
+		policy_flags = {  }
+		modifier = {
+			job_dreamer_per_pop = 1
+		}
+	}
+}

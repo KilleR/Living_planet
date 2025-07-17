@@ -19,3 +19,103 @@ espionage_operation_event = {
 
 	option = { name = EXCELLENT }
 }
+
+### Deep Dream
+# Resolution
+espionage_operation_event = {
+	id = dream_operation.1100
+	title = dream_operation.1100.name
+	desc = dream_operation.1100.desc
+	espionage_operation = yes
+	picture = GFX_evt_astral_rift_bleached_planet
+	show_sound = event_psionic
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			complete_crisis_objective = crisobj_infiltrate_dreams
+		}
+		target.owner = {
+			random_owned_planet = {
+				save_event_target_as = targetPlanet
+				limit = {
+					not = {
+						has_modifier = dreaming_deep
+					}
+				}
+				add_modifier = {
+					modifier = dreaming_deep
+				}
+			}
+		}
+	}
+
+
+
+	option = { name = EXCELLENT }
+}
+
+### Gate Weaving
+# Resolution
+espionage_operation_event = {
+	id = dream_operation.1200
+	title = dream_operation.1200.name
+	desc = dream_operation.1200.desc
+	espionage_operation = yes
+	picture = GFX_evt_astral_rift_bleached_planet_3
+	show_sound = event_psionic
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			complete_crisis_objective = crisobj_infiltrate_dreams
+		}
+		target.owner = {
+			save_event_target_as = targetEmpire
+			random_owned_planet = {
+				limit = {
+					not = {
+						has_modifier = dreaming_deep
+					}
+				}
+
+				# TODO: finish this event
+			}
+		}
+	}
+
+	option = { name = EXCELLENT }
+}
+
+### Tide of Lethargy
+# Resolution
+espionage_operation_event = {
+	id = dream_operation.1300
+	title = dream_operation.1300.name
+	desc = dream_operation.1300.desc
+	espionage_operation = yes
+	picture = GFX_evt_astral_rift_bleached_planet_2
+	show_sound = event_psionic
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			complete_crisis_objective = crisobj_infiltrate_dreams
+		}
+		target.owner = {
+			save_event_target_as = targetEmpire
+			every_owned_planet = {
+				limit = {
+					not = {
+						has_modifier = dreaming_deep
+					}
+				}
+				add_modifier = {
+					modifier = dreaming_deep
+				}
+			}
+		}
+	}
+
+	option = { name = EXCELLENT }
+}

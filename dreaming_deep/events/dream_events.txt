@@ -1,5 +1,24 @@
 namespace = dream
 
+# Debug for changing policy quickly
+country_event = {
+	id = dream.0001
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		this = {
+			last_changed_policy = directed_dreaming
+		}
+	}
+
+	immediate = {
+		this = {
+			reset_policy_cooldowns = yes
+		}
+	}
+}
+
 # On becoming a Crisis Empire (Crisis Level 1)
 country_event = { # Taking the AP - Start level 1
 	id = dream.001
@@ -22,5 +41,90 @@ country_event = { # Taking the AP - Start level 1
 			amount = 1
 		}
 		custom_tooltip = new_cosmogenesis_tech_tt
+	}
+}
+
+
+# Add Dreamer Leader Trait
+country_event = {
+	id = dream.030
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		AND = {
+			has_ascension_perk = ap_dreaming_deep
+			has_crisis_level = crisis_dreaming_level_2
+		}
+	}
+
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				NOR = {
+					has_trait = leader_trait_dreamweaver
+					has_leader_flag = renowned_leader
+					has_leader_flag = legendary_leader
+				}
+				is_gestalt_node = no
+			}
+			add_trait = {
+				trait = leader_trait_dreamweaver
+				show_message = no
+			}
+		}
+		every_pool_leader = {
+			limit = {
+				NOT = { has_trait = leader_trait_dreamweaver }
+			}
+			add_trait = {
+				trait = leader_trait_dreamweaver
+				show_message = no
+			}
+		}
+		create_message = {
+			type = MESSAGE_ALL_GAINED_TRAIT
+			localization = MESSAGE_ALL_GAINED_TRAIT_DESC
+			days = @toast_message_days
+			variable = {
+				type = key
+				value = leader_trait_dreamweaver
+				localization = TRAIT
+			}
+			variable = {
+				key = TRAIT_KEY
+				value = leader_trait_dreamweaver
+			}
+			variable = {
+				key = "border"
+				value = "GFX_invisible"
+			}
+		}
+	}
+}
+
+# New Leaders Get Virtual Trait
+country_event = {
+	id = dream.031
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		OR = {
+			has_ascension_perk = ap_dreaming_deep
+			has_crisis_level = crisis_dreaming_level_3
+		}
+		from = {
+			NOT = { leader_class = envoy }
+		}
+	}
+
+	immediate = {
+		from = {
+			add_trait = {
+				trait = leader_trait_dreamweaver
+				show_message = no
+			}
+		}
 	}
 }

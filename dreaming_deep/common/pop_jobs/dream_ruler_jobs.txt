@@ -18,19 +18,71 @@ dreamer = {
 		is_sapient = yes
 	}
 
-	possible_precalc = can_fill_ruler_job
-	possible = {
-		complex_specialist_job_check_trigger = yes
-	}
+	# possible_precalc = can_fill_ruler_job
+	# possible = {
+	# 	complex_specialist_job_check_trigger = yes
+	# }
 
 	resources = {
-		category = planet_jobs_ruler
+		category = planet_dreamers
 		# PRODUCES
 		produces = {
 			unity = 4
 			dream_motes = 1
 		}
 	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				NOT = { has_ascension_perk = ap_dreaming_deep }
+			}
+		}
+
+		pop_bonus_workforce_mult = -0.1
+		pop_dreamer_bonus_workforce_mult = 0.1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				has_ascension_perk = ap_dreaming_deep
+				has_crisis_level = crisis_dreaming_level_3
+			}
+		}
+
+		pop_bonus_workforce_mult = 0.05
+		pop_dreamer_bonus_workforce_mult = -0.05
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				has_ascension_perk = ap_dreaming_deep
+				has_crisis_level = crisis_dreaming_level_4
+			}
+		}
+
+		pop_workforce_add = 10
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = dreaming_strategy
+			}
+		}
+		country_naval_cap_add = 1
+		mult = planet.modifier:job_dreamer_naval_cap_add
+	}
+
+	triggered_planet_modifier = {
+		modifier = {
+			planet_stability_add = 1
+		}
+		mult = planet.modifier:job_dreamer_stability_add
+	}
+
 
 	weight = {
 		weight = @ruler_job_weight

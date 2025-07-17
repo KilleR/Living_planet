@@ -61,13 +61,17 @@ event = {
                 }
                 change_variable = {
                     which = alien_dreamer_motes_produced
-                    value = from.dreamer_motes_produced
+                    value = prev.dreamer_motes_produced
                 }
             }
         }
         every_playable_country = {
             limit = {
                 has_ascension_perk = ap_dreaming_deep
+            }
+            divide_variable = {
+                which = alien_dreamer_motes_produced
+                value = 2
             }
             complete_crisis_objective = crisobj_dreamers
             complete_crisis_objective = crisobj_dreamers_alien
