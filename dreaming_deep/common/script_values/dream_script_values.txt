@@ -1,3 +1,6 @@
+# dream_script_values.txt
+# Contributors: Lord Roscoford
+
 count_dreamers = {
 	complex_trigger_modifier = {
 		trigger_scope = owner
@@ -9,3 +12,4 @@ count_dreamers = {
 		mult = 0.01
 	}
 }
+

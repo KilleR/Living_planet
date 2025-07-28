@@ -1,3 +1,6 @@
+# dream_chain.txt
+# Contributors: Lord Roscoford
+
 
 
 dreaming_chain = {
@@ -7,3 +10,4 @@ dreaming_chain = {
 		dreaming_level_reached = { max = 5 }
 	}
 }
+

@@ -1,3 +1,6 @@
+# dream_on_actions.txt
+# Contributors: Lord Roscoford
+
 
 on_monthly_pulse= {
 	events = {
@@ -31,3 +34,4 @@ on_leader_spawned = {
 		dream.031
 	}
 }
+

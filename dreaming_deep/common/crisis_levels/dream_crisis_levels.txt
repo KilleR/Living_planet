@@ -1,3 +1,6 @@
+# dream_crisis_levels.txt
+# Contributors: Lord Roscoford
+
 crisis_dreaming_level_1 = {
 	# REQUIREMENTS
 	allow = {
@@ -161,4 +164,5 @@ crisis_dreaming_level_5 = {
 		}
 	}
 }
+
 

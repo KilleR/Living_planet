@@ -1,3 +1,6 @@
+# dream_scripted_modifiers.txt
+# Contributors: Lord Roscoford
+
 
 job_dreamer_unity_add = {
 	icon = mod_resource_unity_add
@@ -16,3 +19,4 @@ job_dreamer_stability_add = {
 	good = yes
 	category = planet
 }
+

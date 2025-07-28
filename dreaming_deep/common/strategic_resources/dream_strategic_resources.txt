@@ -1,3 +1,6 @@
+# dream_strategic_resources.txt
+# Contributors: Lord Roscoford
+
 ################
 ###	Crisis Resources ###
 ################
@@ -10,3 +13,4 @@ dream_motes = {
 		weight = 1
 	}
 }
+

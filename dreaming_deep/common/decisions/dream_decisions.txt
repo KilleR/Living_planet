@@ -1,3 +1,6 @@
+# dream_decisions.txt
+# Contributors: Lord Roscoford
+
 
 decision_dreamworld_add = {
 	owned_planets_only = yes
@@ -24,3 +27,4 @@ decision_dreamworld_add = {
 		}
 	}
 }
+

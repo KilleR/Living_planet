@@ -1,3 +1,6 @@
+# dream_scripted_triggers_jobs.txt
+# Contributors: Lord Roscoford
+
 
 dreamer_is_in_dreaming_deep = {
 	exists = owner
@@ -5,3 +8,4 @@ dreamer_is_in_dreaming_deep = {
 		has_ascension_perk = ap_dreaming_deep
 	}
 }
+

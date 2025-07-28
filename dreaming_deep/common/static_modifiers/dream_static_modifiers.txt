@@ -1,3 +1,6 @@
+# dream_static_modifiers.txt
+# Contributors: Lord Roscoford
+
 
 dreaming_deep = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_surreal_visions.dds"
@@ -16,3 +19,4 @@ dreamworld = {
 	job_dreamer_per_pop = 1
 	pop_happiness = 30
 }
+

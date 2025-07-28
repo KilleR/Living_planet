@@ -1,3 +1,6 @@
+# dream_crisis_paths.txt
+# Contributors: Lord Roscoford
+
 dream_path = {
 	crisis_currency = "dream_motes"
 
@@ -16,3 +19,4 @@ dream_path = {
 		crisobj_espionage
 	}
 }
+

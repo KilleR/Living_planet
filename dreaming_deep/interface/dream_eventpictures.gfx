@@ -1,3 +1,6 @@
+# dream_eventpictures.gfx
+# Contributors: Lord Roscoford
+
 spriteTypes = {
 	spriteType = {
 		name = "GFX_evt_everdream"
@@ -6,3 +9,4 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 }
+

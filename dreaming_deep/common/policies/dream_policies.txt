@@ -1,3 +1,6 @@
+# dream_policies.txt
+# Contributors: Lord Roscoford
+
 mandatory_downtime = {
 	potential = {
 		has_crisis_level = crisis_dreaming_level_2
@@ -40,3 +43,4 @@ mandatory_downtime = {
 		}
 	}
 }
+

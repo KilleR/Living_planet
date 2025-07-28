@@ -1,3 +1,6 @@
+# dream_projects.txt
+# Contributors: Lord Roscoford
+
 
 special_project = {
 	key = "DREAM_CRISIS_SPECIAL_PROJECT_1"
@@ -88,3 +91,4 @@ special_project = {
 	on_fail = {
 	}
 }
+

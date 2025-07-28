@@ -1,3 +1,6 @@
+# dream_ascension_perks.txt
+# Contributors: Lord Roscoford
+
 
 ap_dreaming_deep = {
 	potential = {
@@ -50,3 +53,4 @@ ap_dreaming_deep = {
 		factor = 0 # AI shouldn't take this perk, it will be extremely unfun
 	}
 }
+

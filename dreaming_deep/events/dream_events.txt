@@ -1,3 +1,6 @@
+# dream_events.txt
+# Contributors: Lord Roscoford
+
 namespace = dream
 
 # event = {
@@ -133,3 +136,4 @@ country_event = {
 		}
 	}
 }
+

@@ -1,3 +1,6 @@
+# dream_edicts.txt
+# Contributors: Lord Roscoford
+
 
 
 directed_dreaming_abstract = {
@@ -121,3 +124,4 @@ directed_dreaming_stability = {
 		weight = 0
 	}
 }
+

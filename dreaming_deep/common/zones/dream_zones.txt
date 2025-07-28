@@ -1,3 +1,6 @@
+# dream_zones.txt
+# Contributors: Lord Roscoford
+
 
 zone_dreaming = {
 	icon = GFX_colony_type_urban
@@ -58,3 +61,4 @@ zone_dreaming = {
 	ai_priority = 2
 	ai_weight_coefficient = 0.5
 }
+

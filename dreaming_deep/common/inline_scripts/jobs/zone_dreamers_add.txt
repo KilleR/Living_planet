@@ -1,3 +1,6 @@
+# zone_dreamers_add.txt
+# Contributors: Lord Roscoford
+
 ### REGULAR EMPIRES
 
 # Mixed Jobs
@@ -237,3 +240,4 @@ triggered_district_planet_modifier = {
 	job_dreamer_add = $AMOUNT$
 	mult = 2.5
 }
+

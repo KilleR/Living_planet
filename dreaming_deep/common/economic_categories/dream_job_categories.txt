@@ -1,3 +1,6 @@
+# dream_job_categories.txt
+# Contributors: Lord Roscoford
+
 
 planet_dreamers = {
 	parent = planet_jobs_ruler
@@ -6,3 +9,4 @@ planet_dreamers = {
 	}
 	modifier_category = pop_job
 }
+

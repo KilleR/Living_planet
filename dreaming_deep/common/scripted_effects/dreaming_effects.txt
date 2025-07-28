@@ -1,3 +1,6 @@
+# dreaming_effects.txt
+# Contributors: Lord Roscoford
+
 
 add_dreaming_level_1_perks = {
 
@@ -26,4 +29,5 @@ add_dreaming_level_4_perks = {
 add_dreaming_level_5_perks = {
 
 }
+
 

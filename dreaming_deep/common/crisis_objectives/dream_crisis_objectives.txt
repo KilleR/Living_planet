@@ -1,3 +1,6 @@
+# dream_crisis_objectives.txt
+# Contributors: Lord Roscoford
+
 
 crisobj_dreamers = {
     #Fire on Monthly?
@@ -36,3 +39,4 @@ crisobj_espionage = {
         min = 0                                #just in case
     }
 }
+

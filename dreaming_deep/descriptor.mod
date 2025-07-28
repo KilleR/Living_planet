@@ -1,3 +1,6 @@
+# descriptor.mod
+# Contributors: Lord Roscoford
+
 version="0.1.7"
 tags={
 	"Crisis"

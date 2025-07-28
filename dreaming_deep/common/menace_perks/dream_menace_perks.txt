@@ -1,3 +1,6 @@
+# dream_menace_perks.txt
+# Contributors: Lord Roscoford
+
 ###Dreaming Deep
 #Level 1
 #To Sleep, Perchance to Dream
@@ -112,3 +115,4 @@ menp_dream_objectives_5 = {
         custom_tooltip = menp_dream_objectives_5_tooltip
     }
 }
+

@@ -1,3 +1,6 @@
+# dream_situations.txt
+# Contributors: Lord Roscoford
+
 situation_dreaming_deep = {
 	category = positive
 	picture = GFX_evt_everdream
@@ -35,3 +38,4 @@ situation_dreaming_deep = {
 		}
 	}
 }
+

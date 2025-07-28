@@ -1,3 +1,6 @@
+# dream_ruler_jobs.txt
+# Contributors: Lord Roscoford
+
 
 dreamer = {
 	category = ruler
@@ -100,3 +103,4 @@ dreamer = {
 		}
 	}
 }
+

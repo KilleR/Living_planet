@@ -1,3 +1,6 @@
+# dream_crisis.gfx
+# Contributors: Lord Roscoford
+
 spriteTypes = {
 	spriteType = {
 		name = "GFX_crisis_dreaming_level_1_btn"
@@ -61,3 +64,4 @@ spriteTypes = {
 		textureFile = "gfx/interface/icons/resources/dream_motes.dds"
 	}
 }
+

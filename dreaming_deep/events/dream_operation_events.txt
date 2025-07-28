@@ -1,3 +1,6 @@
+# dream_operation_events.txt
+# Contributors: Lord Roscoford
+
 namespace = dream_operation
 
 ### Dreamwalking
@@ -176,3 +179,4 @@ espionage_operation_event = {
 
 	option = { name = EXCELLENT }
 }
+
