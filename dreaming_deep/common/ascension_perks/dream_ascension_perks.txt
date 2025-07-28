@@ -27,6 +27,10 @@ ap_dreaming_deep = {
 			fail_text = "must_not_be_emperor"
 			is_galactic_emperor = no
 		}
+		custom_tooltip = {
+			fail_text = "must_not_be_crisis"
+			has_country_flag = player_crisis_chosen
+		}
 	}
 
 	on_enabled = {
@@ -37,6 +41,7 @@ ap_dreaming_deep = {
 				which = dreamer_motes_produced
 				value = 0
 			}
+			set_country_flag = player_crisis_chosen
 		}
 		activate_crisis_progression = dream_path
 	}

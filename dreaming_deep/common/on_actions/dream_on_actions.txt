@@ -3,6 +3,10 @@ on_monthly_pulse= {
 	events = {
 		dream.101
 		dream.102
+		dream_operation.1301
+		dream.103
+		dream.400
+		dream.401
 	}
 }
 
@@ -19,7 +23,6 @@ on_operation_finished = {
 # This = Country
 on_policy_changed = {
 	events = {
-		dream.0001
 	}
 }
 

@@ -1,0 +1,11 @@
+count_dreamers = {
+	complex_trigger_modifier = {
+		trigger_scope = owner
+		trigger = num_assigned_jobs
+		parameters = {
+			job = dreamer
+		}
+		mode = add
+		mult = 0.01
+	}
+}

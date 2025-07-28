@@ -6,7 +6,7 @@ country_event = {
 	title = "dream.010.name"
 	desc = dream.010.desc
 
-	picture = GFX_dream_path_bg
+	picture = GFX_evt_everdream
 	show_sound = event_psionic
 	event_chain = dreaming_chain
 
@@ -27,7 +27,7 @@ country_event = {
 	title = "dream.011.name"
 	desc = dream.011.desc
 
-	picture = GFX_dream_path_bg
+	picture = GFX_evt_everdream
 	show_sound = event_psionic
 	event_chain = dreaming_chain
 
@@ -48,7 +48,7 @@ country_event = {
 	title = "dream.012.name"
 	desc = dream.012.desc
 
-	picture = GFX_dream_path_bg
+	picture = GFX_evt_everdream
 	show_sound = event_psionic
 	event_chain = dreaming_chain
 
@@ -65,10 +65,10 @@ country_event = {
 # Crisis Special Project 4 Completed - Crisis Level 5 Unlocked
 country_event = {
 	id = dream.013
-	title = "dream.013.name"
+	title = dream.013.name
 	desc = dream.013.desc
 
-	picture = GFX_dream_path_bg
+	picture = GFX_evt_everdream
 	show_sound = event_psionic
 	event_chain = dreaming_chain
 

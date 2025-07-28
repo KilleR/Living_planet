@@ -1,7 +1,8 @@
-version="0.1.0"
+version="0.1.7"
 tags={
 	"Crisis"
 }
 picture="thumbnail.png"
-name="Dreaming Deep"
+name="Crisis - Dreaming Deep"
 supported_version="v4.0.*"
+remote_file_id="3528271811"

@@ -2,9 +2,6 @@ crisis_dreaming_level_1 = {
 	# REQUIREMENTS
 	allow = {
 		custom_tooltip = {
-			success_text = crisis_level_2_req_clear_tooltip
-			fail_text = crisis_level_2_req_tooltip
-			has_country_flag = dreaming_crisis_special_project_1_complete
 		}
 	}
 	required_crisis_currency = 0
@@ -20,7 +17,20 @@ crisis_dreaming_level_1 = {
 		add_dreaming_level_1_perks = yes
 		hidden_effect = {
 			owner = {
+				begin_event_chain = {
+					event_chain = dreaming_chain
+					target = root
+				}
+				add_event_chain_counter = {
+					event_chain = "dreaming_chain"
+					counter = "dreaming_level_reached"
+					amount = 1
+				}
 				country_event = { id = dream.001 }
+				enable_special_project = {
+					name = "DREAM_CRISIS_SPECIAL_PROJECT_1"
+					owner = ROOT
+				}
 			}
 		}
 	}
@@ -32,7 +42,7 @@ crisis_dreaming_level_2 = {
 		custom_tooltip = {
 			success_text = crisis_level_2_req_clear_tooltip
 			fail_text = crisis_level_2_req_tooltip
-			has_country_flag = dreaming_crisis_special_project_2_complete
+			has_country_flag = dreaming_crisis_special_project_1_complete
 		}
 	}
 	required_crisis_currency = 1000
@@ -50,6 +60,10 @@ crisis_dreaming_level_2 = {
 		hidden_effect = {
 			owner = {
 				country_event = { id = dream.002 }
+				enable_special_project = {
+					name = "DREAM_CRISIS_SPECIAL_PROJECT_2"
+					owner = ROOT
+				}
 			}
 		}
 	}
@@ -61,7 +75,7 @@ crisis_dreaming_level_3 = {
 		custom_tooltip = {
 			success_text = crisis_level_3_req_clear_tooltip
 			fail_text = crisis_level_3_req_tooltip
-			has_country_flag = dreaming_crisis_special_project_3_complete
+			has_country_flag = dreaming_crisis_special_project_2_complete
 		}
 	}
 	required_crisis_currency = 4000
@@ -79,6 +93,10 @@ crisis_dreaming_level_3 = {
 		hidden_effect = {
 			owner = {
 				country_event = { id = dream.030 }
+				enable_special_project = {
+					name = "DREAM_CRISIS_SPECIAL_PROJECT_3"
+					owner = ROOT
+				}
 			}
 		}
 	}
@@ -90,7 +108,7 @@ crisis_dreaming_level_4 = {
 		custom_tooltip = {
 			success_text = crisis_level_4_req_clear_tooltip
 			fail_text = crisis_level_4_req_tooltip
-			has_country_flag = dreaming_crisis_special_project_4_complete
+			has_country_flag = dreaming_crisis_special_project_3_complete
 		}
 	}
 	required_crisis_currency = 8000
@@ -108,6 +126,10 @@ crisis_dreaming_level_4 = {
 		hidden_effect = {
 			owner = {
 				country_event = { id = dream.004 }
+				enable_special_project = {
+					name = "DREAM_CRISIS_SPECIAL_PROJECT_4"
+					owner = ROOT
+				}
 			}
 		}
 	}
@@ -119,7 +141,7 @@ crisis_dreaming_level_5 = {
 		custom_tooltip = {
 			success_text = crisis_level_5_req_clear_tooltip
 			fail_text = crisis_level_5_req_tooltip
-			has_country_flag = dreaming_crisis_special_project_5_complete
+			has_country_flag = dreaming_crisis_special_project_4_complete
 		}
 	}
 	required_crisis_currency = 16000

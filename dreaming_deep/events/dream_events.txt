@@ -1,48 +1,54 @@
 namespace = dream
 
+# event = {
+# 	id = dream.990
+# 	is_triggered_only = yes
+# 	hide_window = yes
+#
+# 	immediate = {
+# 		every_country = {
+# 			country_event = {
+# 				id = dream.999
+# 			}
+# 		}
+# 	}
+# }
+
 # Debug for changing policy quickly
-country_event = {
-	id = dream.0001
-	is_triggered_only = yes
-	hide_window = yes
-
-	trigger = {
-		this = {
-			last_changed_policy = directed_dreaming
-		}
-	}
-
-	immediate = {
-		this = {
-			reset_policy_cooldowns = yes
-		}
-	}
-}
-
-# On becoming a Crisis Empire (Crisis Level 1)
-country_event = { # Taking the AP - Start level 1
-	id = dream.001
-	title = "dream.001.name"
-	desc = dream.001.desc
-	picture = GFX_evt_surreal_visions
-	show_sound = event_death_cult
-	is_triggered_only = yes
-	event_chain = dreaming_chain
-
-	option = {
-		name = dream.001.a
-		begin_event_chain = {
-			event_chain = dreaming_chain
-			target = root
-		}
-		add_event_chain_counter = {
-			event_chain = "dreaming_chain"
-			counter = "dreaming_level_reached"
-			amount = 1
-		}
-		custom_tooltip = new_cosmogenesis_tech_tt
-	}
-}
+# country_event = {
+# 	id = dream.999
+# 	is_triggered_only = yes
+# 	hide_window = no
+# 	title = example_title
+# 	desc = example_desc
+#
+# 	trigger = {
+# 	}
+#
+# 	immediate = {
+# 		random_situation = {
+# 			limit = {
+# 				# is_situation_type = situation_dreaming_deep
+# 			}
+#
+# 			set_variable = {
+# 				which = customInfo
+# 				value = trigger:situation_progress
+# 			}
+# 			multiply_variable = {
+# 				which = customInfo
+# 				value = -1
+# 			}
+# 			add_situation_progress = customInfo
+# 			save_event_target_as = situationTarget
+# 			custom_tooltip = example_custom
+# 		}
+# 	}
+#
+# 	option = {
+# 		name = "example_custom"
+# 	}
+# }
 
 
 # Add Dreamer Leader Trait
@@ -103,7 +109,6 @@ country_event = {
 	}
 }
 
-# New Leaders Get Virtual Trait
 country_event = {
 	id = dream.031
 	is_triggered_only = yes

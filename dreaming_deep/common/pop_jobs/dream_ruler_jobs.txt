@@ -69,7 +69,7 @@ dreamer = {
 	triggered_country_modifier = {
 		potential = {
 			owner = {
-				has_policy_flag = dreaming_strategy
+				has_edict = directed_dreaming_strategy
 			}
 		}
 		country_naval_cap_add = 1
@@ -85,16 +85,7 @@ dreamer = {
 
 
 	weight = {
-		weight = @ruler_job_weight
-		modifier = {
-			factor = 0.1
-			can_take_servant_job = yes
-		}
-		modifier = {
-			factor = 0.1
-			is_enslaved = yes
-			has_slavery_type = { type = slavery_indentured }
-		}
+		weight = 10000
 	}
 
 	inline_script = "jobs/automodding_priority_unity"

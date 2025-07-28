@@ -7,3 +7,11 @@ pm_dreaming_deep = {
 
 	modifier = "dreaming_deep"
 }
+
+pm_dreamworld = {
+	spawn_chance = {
+		#None - from planetary decision
+	}
+
+	modifier = "dreamworld"
+}

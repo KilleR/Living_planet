@@ -4,8 +4,5 @@ planet_dreamers = {
 	generate_add_modifiers = {
 		produces
 	}
-	generate_mult_modifiers = {
-		upkeep
-	}
 	modifier_category = pop_job
 }

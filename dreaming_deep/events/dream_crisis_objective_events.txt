@@ -79,6 +79,187 @@ event = {
     }
 }
 
+event = {
+    id = dream.103
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        any_playable_country = {
+            any_situation = {
+                is_situation_type = situation_dreaming_deep
+            }
+        }
+    }
+
+    immediate = {
+        every_playable_country = {
+            IF = {
+                limit = {
+                    NOT = { is_variable_set = dreamerStrength }
+                }
+
+                set_variable = {
+                    which = dreamerStrength
+                    value = 1
+                }
+            }
+
+            change_variable = {
+                which = dreamerStrength
+                value = 0.1
+            }
+
+
+            every_owned_planet = {
+                limit = {
+                    has_modifier = dreaming_deep
+                }
+                add_modifier = {
+                    modifier = dreaming_deep
+                    mult = owner.dreamerStrength
+                }
+            }
+        }
+    }
+}
+
+# On becoming a Crisis Empire (Crisis Level 1)
+country_event = { # Taking the AP - Start level 1
+    id = dream.001
+    hide_window = no
+    is_triggered_only = yes
+    title = dream.001.name
+    desc = dream.001.desc
+    picture = GFX_evt_everdream
+    show_sound = event_psionic
+
+    immediate = {  }
+
+    option = {
+        name = dream.001.a
+    }
+}
+
+country_event = {
+    id = dream.002
+    hide_window = no
+    is_triggered_only = yes
+    title = dream.002.name
+    desc = dream.002.desc
+    picture = GFX_evt_everdream
+    show_sound = event_psionic
+
+
+    trigger = {
+        any_playable_country = {
+            has_ascension_perk = ap_dreaming_deep
+        }
+    }
+
+    immediate = {  }
+
+    option = {
+        name = dream.002.a
+    }
+}
+
+country_event = {
+    id = dream.003
+    hide_window = no
+    is_triggered_only = yes
+    title = dream.003.name
+    desc = dream.003.desc
+    picture = GFX_evt_everdream
+    show_sound = event_psionic
+
+
+    trigger = {
+        any_playable_country = {
+            has_ascension_perk = ap_dreaming_deep
+        }
+    }
+
+    immediate = {  }
+
+    option = {
+        name = dream.003.a
+    }
+}
+
+country_event = {
+    id = dream.004
+    hide_window = no
+    is_triggered_only = yes
+    title = dream.004.name
+    desc = dream.004.desc
+    picture = GFX_evt_everdream
+    show_sound = event_psionic
+
+
+    trigger = {
+        any_playable_country = {
+            has_ascension_perk = ap_dreaming_deep
+        }
+    }
+
+    immediate = {  }
+
+    option = {
+        name = dream.004.a
+    }
+}
+
+country_event = {
+    id = dream.005
+    hide_window = no
+    is_triggered_only = yes
+    title = dream.005.name
+    desc = dream.005.desc
+    picture = GFX_evt_everdream
+    show_sound = event_psionic
+
+
+    trigger = {
+        any_playable_country = {
+            has_ascension_perk = ap_dreaming_deep
+        }
+    }
+
+    immediate = {  }
+
+    option = {
+        name = dream.005.a
+    }
+}
+
+country_event = {
+    id = dream.006
+    hide_window = no
+    is_triggered_only = yes
+    title = dream.006.name
+    desc = dream.006.desc
+    picture = GFX_evt_everdream
+    show_sound = event_psionic
+
+
+    trigger = {
+        any_playable_country = {
+            has_ascension_perk = ap_dreaming_deep
+        }
+    }
+
+    immediate = {  }
+
+    option = {
+        name = dream.006.a
+    }
+
+    after = {
+        win = yes
+    }
+}
+
 espionage_operation_event = {
     id = dream.201
     hide_window = yes

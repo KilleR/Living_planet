@@ -6,12 +6,47 @@
 
  CRISIS_TAB_DISABLED:1 "Only available with $TRAD|Y$, §Y$ap_cosmogenesis$§!, §Y$ap_behemoths$§!, or §Y$ap_dreaming_deep$§! Ascension Perk"
 
+ ECONOMICS_SCALED_RESOURCES_DREAMERS_STRING: "    $job_dreamer_plural_with_icon$: $STRING|Y$"
+
+ DREAM_CRISIS_SPECIAL_PROJECT_1: "The Everdream"
+ DREAM_CRISIS_SPECIAL_PROJECT_2: "Forks in the Dream Roads"
+ DREAM_CRISIS_SPECIAL_PROJECT_3: "Contact"
+ DREAM_CRISIS_SPECIAL_PROJECT_4: "A Great Calling"
+
+ must_not_be_crisis: "Cannot already be a Crisis empire."
+
  dream.001.name: "Dreaming Deep"
- dream.001.desc: "The waking world confines us.\n\nOur dreams allow us to explore and create realities in a way no waking race can."
+ dream.001.desc: "The waking world confines us.\n\nIn our dreams there are branching paths for us to explore and create new realities in a way no waking race can.\n\nSomething about this dreamscape is almost real, nearly tangible\nWe must explore to find the true meaning here, and reach our potential."
  dream.001.a: "Something calls to us."
 
- dream.010.name: "The Great Dream"
- dream.010.desc: "With the dawn of the idea that we can share our dreams, we realise that we can manage so much more.\nA Great Dream, which some have Started to call the '§BEverdream§!' which we takes form based on the collective dreams of all.\nWho knows yet where this will lead?"
+ dream.002.name: "The Everdream Forms!"
+ dream.002.desc: "The greatest project in the history of our people has borne fruit!\n\nOur §YDreamers§! have walked the pathways in their dreams and now it is stable. A singular dream which all §YDreamers§! dream together.\nThey are calling it §BThe Everdream!§!\n\nNow all §YDreamers§! can work together to shape this new reality, and draw in new races to experience it with us.\n\n\n§2Something§! deep within the §BEverdream§! calls to our §YDreamers§!...\n\n    §2\"You will find Me within your own creation.\"§!\n        §2\"Find Me...\"§!"
+ dream.002.a: "We have begun."
+
+ dream.003.name: "Forks in the dream roads."
+ dream.003.desc: "Within the §BEverdream§! there are twisting pathways which our §YDreamers§! walk, both shaping and shaped by them.\nThere are gateways which only the strongest of us, the most dedicated, can  cross.\nBut when they do, whole new universes open up to us all.\n\nWe are growing stronger, and our mastery of both the §BEverdream§! and the waking world grow in leaps and bounds.\nYet §2something§! still waits for us. Beyond the Gates, deeper into the unfolding §BEverdream§!!\n\nThis realm is perfection, and with the aid of our §YDreamers§! we barely need to spend time in the waking world any longer.\n\nA §2great force§! calls to us.\nWe must explore all the dreams of the waking to know ...\n\nWe must §2know§!..."
+ dream.003.a: "More. We must have more!"
+
+ dream.004.name: "Contact!"
+ dream.004.desc: "§2A Being is in our dreams.\nOur new Mentor!§!\n\nIt speaks to us of eternity. Of an §BEverdream§! where all exist, but we have unrivalled power!\n\nWe must forge links with all the dreams of the waking species!\nDrag them into the §BEverdream§!.\nOur operatives have already begun the first steps, and with the aid of our §2Mentor§! we will be able to accomplish this great task faster.\n\n\nTo make this §BEverdream§! reality, we must forge a link with every waking species."
+ dream.004.a: "The chain is forged."
+
+ dream.005.name: "A Great Calling!"
+ dream.005.desc: "We have explored, and with the guidance of our §2Mentor§! we are ready!\n\nAll the pathways of the §BEverdream§! have been opened to us thanks to the dedication of our §YDreamers§!\nWe have linked with alien minds, and all who dream will join us in the §BEverdream§!, our creation, under our control!\n\nTheir reality will be ours to shape.\nThrough their §YDreamers§!, planted by our Operatives, they will all fall!\n\nThey will know it is us.\n\nThey cannot stop it now.\n\n\nThrough every dream an irresistable call sounds:\n\n§2    \"COME TO US\"§!\n§2      \"JOIN WITH US\"§!\n§2        \"EVERYBODY JOINS US IN THE END\"§!"
+ dream.005.a: "The Waking will Dream, FOREVER."
+
+ dream.006.name: "§2VICTORY!§!"
+ dream.006.desc: "The galaxy is finally resting peacefully.\nThe §BEverdream§! now houses the whole breadth of the minds of the galaxy.\n\nUnder the guidance of our §2Mentor§! we shape it to our every whim, our every desire.\nIt is perfection!"
+ dream.006.a: "The §BEverdream§! is all that is."
+
+ dream.010.name: "A Great Dream"
+ dream.010.desc: "All over our empire, in the course of just a day, people have started reporting anomalies in relation to shared dreams. Alone, and even with the coincidence that our leaders recently had strange dream experiences, the sudden influx of reports would be odd. Once we considered that this percentage of the population were simply the ones that thought to report their experiences though...\n\nThrough various methods, we surveyed our population. The results were interesting, and frightening.\n\nThe results seem to imply that everyone. every. single. person. In our empire experienced a 'shared dream'. Due to the fickle nature of dreams though, it seems that any concrete memories of this dream, the everdream, have been lost.\n\nWe should begin to test the implication on the nature of dreams that this experience implies. ultimately, our goal would be to remember this dream. Not only because of the benefits such information could give our empire, but because we just have to...\n\nwe need to remember our dream."
+ dream.011.name: "The Great Dream"
+ dream.011.desc: "With the dawn of the idea that we can share our dreams, we realise that we can manage so much more.\nA Great Dream, which some have Started to call the '§BEverdream§!' which we takes form based on the collective dreams of all.\nWho knows yet where this will lead?"
+ dream.012.name: "Contact"
+ dream.012.desc: "We have discovered §2something§! within the §BEverdream§!.\nIt calls to us with promises of unparallelled control over Dreams - both ours and others'!"
+ dream.013.name: "§BEverdream§!"
+ dream.013.desc: "Our plans are laid, the paths are travelled.\nWe will awaken the true power of the §BEverdream§! with the will of our §2Mentor§!\n\nThe waking races will know it is us who fuels this endeavor, and they will make war on us, but it is too late.\nThey will all fall to our reality\n\n----\n\n§RThe galaxy will know us as a Crisis empire.\nThis will trigger the Crisis War!§!"
 
  dreaming_chain_title: "Dreaming Deep"
  dreaming_chain_desc: "The waking world confines us.\n\nOur dreams allow us to explore and create realities in a way no waking race can."
@@ -75,8 +110,8 @@
  menp_dream_sleepers_3: "Dreams power the Waking"
  menp_dream_sleepers_3_tooltip: "Pops working as §Y$job_dreamer_plural_with_icon$§! increase the job efficiency of all other jobs."
  menp_dream_sleepers_3_desc: "-"
- menp_dream_espionage_3: "Mutual Dreaming III: Dreamwalking"
- menp_dream_espionage_3_tooltip: "Unlock Espionage action: Dreamwalking\nLure pops to our empire"
+ menp_dream_espionage_3: "Mutual Dreaming III: Gate Weaving"
+ menp_dream_espionage_3_tooltip: "Unlock Espionage action: Gate Weaving\nLure pops to our empire"
  menp_dream_espionage_3_desc: "-"
  menp_dream_objectives_3: "Contact"
  menp_dream_objectives_3_tooltip: "Empire Situation: unlock the next stage of Dreaming"
@@ -85,7 +120,7 @@
  menp_dream_trait_tooltip: "All owned pops gain the §Y$[trait_dreamweaver]$§! trait."
  menp_dream_trait_desc: "The Waking must serve the Dreamers"
  menp_dream_colony: "Living in a Dreamworld"
- menp_dream_colony_tooltip: "Ability to designage a colony as a Dreamworld\nOnly Dreamer jobs will appear\nDreamers generate extra science."
+ menp_dream_colony_tooltip: "Ability to designage a colony as a Dreamworld\nEvery pop will generate a Dreamer job for themselves\nDreamers generate extra science."
  menp_dream_colony_desc: "-"
  menp_dream_sleepers_4: "Turning the Tide"
  menp_dream_sleepers_4_tooltip: "Dreamers increrase the workforce generation of all other pops"
@@ -119,6 +154,8 @@
  ap_dreaming_deep: "Dreaming Deep"
  ap_dreaming_deep_desc: "The galaxy is your dominion, the waking races fall asleep forever, and that is where you have the ultimate power.\nComplete Crisis espionage mission with every other empire\n"
 
+ operation_already_lethargic: "$TRIGGER_FAIL$ §RThe target is already under the effects of a Tide of Lethargy - any more effort would be wasted."
+
  operation_dreamwalking: "Dreamwalking"
  operation_dreamwalking_desc: "Our operatives will find targets susceptible to having their dreams invaded, and create link between them and our Everdream."
  operation_dreamwalking_on_success: "$IF_SUCCESSFUL|E$\nGain progress towards our Crisis Objective."
@@ -130,14 +167,12 @@
  operation_deep_sleep_on_success: "$IF_SUCCESSFUL|E$\n$pop_group_unit$ Pops will become $job_dreamer_plural_with_icon$ on a random planet in the target empire.\nDreamers in waking empires will reduce job efficiency for other jobs on the planet."
  dream_operation.1100.name: "Sleeping Deeply"
  dream_operation.1100.desc: "We have pulled the minds of some of the aliens on §Y[targetPlanet.GetName]§! into the Everdream. From there they will drag their waking comrades into deeper sleep."
- dreaming_deep: "Dreaming Deeply"
- dreaming_deep_tt: "Our people sleep soundly.\nSome claim to be dreaming the same dream as others."
 
  operation_gate_weave: "Gate Weaving???"
  operation_gate_weave_desc: "Our operatives will find targets susceptible to having their dreams invaded, and create link between them and our Everdream."
  operation_gate_weave_on_success: "$IF_SUCCESSFUL|E$\nGain progress towards our Crisis Objective."
  dream_operation.1200.name: "Dreamers Acquired"
- dream_operation.1200.desc: "We have planted a lure in the minds of the enemy. They will do all they can to join us."
+ dream_operation.1200.desc: "We have planted a lure in the minds of the enemy.\nThey will do all they can to join us from their home planet of §Y[originPlanet.GetName]§!.\nWe expect them to join us on §Y[targetPlanet.GetName]§! shortly."
 
  operation_tide_of_lethargy: "Tide of Lethargy"
  operation_tide_of_lethargy_desc: "Using our advanced knowledge of the Everdream, our operatives will set up a network to bring some pops from every planet in the target empire into the Everdream."
@@ -145,6 +180,16 @@
  dream_operation.1300.name: "Waves of Sleep"
  dream_operation.1300.desc: "We have pulled the minds of some of the aliens on every §Y[targetEmpire.GetName]§! planet into the Everdream. From there they will drag their waking comrades into deeper sleep."
 
+ operation_dream_weaving: "Dream Weaving"
+ operation_dream_weaving_desc: "Slipping in through the pathways of the Everdream we will locate the leaders of a fleet, and send it on an extended misadventure."
+ operation_dream_weaving_on_success: "$IF_SUCCESSFUL|E$\nThe targetted fleet will go MIA.\nIt will return to its home planet instead of its previous orders."
+ dream_operation.1400.name: "Lost in the Everdream"
+ dream_operation.1400.desc: "We have successfully slipped a fragment of the Everdream into the minds of the leaders of §Y[targetFleet.GetName]§!. They will wander for a time amongst the pathways of the Everdream.\nLikely they will be picked up eventually and returned to their capitol."
+
+ dreaming_deep: "Dreaming Deeply"
+ dreaming_deep_tt: "Our people sleep soundly.\nSome claim to be dreaming the same dream as others."
+ dreamworld: "Dreamworld"
+ dreamworld_tt: "A paradise world designated for Dreamers only."
 
  planet_dreamers: "Dreamers"
  job_dreamer: "Dreamer"
@@ -160,14 +205,14 @@
 
  policy_directed_dreaming: "Directed Dreaming"
  policy_directed_dreaming_desc: "We can tell our dreamers what to focus on, which will allow them to produce useful results for our empire."
- directed_dreaming_abstract: "Abstract Dreams"
- directed_dreaming_abstract_desc: "Let our dreamers minds flow freely.\n"
- directed_dreaming_tech: "Philosophical Musings"
- directed_dreaming_tech_desc: "Direct our dreamers to dream up new possibilities for the advancement of our society.\n"
- directed_dreaming_strategy: "Strategic Thinking"
- directed_dreaming_strategy_desc: "Dreams of war will help us optimise our Navy.\n"
- directed_dreaming_stability: "Sweet Dreams"
- directed_dreaming_stability_desc: "Placid dreams make everyone feel safe.\n"
+ edict_directed_dreaming_abstract: "Directed Dreaming: Abstract Dreams"
+ edict_directed_dreaming_abstract_desc: "Let our dreamers minds flow freely.\n"
+ edict_directed_dreaming_tech: "Directed Dreaming: Philosophical Musings"
+ edict_directed_dreaming_tech_desc: "Direct our dreamers to dream up new possibilities for the advancement of our society.\n"
+ edict_directed_dreaming_strategy: "Directed Dreaming: Strategic Thinking"
+ edict_directed_dreaming_strategy_desc: "Dreams of war will help us optimise our Navy.\n"
+ edict_directed_dreaming_stability: "Directed Dreaming: Sweet Dreams"
+ edict_directed_dreaming_stability_desc: "Placid dreams make everyone feel safe.\n"
 
  policy_mandatory_downtime: "Mandatory Downtime"
  policy_mandatory_downtime_desc: "Mandating time for sleep among our populace will allow for more Dreamers."
@@ -182,6 +227,7 @@
  mandatory_downtime_all: "Everyone"
  mandatory_downtime_all_desc: "Everyone who can dream, must dedicate their life to dreaming."
 
+ mod_planet_dreamers_dream_motes_produces_add: "$r_dream_motes$ per $pop_group_unit$ $job_dreamer_plural$"
  mod_planet_dreamers_unity_produces_add: "$r_unity$ per $pop_group_unit$ $job_dreamer_plural$"
  mod_planet_dreamers_physics_research_produces_add: "$r_physics$ per $pop_group_unit$ $job_dreamer_plural$"
  mod_planet_dreamers_society_research_produces_add: "$r_society$ per $pop_group_unit$ $job_dreamer_plural$"
@@ -195,5 +241,14 @@
  leader_trait_dreamweaver:0 "Dreamweaver"
  leader_trait_dreamweaver_desc:0 "Leader from a race which blends dreams and reality. As a leader they can use the dreamscape of the Everdream to alter reality."
 
+ situation_dreaming_deep: "§2A Dreaming Galaxy§!"
+ situation_dreaming_deep_desc: "Galaxy-wide Dreamer percentage.\nWhen we reach 95% no-one will be able to stop us."
+ situation_dreaming_deep_type: "Dreaming Deep Endgame"
+ situation_dreaming_deep_monthly_change_tooltip: "This situation does not progress.\nIt adjusts to reflect the Dreamer population in the galaxy."
+ situation_dreaming_deep_complete: "When enough of the galaxy dreams, it will be the end for the galaxy!\n"
+ situation_dreaming_deep_active: "Dreamers are becoming stronger.\nThey call to their kin.\n\n§YEFFECT§!:\nPlanets with the $dreaming_deep$ modifier will increase in magnitude over time."
+ situation_dreaming_deep_approach_neutral: "Spread the Dream"
+
  example_title: "Title"
- example_desc: "Description belongs here"
+ example_desc: "Description belongs here."
+ example_custom: "Custom info: [customInfo] - [situationTarget.GetProgress]!"

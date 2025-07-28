@@ -120,6 +120,12 @@ operation_deep_sleep = {
 			is_running_espionage_operation = no
 			fail_text = operation_one_at_a_time
 		}
+		custom_tooltip = {
+			this.target = {
+				NOT = { has_country_flag = tide_of_lethargy }
+			}
+			fail_text = operation_already_lethargic
+		}
 	}
 	stage = {
 		difficulty = @diff_t2
@@ -235,11 +241,82 @@ operation_tide_of_lethargy = {
 			is_running_espionage_operation = no
 			fail_text = operation_one_at_a_time
 		}
+		custom_tooltip = {
+			this.target = {
+				NOT = { has_country_flag = tide_of_lethargy }
+			}
+			fail_text = operation_already_lethargic
+		}
 	}
 	stage = {
 		difficulty = @diff_t2
 		icon = GFX_espionage_chapter_icon_target
-		event = dream_operation.1100
+		event = dream_operation.1300
+	}
+
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = {
+			RANDOM_EVENTS = operation_random_events_low_stakes
+		}
+	}
+	on_create = {
+		target = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}
+
+operation_dream_weaving = {
+	target = fleet
+	categories = { op_cat_subterfuge }
+	picture = GFX_evt_spymaster
+	desc = {
+		text = operation_dream_weaving_desc
+	}
+	stages = 1
+
+	resources = {
+		category = operations
+		cost = {
+			influence = 100
+		}
+		upkeep = {
+			energy = 50
+		}
+	}
+
+	target_potential = {
+		OR = {
+			is_ship_class = shipclass_military
+			is_ship_class = shipclass_science_ship
+			is_ship_class = shipclass_transport
+		}
+	}
+
+	spy_power_cost = 50
+	potential = {
+		this = {
+			owner = {
+				AND = {
+					has_ascension_perk = ap_dreaming_deep
+					has_crisis_level = crisis_dreaming_level_5
+				}
+			}
+		}
+	}
+	allow = {
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+	}
+	stage = {
+		difficulty = @diff_t2
+		icon = GFX_espionage_chapter_icon_target
+		event = dream_operation.1400
 	}
 
 	on_roll_failed = {
