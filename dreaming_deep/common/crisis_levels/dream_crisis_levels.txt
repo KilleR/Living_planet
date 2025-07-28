@@ -158,6 +158,7 @@ crisis_dreaming_level_5 = {
 	on_unlock = {
 		add_dreaming_level_5_perks = yes
 		hidden_effect = {
+			declare_crisis_effect = yes
 			owner = {
 				country_event = { id = dream.005 }
 			}
