@@ -26,6 +26,9 @@ situation_dreaming_deep = {
 		icon = GFX_situation_approach_volatile_motes
 		icon_background = GFX_situation_approach_bg_green
 		active_tooltip = situation_dreaming_deep_active
+		on_select = {
+			custom_tooltip = situation_dreaming_deep_active
+		}
 	}
 
 

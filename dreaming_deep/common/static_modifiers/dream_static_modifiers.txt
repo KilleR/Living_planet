@@ -17,6 +17,9 @@ dreamworld = {
 	show_only_custom_tooltip = no
 	custom_tooltip = dreamworld_tt
 	job_dreamer_per_pop = 1
-	pop_happiness = 30
+	planet_dreamers_physics_research_produces_add = 2
+	planet_dreamers_society_research_produces_add = 2
+	planet_dreamers_engineering_research_produces_add = 2
+	pop_happiness = 3
 }
 
