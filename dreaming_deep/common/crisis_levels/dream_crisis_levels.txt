@@ -159,6 +159,19 @@ crisis_dreaming_level_5 = {
 		add_dreaming_level_5_perks = yes
 		hidden_effect = {
 			declare_crisis_effect = yes
+			every_playable_country = {
+				limit = {
+					is_galactic_community_member = no
+					NOT = {
+						is_same_value = owner
+						is_at_war_with = owner
+					}
+				}
+				join_war_on_side = {
+					war = event_target:crisis_war
+					side = event_target:community_war_leader
+				}
+			}
 			owner = {
 				country_event = { id = dream.005 }
 			}

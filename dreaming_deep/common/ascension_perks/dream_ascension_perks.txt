@@ -4,7 +4,12 @@
 
 ap_dreaming_deep = {
 	potential = {
-		has_nemesis = yes
+		OR = {
+			has_nemesis = yes
+			has_biogenesis_dlc = yes
+			has_machine_age_dlc = yes
+		}
+
 		NOR = {
 			has_ascension_perk = ap_become_the_crisis
 			has_ascension_perk = ap_cosmogenesis
@@ -32,7 +37,7 @@ ap_dreaming_deep = {
 		}
 		custom_tooltip = {
 			fail_text = "must_not_be_crisis"
-			has_country_flag = player_crisis_chosen
+			NOT = { has_country_flag = player_crisis_chosen}
 		}
 	}
 
