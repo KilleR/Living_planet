@@ -1,26 +1,49 @@
 trait_living_planet = {
 	cost = 0
-	sorting_priority = 20
-	
+	icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"
+
 	initial = no
 	randomized = no
-	species_possible_add = {
+	advanced_trait = no
+	sapient = yes
+	species_potential_add = {
 		always = no
 	}
 	species_possible_remove = {
 		always = no
 	}
-	species_potential_add = {
+	species_possible_merge_add = {
 		always = no
 	}
-	forced_happiness = yes
-	
+	# forced_happiness = yes
+	modifier = {
+
+	}
+
 	allowed_archetypes = { BIOLOGICAL LITHOID }
+	tags = { organic special}
+
 	ai_weight = {
 		weight = 0
 	}
 
 	custom_tooltip = trait_living_planet_custom_tooltip
+}
 
+trait_pc_living_planet_preference = {
 	icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"
+	species_potential_add = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = yes
+	}
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
+	sorting_priority = 30
+	ai_weight = {
+		weight = 0
+	}
+	modifier = {
+		pc_living_planet_habitability = 1.0
+	}
 }

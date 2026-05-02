@@ -2,9 +2,7 @@ namespace = lp_megastructure
 
 country_event = {
 	id = lp_megastructure.1
-	show_sound = event_super_explosion
-	picture = GFX_evt_supernova
-	location = from
+
 	hide_window = yes
 	
 	trigger = {

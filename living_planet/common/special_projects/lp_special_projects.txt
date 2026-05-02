@@ -2,6 +2,7 @@ special_project = {
 	key = "LP_EVO_SHIFT_GENERAL"
 	event_chain = lp_evo_shift_chain
 	picture = GFX_evt_gray_gooed_planet
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
 	tech_department = society_technology
 	cost = 10000
 	event_scope = planet_event

@@ -3,7 +3,10 @@ pc_living_planet = {
 	picture = pc_infested
 	entity_scale = @planet_standard_scale
 
-	atmosphere_color 		= rgb { 100 0 150 }
+	icon = GFX_planet_type_hive
+	icon_large = GFX_planet_type_hive_big
+
+	atmosphere_color 		= hsv { 0.8 1 1 }
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 15.0
 
@@ -14,11 +17,9 @@ pc_living_planet = {
 
 	modifier = {
 		planet_jobs_produces_mult = 0.10
-		planet_max_buildings_add = 12
 		job_spawning_drone_add = 1
 		job_spawning_drone_per_pop = 0.05
 		job_synapse_drone_per_pop = 0.05
-
 	}
 
 	spawn_odds = 0

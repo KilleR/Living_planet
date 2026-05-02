@@ -22,11 +22,13 @@ planet_event = {
 	
 	immediate = {
 		this = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					has_trait = trait_living_planet
 				}
-				kill_pop = yes
+				kill_pop_group = {
+					pop_group = this
+				}
 			}
 		}
 	}
@@ -46,8 +48,8 @@ planet_event = {
 	immediate = {
 		remove_modifier = living_planet_system_shift_crime
 		set_variable = { which = "lp_system_shift_crime_pops" value = 0 }
-		every_owned_pop = {
-			limit = { pop_has_trait = trait_living_planet }
+		every_owned_pop_group = {
+			limit = { pop_group_has_trait = trait_living_planet }
 			planet = { change_variable = { which = "lp_system_shift_crime_pops" value = 1 } }
 		}
 		if = {
@@ -73,7 +75,7 @@ pop_event = {
 	hide_window = yes
 	
 	trigger = {
-		Root = { pop_has_trait = trait_living_planet }
+		Root = { pop_group_has_trait = trait_living_planet }
 	}
 	
 	immediate = {

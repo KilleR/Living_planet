@@ -1,18 +1,18 @@
 
-can_colonize_with_species = {
-	if = {
-		root = { has_origin = origin_living_planet }
-		custom_tooltip = {
-			always = no
-		}
-	}
-}
-
-can_colonize_with_pop = {
-	if = {
-		root = { has_origin = origin_living_planet }
-		custom_tooltip = {
-			always = no
-		}
-	}
-}
+# can_colonize_with_species = {
+# 	if = {
+# 		root = { has_origin = origin_living_planet }
+# 		custom_tooltip = {
+# 			always = no
+# 		}
+# 	}
+# }
+#
+# can_colonize_with_pop = {
+# 	if = {
+# 		root = { has_origin = origin_living_planet }
+# 		custom_tooltip = {
+# 			always = no
+# 		}
+# 	}
+# }

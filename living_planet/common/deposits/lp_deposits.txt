@@ -106,7 +106,9 @@ d_living_planet_brain_district = {
 	
 	planet_modifier = {
 		planet_max_districts_add = -1
-		job_brain_drone_add = 2
+		job_brain_drone_biologist_add = 2
+		job_brain_drone_physicist_add = 2
+		job_brain_drone_engineer_add = 2
 	}
 	
 }
@@ -140,7 +142,7 @@ d_living_planet_sentient_metal_district = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_metal_boneyard
-	
+
 	planet_modifier = {
 		planet_max_districts_add = -1
 		job_ehof_cultivation_drone_add = 2
@@ -244,7 +246,9 @@ d_living_planet_neural_net_general = {
 	icon = d_infestation
 	
 	planet_modifier = {
-		job_brain_drone_per_pop = 0.1
+		job_brain_drone_engineer_per_pop = 0.03
+		job_brain_drone_physicist_per_pop = 0.03
+		job_brain_drone_biologist_per_pop = 0.03
 	}
 }
 
@@ -256,7 +260,9 @@ d_living_planet_neural_net_physics = {
 	icon = d_infestation
 	
 	planet_modifier = {
-		job_brain_drone_per_pop = 0.05
+		job_brain_drone_engineer_per_pop = 0.015
+		job_brain_drone_physicist_per_pop = 0.015
+		job_brain_drone_biologist_per_pop = 0.015
 		planet_researchers_physics_research_produces_add = 2
 	}
 }
@@ -269,7 +275,9 @@ d_living_planet_neural_net_society = {
 	icon = d_infestation
 	
 	planet_modifier = {
-		job_brain_drone_per_pop = 0.05
+		job_brain_drone_engineer_per_pop = 0.015
+		job_brain_drone_physicist_per_pop = 0.015
+		job_brain_drone_biologist_per_pop = 0.015
 		planet_researchers_society_research_produces_add = 2
 	}
 }
@@ -282,7 +290,9 @@ d_living_planet_neural_net_engineering = {
 	icon = d_infestation
 	
 	planet_modifier = {
-		job_brain_drone_per_pop = 0.05
+		job_brain_drone_engineer_per_pop = 0.015
+		job_brain_drone_physicist_per_pop = 0.015
+		job_brain_drone_biologist_per_pop = 0.015
 		planet_researchers_engineering_research_produces_add = 2
 	}
 }
@@ -299,7 +309,7 @@ d_living_planet_system_unity = {
 	icon = d_infestation
 	
 	planet_modifier = {
-		pop_category_drones_unity_produces_add = 1
+		pop_category_workers_unity_produces_add = 1
 	}
 }
 
@@ -327,6 +337,7 @@ d_living_planet_system_ships = {
 	country_modifier = {
 		country_ship_upgrade_cost_mult = -0.2
 		country_ship_cost_mult = -0.5
+		country_space_fauna_ship_cost_mult = -0.5
 		pop_category_drones_unity_produces_add = 1
 		ship_cost_mult = -0.5
 	}

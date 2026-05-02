@@ -13,48 +13,48 @@ country_event = {
 	}
 	immediate = {
 		capital_scope = {
-			every_deposit = {
-				limit = { is_deposit_type = d_failing_infrastructure }
-				clear_blocker = yes
-			}
-			remove_all_districts = yes
-			while = {
-				count = 3
-				add_district = district_hive
-			}
-			while = {
-				count = 1
-				add_district = district_industrial
-			}
-			while = {
-				count = 2
-				add_district = district_generator_uncapped
-			}
-			while = {
-				count = 2
-				add_district = district_mining_uncapped
-			}
-			while = {
-				count = 2
-				add_district = district_farming_uncapped
-			}
+			# every_deposit = {
+				# limit = { is_deposit_type = d_failing_infrastructure } # TODO: ensure this is still necessary
+				# clear_blocker = yes
+			# }
+			# remove_all_buildings = yes
+			# while = {
+			# 	count = 2
+			# 	add_district = district_hive
+			# }
+			# while = {
+			# 	count = 1
+			# 	add_district = district_industrial
+			# }
+			# while = {
+			# 	count = 2
+			# 	add_district = district_generator_uncapped
+			# }
+			# while = {
+			# 	count = 2
+			# 	add_district = district_mining_uncapped
+			# }
+			# while = {
+			# 	count = 2
+			# 	add_district = district_farming_uncapped
+			# }
 			
-			if = {
-				limit = {
-					owner = {
-						is_lithoid_empire = yes
-					}
-				}
-				while = {
-					count = 2
-					remove_district = district_farming_uncapped
-					add_district = district_mining_uncapped
-				}
-			}
+			# if = {
+			# 	limit = {
+			# 		owner = {
+			# 			is_lithoid_empire = yes
+			# 		}
+			# 	}
+			# 	while = {
+			# 		count = 2
+			# 		remove_district = district_farming_uncapped
+			# 		add_district = district_mining_uncapped
+			# 	}
+			# }
 			
-			hidden_effect = {
-				validate_planet_buildings_and_districts = yes
-			}
+			# hidden_effect = {
+			# 	validate_planet_buildings_and_districts = yes
+			# }
 		}
 	}
 }

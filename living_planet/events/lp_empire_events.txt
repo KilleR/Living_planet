@@ -1,6 +1,6 @@
 namespace = lp_empire
 
-# Calcuate devouring growth rate
+# Calculate devouring growth rate
 country_event = {
 	id = lp_empire.001
 	hide_window = yes

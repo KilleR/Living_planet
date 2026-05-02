@@ -1,0 +1,18 @@
+# lp_strategic_resources.txt
+# Contributors: Lord Roscoford
+
+#################
+###	Resources ###
+#################
+
+lp_planetary_matter = {
+	tradable = no
+	category = basic
+	visibility_prerequisite = {
+		is_lp_empire = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+

@@ -1,9 +1,9 @@
-version="0.3.0"
+version="0.4.0"
 tags={
 	"Species"
 	"Buildings"
 }
 picture="thumbnail.png"
 name="Origin: Living Planet"
-supported_version="v3.12.*"
+supported_version="v4.3.*"
 remote_file_id="2517736843"
