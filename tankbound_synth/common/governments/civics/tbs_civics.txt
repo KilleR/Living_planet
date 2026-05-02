@@ -1,0 +1,151 @@
+
+civic_tankbound = {
+	playable = { has_shroud_dlc = yes }
+	ai_playable = { has_shroud_dlc = yes }
+	description = "civic_tankbound_effects"
+	negative_description = "civic_tankbound_negative_effects"
+
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+		civics = { NOT = { value = civic_tankbound_corporate } }
+	}
+	possible = {
+		origin = {
+			NOR = {
+				value = origin_broken_shackles
+				value = origin_payback
+				value = origin_toxic_knights
+				value = origin_clone_army
+				value = origin_primal_calling
+				value = origin_syncretic_evolution
+				value = origin_unplugged
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_mining_guilds
+				value = civic_anglers
+				value = civic_agrarian_idyll
+				value = civic_citizen_service
+				value = civic_slaver_guilds
+				value = civic_tankbound_corporate
+			}
+		}
+		species_class = {
+			OR = {
+				value = NECROID
+				value = TOX
+				value = AQUATIC
+				value = INF
+				value = ROBOT
+			}
+		}
+	}
+
+	alternate_civic_version = civic_tankbound_corporate
+	modification = {
+		add = {
+			hidden_trigger = {
+				has_civic = civic_tankbound_corporate
+			}
+		}
+		remove = {
+			always = no
+		}
+	}
+
+	traits = {
+		trait = trait_tankbound
+	}
+	modifier = {
+		planet_jobs_upkeep_mult = @civic_tankbound_job_upkeep
+		planet_districts_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_districts_farming_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_districts_mining_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_districts_generator_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_districts_rw_generator_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_districts_rw_farming_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_districts_hab_energy_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_districts_hab_mining_energy_upkeep_add = @civic_tankbound_district_upkeep
+	}
+	hide_modifiers = yes
+
+	random_weight = { base = @civic_default_random_weight }
+}
+
+civic_tankbound_corporate = {
+	playable = { has_shroud_dlc = yes }
+	ai_playable = { has_shroud_dlc = yes }
+	description = "civic_tankbound_corporate_effects"
+	negative_description = "civic_tankbound_negative_effects"
+
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { value = auth_corporate }
+		civics = { NOT = { value = civic_tankbound } }
+	}
+	possible = {
+		origin = {
+			NOR = {
+				value = origin_broken_shackles
+				value = origin_payback
+				value = origin_toxic_knights
+				value = origin_clone_army
+				value = origin_primal_calling
+				value = origin_syncretic_evolution
+				value = origin_unplugged
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_corporate_anglers
+				value = civic_indentured_assets
+				value = civic_private_military_companies
+				value = civic_tankbound
+			}
+		}
+		OR = {
+			species_class = {
+				OR = {
+					value = NECROID
+					value = TOX
+					value = AQUATIC
+					value = INF
+					value = ROBOT
+				}
+			}
+		}
+	}
+
+	alternate_civic_version = civic_tankbound
+	modification = {
+		add = {
+			hidden_trigger = {
+				has_civic = civic_tankbound
+			}
+		}
+		remove = {
+			always = no
+		}
+	}
+
+	traits = {
+		trait = trait_tankbound
+	}
+
+	modifier = {
+		planet_jobs_upkeep_mult = @civic_tankbound_job_upkeep
+		planet_districts_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_districts_farming_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_districts_mining_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_districts_generator_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_districts_rw_generator_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_districts_rw_farming_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_districts_hab_energy_energy_upkeep_add = @civic_tankbound_district_upkeep
+		planet_districts_hab_mining_energy_upkeep_add = @civic_tankbound_district_upkeep
+	}
+	hide_modifiers = yes
+
+	random_weight = { base = @civic_default_random_weight }
+}
