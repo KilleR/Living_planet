@@ -1,4 +1,4 @@
-decision_lp_devour_biomass = {
+decision_lp_devour_planetary_matter = {
 	icon = decision_planet_beam
 	owned_planets_only = no
 	

@@ -15,5 +15,10 @@ origin_living_planet = {
 	traits = {
 		trait = trait_living_planet
 	}
+	advanced_start = yes
+	flags = {
+		uses_biomass
+		custom_start_screen
+	}
 }
 

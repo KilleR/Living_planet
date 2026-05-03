@@ -1,0 +1,8 @@
+
+
+concept_lp_devour_planet = {
+}
+
+concept_lp_planetary_mass = {
+	icon = "gfx/interface/icons/resources/lp_planetary_matter.dds"
+}

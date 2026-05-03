@@ -11,6 +11,34 @@ d_living_planet_neural_net = {
 	}
 }
 
+d_living_planet_proto_hive = {
+	category = deposit_cat_rare_blocker
+
+	icon = "d_spawning_complex_blocker"
+	time = 360
+
+	is_for_colonizable = yes
+
+	potential = { always = no }
+
+	planet_modifier = {
+		district_jobs_mult = -0.67	# This only exists to show in the UI. Actual implementation is checked in
+													# planet_is_ecu_equivalent scripted trigger.
+		planet_housing_mult = -0.33
+	}
+
+	can_be_cleared = {
+		exists = owner
+		owner = {
+			OR = {
+				has_ascension_perk = ap_hive_worlds
+				has_country_flag = lp_evo_shift_started
+			}
+		}
+	}
+
+}
+
 d_living_planet_minerals = {
 	is_for_colonizable = yes
 	category = deposit_cat_minerals

@@ -1,0 +1,23 @@
+
+lp_situation_growth_modifier = {
+	base = 0
+	modifier = {
+		add = 1
+		owner = {
+			has_country_resource = {
+				type = lp_planetary_matter
+				amount > 0
+			}
+		}
+	}
+}
+
+lp_devourer_artificial_modifier = {
+	base = 1
+	modifier = {
+		add = -0.5
+		planet = {
+			is_artificial = yes
+		}
+	}
+}

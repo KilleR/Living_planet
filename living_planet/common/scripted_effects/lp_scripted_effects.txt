@@ -1,0 +1,17 @@
+
+lp_start_growth_situation = {
+	start_situation = {
+		type = lp_situation_growth
+		target = this
+		effect = {
+			set_situation_approach = lp_situation_growth_approach_standard
+		}
+	}
+}
+
+lp_set_growth_resource = {
+	set_variable = {
+		which = lp_pm_amount
+		value = owner.value:get_resource_amount|RESOURCE|lp_planetary_matter|PERCENTAGE|1|
+	}
+}

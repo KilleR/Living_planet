@@ -1,0 +1,10 @@
+
+# Crisis Resource/Currency
+# Ideally we will add future Crisis Currencies to this so the tutorial is udated.
+define_text = {
+	name = GetPlaneteryMatter
+	text = {
+		weight = 6
+		localization_key = lp_planetary_matter_value
+	}
+}

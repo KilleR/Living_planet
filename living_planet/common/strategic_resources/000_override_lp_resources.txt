@@ -1,0 +1,64 @@
+biomass = {
+	tradable = no
+	category = advanced
+	hide_gain = yes
+
+	visibility_prerequisite = {
+		OR = {
+			is_lp_empire = yes
+			has_biogenesis_dlc = yes
+			OR = {
+				is_scope_valid = no
+				is_wilderness_empire = yes
+			}
+		}
+	}
+}
+
+consumer_goods = {
+	tradable = yes
+	category = advanced
+	market_amount = 50
+	market_price = 100
+	max = 15000
+
+	deficit_situation = situation_consumer_goods_deficit
+	deficit_trade_conversion_mult = -0.25
+
+	visibility_prerequisite = {
+		OR = {
+			is_scope_valid = no
+			AND = {
+				is_wilderness_empire = no
+				is_lp_empire = no
+			}
+		}
+	}
+
+	culling_conversion_value = 2
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.1
+			country_uses_consumer_goods = no
+		}
+	}
+
+	ai_wants = {
+		base = 500
+		modifier = {
+			factor = 0.1
+			country_uses_consumer_goods = no
+		}
+	}
+
+	tradable_in_market = {
+		NOT = {
+			AND = {
+				exists = this
+				has_valid_civic = civic_machine_obsessional_directive
+			}
+		}
+	}
+}

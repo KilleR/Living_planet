@@ -47,13 +47,13 @@ event = {
 									}
 									add_deposit = d_living_planet_megastructure
 									change_variable = {
-										which = biomass_acquired
+										which = planetary_matter_acquired
 										value = 0.5
 									}
 								}
 								else = {
 									change_variable = {
-										which = biomass_acquired
+										which = planetary_matter_acquired
 										value = 1
 									}
 								}
@@ -61,14 +61,14 @@ event = {
 								if = {
 									limit = {
 										check_variable = {
-											which = biomass_acquired
+											which = planetary_matter_acquired
 											value >= lp_growth_factor
 										}
 									}
 									# grow the planet
 									planet_event = { id = lp_planet.010 }
 									subtract_variable = {
-										which = biomass_acquired
+										which = planetary_matter_acquired
 										value = lp_growth_factor
 									}
 								}
@@ -517,6 +517,9 @@ planet_event = {
 			begin_event_chain = {
 				event_chain = lp_evo_shift_chain
 				target = ROOT
+			}
+			owner = {
+				set_country_flag = lp_evo_shift_started
 			}
 			if = {
 				limit = {

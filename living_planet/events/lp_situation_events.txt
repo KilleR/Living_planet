@@ -1,15 +1,28 @@
 namespace = lp_situation
 
+# Monthly resource check
 situation_event = {
-	id = lp_situation.01
+	id = lp_situation.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+
+		}
+		lp_set_growth_resource = yes
+	}
+}
+
+situation_event = {
+	id = lp_situation.101
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
 		owner = {
-			set_country_flag = pending_insight_tech
 			create_message = {
-				type = TERRAFORM_MESSAGE_TYPE
-				localization = MESSAGE_PENDING_INSIGHT_TECH
+				type = MESSAGE_TYPE_LP_GROWTH
+				localization = LP_MESSAGE_SIZE_GAINED
 				days = 30
 			}
 		}

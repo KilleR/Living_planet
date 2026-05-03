@@ -13,6 +13,11 @@ planet_devourer = {
 		upkeep = {
 			influence = 1
 		}
+
+		produces = {
+			lp_planetary_matter = 1
+			mult = value:lp_devourer_artificial_modifier
+		}
 	}
 	
 	potential = {

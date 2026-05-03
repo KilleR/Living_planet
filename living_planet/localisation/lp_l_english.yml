@@ -7,7 +7,7 @@
   living_planet_home_system_DESC:0 "You are a Living Planet, which has devoured all the resources in its home system."
   origin_living_planet: "Living Planet"
   origin_living_planet_desc: "This planet is a giant organic neural network, functioning similarly to a hive mind. Its surface is covered in semi autonomous drones and giant digestive vats into which it funnels resources. As the network grows more and more habitable worlds will be consumed to fuel its growth."
-  origin_living_planet_effects: "- Species Trait: ['trait:trait_living_planet']\nStart on a special $pc_hive$ with the ability consume other habitable worlds to increase the size of your homeworld.\n- Enables the §H$decision_lp_devour_biomass$§! planetary decision:.\n  * Moves £planetsize£ from an empty habitable world to the §GLiving Planet§! at a cost of £influence£ 1 per month until the planet is entirely consumed.\n  * £planetsize£ Size requirement to grow the §GLiving Planet§! starts at 4 biomass consumed.\n  * Planetary features consumed will add related features to the §GLiving Planet§! .\n- Owned £pops£ will automatically be moved to the §GLiving Planet§! from other worlds.\n- Gain an additional £job_synapse_drone£ $job_synapse_drone$, £job_spawning_drone£ $job_spawning_drone$ Job and £job_brain_drone£ $job_brain_drone$ on your homeworld for every £pops£ 20.\n- Gain unique planetary decisions to add additional jobs to your homeworld to help manage deviancy and fleet cap for £influence£ 100.\n"
+  origin_living_planet_effects: "- Species Trait: ['trait:trait_living_planet']\nStart on a special $pc_hive$ with the ability consume other habitable worlds to increase the size of your homeworld.\n- Enables the §H$decision_lp_devour_planetary_matter$§! planetary decision:.\n  * Moves £planetsize£ from an empty habitable world to the §GLiving Planet§! at a cost of £influence£ 1 per month until the planet is entirely consumed.\n  * £planetsize£ Size requirement to grow the §GLiving Planet§! starts at 4 planetary_matter consumed.\n  * Planetary features consumed will add related features to the §GLiving Planet§! .\n- Owned £pops£ will automatically be moved to the §GLiving Planet§! from other worlds.\n- Gain an additional £job_synapse_drone£ $job_synapse_drone$, £job_spawning_drone£ $job_spawning_drone$ Job and £job_brain_drone£ $job_brain_drone$ on your homeworld for every £pops£ 20.\n- Gain unique planetary decisions to add additional jobs to your homeworld to help manage deviancy and fleet cap for £influence£ 100.\n"
   origin_living_planet_negative_effects: "- §RDue to the nature and size of the neural network, your drones are unable to live outside of your homeworld.§!\n- §RCannot settle planets.§!\n"
 
   trait_pc_living_planet_preference: "Living Planet"
@@ -20,8 +20,8 @@
   building_giga_gas_giant_habitation_module: "Gas Giant Habitation Module"
   building_giga_gas_giant_habitation_module_desc: "Collection of facilities necessary to maintain a colony on a gas giant assembled by the original population of this planet. These facilities include reactors to provide power for the colony, docking bays to unload minerals collected from local moons and large climate-controlled hangars that can be used for hydroponic farms. In addition to that, these facilities serve as headquarters for resource distribution network and provide various services to the local populations."
   
-  lp_colony.011.name: "Biomass Consumed"
-  lp_colony.011.desc: "Biomass has been extracted from the planet, and added to the size of our living world"
+  lp_colony.011.name: "Planetary Matter Consumed"
+  lp_colony.011.desc: "Planetary matter has been extracted from the planet, and added to the size of our living world"
 
   pc_living_planet: "Living Planet"
   pc_living_planet_desc: "A single hive mind so vast that it resembles a planet."
@@ -31,26 +31,36 @@
   district_living_planet_core_plural:0 "Living Planet Cores"
   district_living_planet_core_max:0 "Max$district_living_planet_core_plural$"
   
-  planet_devourer: "Biomass Extractor"
-  planet_devourer_DESC: "A collection of excavator drones, who's sole purpose is scouring planetary bodies for biomass, and returning them to the Living Planet."
+  planet_devourer: "Planetary Matter Extractor"
+  planet_devourer_DESC: "A collection of excavator drones, who's sole purpose is scouring planetary bodies for planetary matter, and returning them to the Living Planet."
   
   mod_planet_researchers_energy_upkeep_add: "§R£energy£ $energy$ upkeep for £job_researcher£ $job_researcher_plural$§!"
+
+  ################
+  ### Concepts ###
+  ################
+
+  concept_lp_devour_planet: "Devour Planets"
+  concept_lp_devour_planet_desc: "As a living planet, you must consume the mass of habitable worlds to expand.\nThis is achieved by using the $decision_lp_devour_planetary_matter$ Decision on a habitable world within your borders.\nA $planet_devourer$ will be placed over the planet, and it will begin extracting ['concept_lp_planetary_mass'] at the cost of $r_influence$.\n\n$planet_devourer$s reduce the size of the target planet over time, and will also remove features - converting them into small bonus features for the home planet."
+
+  concept_lp_planetary_mass: "Planetary Mass"
+  concept_lp_planetary_mass_desc: "$r_lp_planetary_matter$ is the resource required for us to grow.\nThe $lp_situation_growth$ situation will track growth over time.\nThe Living Planet will grow by one $concept_planet_size$ when it completes, and will then automatically restart.\n\nAt certain points in our growth, we will be able to undergo more significant changes.\nThese happen along the $lp_situation_complexity$ situation."
 
   ##################
   ### Modifiers ####
   ##################
   living_planet_growth_disabled: "Growth Disabled"
-  living_planet_growth_disabled_desc: "The planet has grown recently, and must process the biomass before growing again"
+  living_planet_growth_disabled_desc: "The planet has grown recently, and must process the planetary matter before growing again"
   
-  living_planet_devoured: "Planetary Biomass Consumed"
-  living_planet_devoured_desc: "This planet has recently been scoured for biomass"
+  living_planet_devoured: "Planetary Planetary Matter Consumed"
+  living_planet_devoured_desc: "This planet has recently been scoured for planetary matter"
 
   ##################
   ### Decisions ####
   ##################
   
-  decision_lp_devour_biomass: "Consume Biomass"
-  decision_lp_devour_biomass_desc: "Consume this planet's biomass, and use it to grow the Living Planet $homeworld$.\nThis will cost 1 £influence£ $influence$ per month until the planet is totally consumed."
+  decision_lp_devour_planetary_matter: "Consume Planetary Matter"
+  decision_lp_devour_planetary_matter_desc: "Consume this planet's planetary matter, and use it to grow the Living Planet $homeworld$.\nThis will cost 1 £influence£ $influence$ per month until the planet is totally consumed."
   
   decision_lp_add_brain_district: "Evolve: Integrate Introspection Clusters"
   decision_lp_add_brain_district_desc: "Neuroplastic remodelling for advanced thought, and scientific exploration."
@@ -66,16 +76,16 @@
   lp_planet.011.name: "Evolutionary Shift"
   lp_planet.011.desc: "We have gathered enough mass to make a choice about the future of our development.\nWe can pick a direction for our evolution, which will shape the future of our living planet.\n"
   lp_planet.011.a: "Begin the shift!"
-  lp_planet.011.a.tooltip: "Increasing complexity of our planet's neurostructure makes it more costly to integrate additional biomass.\n\n§EEffect:\n§!§RPlanetary biomass required to grow has increased by 1.§!\n\n"
+  lp_planet.011.a.tooltip: "Increasing complexity of our planet's neurostructure makes it more costly to integrate additional planetary matter.\n\n§EEffect:\n§!§RPlanetary planetary matter required to grow has increased by 1.§!\n\n"
   
   lp_planet.011.a.name: "Evolutionary Shift Completed"
   lp_planet.011.a.desc: "New pathways have been integrated"
   
   lp_evo_shift_chain_title: "Evolutionary Shift"
-  lp_evo_shift_chain_desc: "Sufficient biomass growth permits us to integrate a specific addition to our biosphere."
+  lp_evo_shift_chain_desc: "Sufficient planetary matter growth permits us to integrate a specific addition to our biosphere."
 
-  LP_EVO_SHIFT_GENERAL: "Biomass Processing"
-  LP_EVO_SHIFT_GENERAL_DESC: "Spend our efforts in facilitating more efficient planetary biomass processing.\n\n§EEffect:\n§G-2§! £planetsize£ §YPlanetary Biomass§! consumption required to increase §GLiving Planet§! £planetsize£ size.§!\n"
+  LP_EVO_SHIFT_GENERAL: "Planetary Matter Processing"
+  LP_EVO_SHIFT_GENERAL_DESC: "Spend our efforts in facilitating more efficient planetary planetary matter processing.\n\n§EEffect:\n§G-2§! £planetsize£ §YPlanetary Matter§! consumption required to increase §GLiving Planet§! £planetsize£ size.§!\n"
   LP_EVO_SHIFT_PHYSICS: "Physics Specialisation"
   LP_EVO_SHIFT_PHYSICS_DESC: "Spend our efforts increasing our ability to understand the way the universe works.\n\n§EEffect:\n§G+1§! £physics£ $physics_research$ from £job_brain_drone£ $job_brain_drone_plural$.§!\n§R+1£energy£ $energy$ upkeep for £job_brain_drone£ $job_brain_drone_plural$.§!\n"
   LP_EVO_SHIFT_SOCIETY: "Society Specialisation"
@@ -106,13 +116,22 @@
   lp_system_shift_chain: "Evolutionary Shift - Become the Star System!"
   lp_system_shift_chain_desc: "TODO: desc"
 
-  ####################
-  ### Events #########
-  ####################
+  ###################
+  ### Situations ####
+  ###################
 
-  lp_situation_biomass_accumulation: "Living Planet Growth"
-  lp_situation_biomass_accumulation_desc: "As the living planet grows, we will get opportunities to decide various evolutionary paths.\n\nFind habitable planets and devour them to grow."
-  lp_situation_biomass_accumulation_gain: "Once we have enough biomass processed, we will add "
+  lp_situation_growth: "Living Planet Growth"
+  lp_situation_growth_desc: "As the living planet grows, we will get opportunities to decide various evolutionary paths.\n\nFind habitable planets and devour them to grow.\n\nWe have [root.lp_pm_amount] $r_lp_planetary_matter$"
+  lp_stage_growing: "We are processing $r_lp_planetary_matter$ in order to grow."
+
+  lp_situation_growth_approach_standard: "Consume"
+  lp_situation_growth_approach_standard_desc: "Process $r_lp_planetary_matter$ to increase our size."
+  lp_situation_growth_pause_desc: "We have no $r_lp_planetary_matter$!\nThe situation will pause until we have more.\n['concept_lp_devour_planet'] to generate more."
+
+  lp_situation_growth_gain: "+1 £planetsize£ $concept_planet_size$"
+
+  lp_situation_complexity: ""
+
   lp_stage_nascence: "We have just achieved sentience. We must grow."
   LP_MESSAGE_SIZE_GAINED: "We have processed enough $r_lp_planetary_matter$ and have become larger!"
 
@@ -123,11 +142,14 @@
   d_living_planet_neural_net: "Living Planet Central Cluster"
   d_living_planet_neural_net_desc: "The beating heart of the living planet, providing the neural network required to coordinate all the planet's drones"
 
+  d_living_planet_proto_hive: "Incomplete Hive World"
+  d_living_planet_proto_hive_desc: "Our neural pathways are not yet complete, some areas are primitive and still developing.\nWe need to advance to understand how to  perfect ourself."
+
   # From Devouring
   d_living_planet_minerals: "Mineral Processing Nodules"
-  d_living_planet_minerals_desc: "Crystalline and metallic nodes where planetary biomass is collected for later use in production efforts"
+  d_living_planet_minerals_desc: "Crystalline and metallic nodes where planetary matter is collected for later use in production efforts"
   d_living_planet_food: "Organic Slurry Vats"
-  d_living_planet_food_desc: "Great vats the size of cities which continually process organic matter from planetary biomass to provide sustenance for the Living Planet"
+  d_living_planet_food_desc: "Great vats the size of cities which continually process organic matter from planetary  matter to provide sustenance for the Living Planet"
   d_living_planet_energy: "Energetic Ganglia"
   d_living_planet_energy_desc: "Cohesive neural networks which constantly pulse with power, amplifying the strength of the Living Planet's own neurons"
   d_living_planet_rare: "Exotic Matter Sifters"
@@ -195,6 +217,9 @@
   MESSAGE_LP_POP_RELOCATED_TITLE:0 "Off-worlders relocated"
   MESSAGE_LP_POP_RELOCATED:0 "A $SPECIES|Y$ has been relocated from $ORIGIN|Y$ to $CAPITAL|Y$"
 
+  MESSAGE_LP_GROWTH_TITLE: "Living Planet grows"
+  MESSAGE_LP_GROWTH: "Our planet has incorporated a new swathe of $r_lp_planetary_matter$. We have grown!"
+
   ##################
   ### Resources ####
   ##################
@@ -203,4 +228,4 @@
   lp_planetary_matter_name: "$lp_planetary_matter$"
   lp_planetary_matter_value: "£lp_planetary_matter£ $VAL|0$"
   r_lp_planetary_matter: "£lp_planetary_matter£ §Y$lp_planetary_matter$§!"
-  lp_planetary_matter_desc: "Raw matter from a habitable world suitable for incorporation into our whole.\nThis will be used to add to our own as our $lp_situation_biomass_accumulation$ situation advances."
+  lp_planetary_matter_desc: "Raw matter from a habitable world suitable for incorporation into our whole.\nThis will be used to add to our own as our $lp_situation_growth$ situation advances."
