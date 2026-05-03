@@ -11,6 +11,11 @@ lp_situation_growth = {
 		custom_tooltip = lp_situation_growth_gain
 		hidden_effect = {
 			situation_event = { id = lp_situation.101 }
+			owner = {
+				capital_scope = {
+					planet_event = { id = lp_planet.010 }
+				}
+			}
 		}
 	}
 	

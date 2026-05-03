@@ -41,7 +41,7 @@
   ################
 
   concept_lp_devour_planet: "Devour Planets"
-  concept_lp_devour_planet_desc: "As a living planet, you must consume the mass of habitable worlds to expand.\nThis is achieved by using the $decision_lp_devour_planetary_matter$ Decision on a habitable world within your borders.\nA $planet_devourer$ will be placed over the planet, and it will begin extracting ['concept_lp_planetary_mass'] at the cost of $r_influence$.\n\n$planet_devourer$s reduce the size of the target planet over time, and will also remove features - converting them into small bonus features for the home planet."
+  concept_lp_devour_planet_desc: "As a living planet, you must consume the mass of habitable worlds to expand.\nThis is achieved by using the §H$decision_lp_devour_planetary_matter$§! Decision on a habitable world within your borders.\nA $planet_devourer$ will be placed over the planet, and it will begin extracting ['concept_lp_planetary_mass'] at the cost of $r_influence$.\n\n$planet_devourer$s reduce the size of the target planet over time, and will also remove features - converting them into small bonus features for the home planet."
 
   concept_lp_planetary_mass: "Planetary Mass"
   concept_lp_planetary_mass_desc: "$r_lp_planetary_matter$ is the resource required for us to grow.\nThe $lp_situation_growth$ situation will track growth over time.\nThe Living Planet will grow by one $concept_planet_size$ when it completes, and will then automatically restart.\n\nAt certain points in our growth, we will be able to undergo more significant changes.\nThese happen along the $lp_situation_complexity$ situation."

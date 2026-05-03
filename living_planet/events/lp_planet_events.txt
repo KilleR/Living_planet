@@ -36,42 +36,9 @@ event = {
 				}
 				else = {
 					planet = {
-						save_event_target_as = event_devoured_planet
 						space_owner = {
 							capital_scope = {
-								if = {
-									limit = {
-										event_target:event_devoured_planet = {
-											is_artificial = yes
-										}
-									}
-									add_deposit = d_living_planet_megastructure
-									change_variable = {
-										which = planetary_matter_acquired
-										value = 0.5
-									}
-								}
-								else = {
-									change_variable = {
-										which = planetary_matter_acquired
-										value = 1
-									}
-								}
 								save_event_target_as = event_capital
-								if = {
-									limit = {
-										check_variable = {
-											which = planetary_matter_acquired
-											value >= lp_growth_factor
-										}
-									}
-									# grow the planet
-									planet_event = { id = lp_planet.010 }
-									subtract_variable = {
-										which = planetary_matter_acquired
-										value = lp_growth_factor
-									}
-								}
 							}
 						}
 
@@ -106,6 +73,7 @@ event = {
 									OR = {
 										has_deposit_category = deposit_cat_rare
 										has_deposit_category = deposit_cat_rare_blocker
+										has_deposit_category = deposit_cat_rare_resource
 									}
 								}
 								event_target:event_capital = {
@@ -115,6 +83,7 @@ event = {
 							if = {
 								limit = {
 									has_deposit_category = deposit_cat_blockers
+									has_deposit_category = deposit_cat_misc
 								}
 								event_target:event_capital = {
 									add_deposit = d_living_planet_unity
