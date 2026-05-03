@@ -11,7 +11,8 @@ living_planet_devoured = {
 living_planet_evo_shift_physics = {
 	icon_frame = 1
 	icon = "gfx/interface/icons/modifiers/mod_resource_physics_research_mult.dds"
-	
+
+	researcher_jobs_bonus_workforce_mult =
 	planet_researchers_physics_research_produces_add = 1
 }
 living_planet_evo_shift_society = {

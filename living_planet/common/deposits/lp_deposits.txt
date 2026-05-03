@@ -133,10 +133,10 @@ d_living_planet_brain_district = {
 	icon = d_teeming_reef
 	
 	planet_modifier = {
-		planet_max_districts_add = -1
-		job_brain_drone_biologist_add = 2
-		job_brain_drone_physicist_add = 2
-		job_brain_drone_engineer_add = 2
+		planet_max_districts_add = -0.5
+		job_brain_drone_biologist_add = 100
+		job_brain_drone_physicist_add = 100
+		job_brain_drone_engineer_add = 100
 	}
 	
 }
@@ -148,8 +148,8 @@ d_living_planet_patrol_district = {
 	icon = d_levitating_rocks
 	
 	planet_modifier = {
-		planet_max_districts_add = -1
-		job_patrol_drone_add = 2
+		planet_max_districts_add = -0.5
+		job_patrol_drone_add = 300
 	}
 }
 
@@ -160,8 +160,8 @@ d_living_planet_warrior_district = {
 	icon = d_metal_boneyard
 	
 	planet_modifier = {
-		planet_max_districts_add = -1
-		job_warrior_drone_add = 2
+		planet_max_districts_add = -0.5
+		job_warrior_drone_add = 300
 	}
 }
 
@@ -172,8 +172,8 @@ d_living_planet_sentient_metal_district = {
 	icon = d_metal_boneyard
 
 	planet_modifier = {
-		planet_max_districts_add = -1
-		job_ehof_cultivation_drone_add = 2
+		planet_max_districts_add = -0.5
+		job_ehof_cultivation_drone_add = 300
 	}
 }
 
