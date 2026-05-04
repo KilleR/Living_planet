@@ -100,7 +100,7 @@ d_living_planet_rare = {
 }
 d_living_planet_unity = {
 	is_for_colonizable = yes
-	drop_weight = { weight = 0 }
+	category = deposit_cat_misc
 	potential = { always = no }
 	icon = d_city_ruins
 	
@@ -113,7 +113,7 @@ d_living_planet_unity = {
 }
 d_living_planet_megastructure = {
 	is_for_colonizable = yes
-	drop_weight = { weight = 0 }
+	category = deposit_cat_misc
 	potential = { always = no }
 	icon = d_mining_tunnels
 	
@@ -134,9 +134,9 @@ d_living_planet_brain_district = {
 	
 	planet_modifier = {
 		planet_max_districts_add = -0.5
-		job_brain_drone_biologist_add = 100
-		job_brain_drone_physicist_add = 100
-		job_brain_drone_engineer_add = 100
+		job_biologist_add = 100
+		job_physicist_add = 100
+		job_engineer_add = 100
 	}
 	
 }
@@ -189,8 +189,8 @@ d_living_planet_evo_shift_physics = {
 	icon = d_infestation
 	
 	planet_modifier = {
-		planet_researchers_physics_research_produces_add = 1
-		planet_researchers_energy_upkeep_add = 1
+		physicist_jobs_bonus_workforce_mult = 0.25
+		planet_physicists_energy_upkeep_add = 1
 	}
 }
 d_living_planet_evo_shift_society = {
@@ -201,8 +201,8 @@ d_living_planet_evo_shift_society = {
 	icon = d_infestation
 	
 	planet_modifier = {
-		planet_researchers_society_research_produces_add = 1
-		planet_researchers_energy_upkeep_add = 1
+		biologist_jobs_bonus_workforce_mult = 0.25
+		planet_biologists_energy_upkeep_add = 1
 	}
 }
 d_living_planet_evo_shift_engineering = {
@@ -213,8 +213,8 @@ d_living_planet_evo_shift_engineering = {
 	icon = d_infestation
 	
 	planet_modifier = {
-		planet_researchers_engineering_research_produces_add = 1
-		planet_researchers_energy_upkeep_add = 1
+		engineer_jobs_bonus_workforce_mult = 0.25
+		planet_engineers_energy_upkeep_add = 1
 	}
 }
 d_living_planet_evo_shift_growth = {
@@ -236,7 +236,7 @@ d_living_planet_evo_shift_energy = {
 	icon = d_tempestous_mountain
 	
 	planet_modifier = {
-		planet_technician_energy_produces_add = 1.5
+		technician_jobs_bonus_workforce_mult = 0.25
 	}
 }
 d_living_planet_evo_shift_minerals = {
@@ -247,7 +247,7 @@ d_living_planet_evo_shift_minerals = {
 	icon = d_crystalline_caverns
 	
 	planet_modifier = {
-		planet_miners_minerals_produces_add = 1
+		miner_jobs_bonus_workforce_mult = 0.25
 	}
 }
 d_living_planet_evo_shift_food = {
@@ -258,7 +258,7 @@ d_living_planet_evo_shift_food = {
 	icon = d_fungal_caves
 	
 	planet_modifier = {
-		planet_farmers_food_produces_add = 1.5
+		farmer_jobs_bonus_workforce_mult = 0.25
 	}
 }
 
@@ -274,9 +274,9 @@ d_living_planet_neural_net_general = {
 	icon = d_infestation
 	
 	planet_modifier = {
-		job_brain_drone_engineer_per_pop = 0.03
-		job_brain_drone_physicist_per_pop = 0.03
-		job_brain_drone_biologist_per_pop = 0.03
+		job_calculator_engineer_per_pop = 0.03
+		job_calculator_physicist_per_pop = 0.03
+		job_calculator_biologist_per_pop = 0.03
 	}
 }
 
@@ -288,10 +288,10 @@ d_living_planet_neural_net_physics = {
 	icon = d_infestation
 	
 	planet_modifier = {
-		job_brain_drone_engineer_per_pop = 0.015
-		job_brain_drone_physicist_per_pop = 0.015
-		job_brain_drone_biologist_per_pop = 0.015
-		planet_researchers_physics_research_produces_add = 2
+		job_calculator_engineer_per_pop = 0.015
+		job_calculator_physicist_per_pop = 0.015
+		job_calculator_biologist_per_pop = 0.015
+		physicist_jobs_bonus_workforce_mult = 0.5
 	}
 }
 
@@ -303,10 +303,10 @@ d_living_planet_neural_net_society = {
 	icon = d_infestation
 	
 	planet_modifier = {
-		job_brain_drone_engineer_per_pop = 0.015
-		job_brain_drone_physicist_per_pop = 0.015
-		job_brain_drone_biologist_per_pop = 0.015
-		planet_researchers_society_research_produces_add = 2
+		job_calculator_engineer_per_pop = 0.015
+		job_calculator_physicist_per_pop = 0.015
+		job_calculator_biologist_per_pop = 0.015
+		biologist_jobs_bonus_workforce_mult = 0.5
 	}
 }
 
@@ -318,10 +318,10 @@ d_living_planet_neural_net_engineering = {
 	icon = d_infestation
 	
 	planet_modifier = {
-		job_brain_drone_engineer_per_pop = 0.015
-		job_brain_drone_physicist_per_pop = 0.015
-		job_brain_drone_biologist_per_pop = 0.015
-		planet_researchers_engineering_research_produces_add = 2
+		job_engineer_per_pop = 0.015
+		job_physicist_per_pop = 0.015
+		job_biologist_per_pop = 0.015
+		engineer_jobs_bonus_workforce_mult = 0.5
 	}
 }
 

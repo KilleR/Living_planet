@@ -82,8 +82,11 @@ event = {
 							}
 							if = {
 								limit = {
-									has_deposit_category = deposit_cat_blockers
-									has_deposit_category = deposit_cat_misc
+									OR = {
+										has_deposit_category = deposit_cat_blockers
+										has_deposit_category = deposit_cat_blockers_natural
+										has_deposit_category = deposit_cat_misc
+									}
 								}
 								event_target:event_capital = {
 									add_deposit = d_living_planet_unity

@@ -16,7 +16,7 @@ planet_devourer = {
 
 		produces = {
 			lp_planetary_matter = 1
-			mult = value:lp_devourer_artificial_modifier
+			mult = prev.value:lp_devourer_artificial_modifier
 		}
 	}
 	
