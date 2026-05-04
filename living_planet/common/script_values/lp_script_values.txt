@@ -4,10 +4,7 @@ lp_situation_growth_modifier = {
 	modifier = {
 		add = 1
 		owner = {
-			has_country_resource = {
-				type = lp_planetary_matter
-				amount > 0
-			}
+			has_lp_growth_resources = yes
 		}
 	}
 }

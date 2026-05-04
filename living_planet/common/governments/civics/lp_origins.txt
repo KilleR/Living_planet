@@ -11,7 +11,11 @@ origin_living_planet = {
 	possible = {
 		authority = { value = auth_hive_mind }
 	}
-	
+
+	modifier = {
+
+	}
+
 	traits = {
 		trait = trait_living_planet
 	}

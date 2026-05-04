@@ -23,7 +23,12 @@ lp_situation_growth = {
 		lp_stage_growing = {
 			icon = GFX_situation_stage_eat
 			icon_background = GFX_situation_stage_frame_green
-			end = 4
+			end = {
+				base = 6
+				modifier = {
+					add = owner.capital_scope.lp_growth_factor
+				}
+			}
 		}
 	}
 	monthly_progress = {
@@ -32,10 +37,7 @@ lp_situation_growth = {
 			mult = 0
 			desc = "lp_situation_growth_pause_desc"
 			owner = {
-				has_country_resource = {
-					type = lp_planetary_matter
-					amount < 1
-				}
+				has_lp_growth_resources = no
 			}
 		}
 	}
@@ -44,6 +46,8 @@ lp_situation_growth = {
 		name = lp_situation_growth_approach_standard
 		icon = GFX_situation_approach_research
 		icon_background = GFX_situation_approach_bg_green
+		default = yes
+
 		on_select = {
 			custom_tooltip = lp_situation_growth_approach_standard
 		}
@@ -54,7 +58,7 @@ lp_situation_growth = {
 		resources = {
 			category = country_situations
 			upkeep = {
-				lp_planetary_matter = 1
+				lp_planetary_matter = 100
 				mult = owner.value:lp_situation_growth_modifier
 			}
 		}
@@ -69,10 +73,7 @@ lp_situation_growth = {
 	triggered_blocked_desc = {
 		trigger = {
 			owner = {
-				has_country_resource = {
-					type = lp_planetary_matter
-					amount < 1
-				}
+				has_lp_growth_resources = no
 			}
 		}
 		text = "lp_situation_growth_pause_desc"
