@@ -134,9 +134,9 @@ d_living_planet_brain_district = {
 	
 	planet_modifier = {
 		planet_max_districts_add = -0.5
-		job_biologist_add = 100
-		job_physicist_add = 100
-		job_engineer_add = 100
+		job_calculator_biologist_add = 100
+		job_calculator_physicist_add = 100
+		job_calculator_engineer_add = 100
 	}
 	
 }

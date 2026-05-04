@@ -58,7 +58,7 @@ lp_situation_growth = {
 		resources = {
 			category = country_situations
 			upkeep = {
-				lp_planetary_matter = 100
+				lp_planetary_matter = 1
 				mult = owner.value:lp_situation_growth_modifier
 			}
 		}
@@ -77,35 +77,5 @@ lp_situation_growth = {
 			}
 		}
 		text = "lp_situation_growth_pause_desc"
-	}
-}
-
-lp_situation_complexity = {
-	picture = GFX_evt_friendly_enlightenment
-	complete_icon_frame = GFX_situation_outcome_frame_green
-	complete_icon = GFX_situation_outcome_positive
-	category = positive
-
-	stages = {
-		lp_stage_nascence = {
-			icon = GFX_situation_stage_1
-			icon_background = GFX_situation_stage_frame_green
-			end = 25
-			#custom_tooltip = lp_stage_nascence_desc
-		}
-	}
-	monthly_progress = {
-		base = 0
-	}
-	approach = {
-		name = approach_standard
-		icon = GFX_situation_approach_research
-		icon_background = GFX_situation_approach_bg_green
-		on_select = {
-			custom_tooltip = lp_situation_growth_approach_standard
-		}
-		modifier = {
-
-		}
 	}
 }
