@@ -5,7 +5,7 @@ d_living_planet_neural_net = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_infestation
-	
+
 	planet_modifier = {
 		job_synapse_drone_per_pop = 0.05
 	}
@@ -45,7 +45,7 @@ d_living_planet_minerals = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_crystalline_caverns
-	
+
 	resources = {
 		category = planet_deposits
 		produces = {
@@ -59,7 +59,7 @@ d_living_planet_energy = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_tempestous_mountain
-	
+
 	resources = {
 		category = planet_deposits
 		produces = {
@@ -73,7 +73,7 @@ d_living_planet_food = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_fungal_caves
-	
+
 	resources = {
 		category = planet_deposits
 		produces = {
@@ -88,7 +88,7 @@ d_living_planet_rare = {
 		always = no
 	}
 	icon = d_organic_landfill
-	
+
 	resources = {
 		category = planet_deposits
 		produces = {
@@ -103,7 +103,7 @@ d_living_planet_unity = {
 	category = deposit_cat_misc
 	potential = { always = no }
 	icon = d_city_ruins
-	
+
 	resources = {
 		category = planet_deposits
 		produces = {
@@ -116,7 +116,7 @@ d_living_planet_megastructure = {
 	category = deposit_cat_misc
 	potential = { always = no }
 	icon = d_mining_tunnels
-	
+
 	planet_modifier = {
 		planet_metallurgists_alloys_produces_add = 0.1
 		planet_metallurgists_minerals_upkeep_add = 0.1
@@ -131,14 +131,14 @@ d_living_planet_brain_district = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_teeming_reef
-	
+
 	planet_modifier = {
 		planet_max_districts_add = -0.5
 		job_calculator_biologist_add = 100
 		job_calculator_physicist_add = 100
 		job_calculator_engineer_add = 100
 	}
-	
+
 }
 
 d_living_planet_patrol_district = {
@@ -146,7 +146,7 @@ d_living_planet_patrol_district = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_levitating_rocks
-	
+
 	planet_modifier = {
 		planet_max_districts_add = -0.5
 		job_patrol_drone_add = 300
@@ -158,7 +158,7 @@ d_living_planet_warrior_district = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_metal_boneyard
-	
+
 	planet_modifier = {
 		planet_max_districts_add = -0.5
 		job_warrior_drone_add = 300
@@ -187,10 +187,10 @@ d_living_planet_evo_shift_physics = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_infestation
-	
+
 	planet_modifier = {
 		physicist_jobs_bonus_workforce_mult = 0.25
-		planet_physicists_energy_upkeep_add = 1
+		planet_physicists_trade_upkeep_add = 1
 	}
 }
 d_living_planet_evo_shift_society = {
@@ -199,10 +199,10 @@ d_living_planet_evo_shift_society = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_infestation
-	
+
 	planet_modifier = {
 		biologist_jobs_bonus_workforce_mult = 0.25
-		planet_biologists_energy_upkeep_add = 1
+		planet_biologists_trade_upkeep_add = 1
 	}
 }
 d_living_planet_evo_shift_engineering = {
@@ -211,10 +211,10 @@ d_living_planet_evo_shift_engineering = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_infestation
-	
+
 	planet_modifier = {
 		engineer_jobs_bonus_workforce_mult = 0.25
-		planet_engineers_energy_upkeep_add = 1
+		planet_engineers_trade_upkeep_add = 1
 	}
 }
 d_living_planet_evo_shift_growth = {
@@ -223,9 +223,10 @@ d_living_planet_evo_shift_growth = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_infestation
-	
+
+
 	planet_modifier = {
-		planet_pop_assembly_organic_mult = 0.25
+		pop_spawning_drone_bonus_workforce_mult = 0.25
 	}
 }
 d_living_planet_evo_shift_energy = {
@@ -234,7 +235,7 @@ d_living_planet_evo_shift_energy = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_tempestous_mountain
-	
+
 	planet_modifier = {
 		technician_jobs_bonus_workforce_mult = 0.25
 	}
@@ -245,7 +246,7 @@ d_living_planet_evo_shift_minerals = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_crystalline_caverns
-	
+
 	planet_modifier = {
 		miner_jobs_bonus_workforce_mult = 0.25
 	}
@@ -256,7 +257,7 @@ d_living_planet_evo_shift_food = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_fungal_caves
-	
+
 	planet_modifier = {
 		farmer_jobs_bonus_workforce_mult = 0.25
 	}
@@ -272,7 +273,7 @@ d_living_planet_neural_net_general = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_infestation
-	
+
 	planet_modifier = {
 		job_calculator_engineer_per_pop = 0.03
 		job_calculator_physicist_per_pop = 0.03
@@ -286,7 +287,7 @@ d_living_planet_neural_net_physics = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_infestation
-	
+
 	planet_modifier = {
 		job_calculator_engineer_per_pop = 0.015
 		job_calculator_physicist_per_pop = 0.015
@@ -301,7 +302,7 @@ d_living_planet_neural_net_society = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_infestation
-	
+
 	planet_modifier = {
 		job_calculator_engineer_per_pop = 0.015
 		job_calculator_physicist_per_pop = 0.015
@@ -316,7 +317,7 @@ d_living_planet_neural_net_engineering = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_infestation
-	
+
 	planet_modifier = {
 		job_engineer_per_pop = 0.015
 		job_physicist_per_pop = 0.015
@@ -335,7 +336,7 @@ d_living_planet_system_unity = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_infestation
-	
+
 	planet_modifier = {
 		pop_category_workers_unity_produces_add = 1
 	}
@@ -347,7 +348,7 @@ d_living_planet_system_production = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_infestation
-	
+
 	planet_modifier = {
 		planet_jobs_upkeep_mult = 0.5
 		planet_jobs_produces_mult = 0.5
@@ -361,7 +362,7 @@ d_living_planet_system_ships = {
 	drop_weight = { weight = 0 }
 	potential = { always = no }
 	icon = d_infestation
-	
+
 	country_modifier = {
 		country_ship_upgrade_cost_mult = -0.2
 		country_ship_cost_mult = -0.5

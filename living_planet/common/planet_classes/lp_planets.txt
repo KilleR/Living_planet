@@ -1,5 +1,5 @@
 pc_living_planet = {
-	entity = "hive_world_planet"
+	entity = "lp_planet"
 	picture = pc_infested
 	entity_scale = @planet_standard_scale
 
@@ -35,6 +35,9 @@ pc_living_planet = {
 	colonizable = yes
 	district_set = hive_world
 	ideal = yes
+	auto_trait_prio = {
+		trait_auto_pc_living_planet_preference
+	}
 	starting_planet = no
 	show_city = no
 

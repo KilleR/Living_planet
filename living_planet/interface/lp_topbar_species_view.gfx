@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_species_selected_background_trait_pc_living_planet_preference"
+		texturefile = "gfx/portraits/species_preview_backgrounds/species_preview_bg_hive.dds"
+	}
+}

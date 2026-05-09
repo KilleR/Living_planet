@@ -1,0 +1,5 @@
+option = {
+	name = lp_evo_shift_$CHOICE$
+	set_situation_flag = lp_evo_flag_$CHOICE$
+	custom_tooltip = lp_evo_shift_$CHOICE$_desc
+}

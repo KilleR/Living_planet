@@ -17,12 +17,12 @@ event = {
 					limit = {
 						check_variable = {
 							which = lp_evolutionary_shift
-							value < 25
+							value < 20
 						}
 					}
 					set_variable = {
 						which = lp_evolutionary_shift
-						value = 25
+						value = 20
 					}
 				}
 

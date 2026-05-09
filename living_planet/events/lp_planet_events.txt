@@ -267,148 +267,28 @@ planet_event = {
 	
 	immediate = {
 		change_planet_size = 1
-		
+
 		if = {
 			limit = {
-				NOT = {
-					space_owner = {
-						has_event_chain = lp_evo_shift_chain
-					}
-				}
-				OR = {
-					AND = {
-						check_variable = {
-							which = lp_evolutionary_shift
-							value = 25
-						}
-						planet_size >= 25
-					}
-					AND = {
-						check_variable = {
-							which = lp_evolutionary_shift
-							value = 50
-						}
-						planet_size >= 50
-					}
-					AND = {
-						check_variable = {
-							which = lp_evolutionary_shift
-							value = 75
-						}
-						planet_size >= 75
-					}
-					AND = {
-						check_variable = {
-							which = lp_evolutionary_shift
-							value = 100
-						}
-						planet_size >= 100
-					}
-					AND = {
-						check_variable = {
-							which = lp_evolutionary_shift
-							value = 125
-						}
-						planet_size >= 125
-					}
-					AND = {
-						check_variable = {
-							which = lp_evolutionary_shift
-							value = 150
-						}
-						planet_size >= 150
-					}
-					AND = {
-						check_variable = {
-							which = lp_evolutionary_shift
-							value = 175
-						}
-						planet_size >= 175
-					}
-					AND = {
-						check_variable = {
-							which = lp_evolutionary_shift
-							value = 200
-						}
-						planet_size >= 200
-					}
-					AND = {
-						check_variable = {
-							which = lp_evolutionary_shift
-							value = 225
-						}
-						planet_size >= 225
-					}
-					AND = {
-						check_variable = {
-							which = lp_evolutionary_shift
-							value = 250
-						}
-						planet_size >= 250
-					}
-					AND = {
-						check_variable = {
-							which = lp_evolutionary_shift
-							value = 275
-						}
-						planet_size >= 275
-					}
-					AND = {
-						check_variable = {
-							which = lp_evolutionary_shift
-							value = 300
-						}
-						planet_size >= 300
-					}
-					AND = {
-						check_variable = {
-							which = lp_evolutionary_shift
-							value = 325
-						}
-						planet_size >= 325
-					}
-					AND = {
-						check_variable = {
-							which = lp_evolutionary_shift
-							value = 350
-						}
-						planet_size >= 350
-					}
-					AND = {
-						check_variable = {
-							which = lp_evolutionary_shift
-							value = 375
-						}
-						planet_size >= 375
-					}
-					AND = {
-						check_variable = {
-							which = lp_evolutionary_shift
-							value = 400
-						}
-						planet_size >= 400
-					}
+				check_variable = {
+					which = lp_evolutionary_shift
+					value = trigger:planet_size
 				}
 			}
+
 			planet_event = { id = lp_planet.011 }
+
+			owner.capital_scope = {
+				change_variable = {
+					which = lp_evolutionary_shift
+					value = 10
+				}
+				change_variable = {
+					which = lp_growth_factor
+					value = 1
+				}
+			}
 		}
-		
-		# fuck this in particular
-		#		export_trigger_value_to_variable = {
-		#			trigger = planet_size
-		#			variable = lp_planet_size
-		#			round = yes
-		#		}
-		#		if = {
-		#			limit = {
-		#				check_variable = {
-		#					which = lp_evolutionary_shift
-		#					value <= lp_planet_size
-		#				}
-		#			}
-		#
-		#			planet_event = { id = lp_planet.011 }
-		#		}
 	}
 }
 # Evo shift
@@ -418,27 +298,13 @@ planet_event = {
 	desc = lp_planet.011.desc
 	is_triggered_only = yes
 	picture = GFX_evt_genetic_modification
-	
-	immediate = {
-		change_variable = {
-			which = lp_evolutionary_shift
-			value = 25
-		}
-		change_variable = {
-			which = lp_growth_factor
-			value = 1
-		}
-	}
-	
+
 	option = {
 		name = lp_planet.011.a
 		custom_tooltip = lp_planet.011.a.tooltip
 		if = {
 			limit = {
-				check_variable = {
-					which = lp_evolutionary_shift
-					value >= 75
-				}
+				planet_size >= 30
 				NOT = {
 					has_planet_flag = lp_lunar_shift_done
 				}
@@ -473,7 +339,7 @@ planet_event = {
 		#	limit = {
 		#		check_variable = {
 		#			which = lp_evolutionary_shift
-		#			value >= 150
+		#			value >= 600
 		#		}
 		#		NOT = {
 		#			has_planet_flag = lp_system_shift_done
@@ -491,51 +357,55 @@ planet_event = {
 				target = ROOT
 			}
 			owner = {
+				start_situation = {
+					type = lp_situation_evo_shift
+					target = this
+				}
 				set_country_flag = lp_evo_shift_started
 			}
-			if = {
-				limit = {
-					check_variable = {
-						which = lp_growth_factor
-						value > 5
-					}
-				}
-				enable_special_project = {
-					name = LP_EVO_SHIFT_GENERAL
-					location = this
-					owner = root
-				}
-			}
-			enable_special_project = {
-				name = LP_EVO_SHIFT_PHYSICS
-				location = this
-				owner = root
-			}
-			enable_special_project = {
-				name = LP_EVO_SHIFT_SOCIETY
-				location = this
-				owner = root
-			}
-			enable_special_project = {
-				name = LP_EVO_SHIFT_ENGINEERING
-				location = this
-				owner = root
-			}
-			enable_special_project = {
-				name = LP_EVO_SHIFT_ENERGY
-				location = this
-				owner = root
-			}
-			enable_special_project = {
-				name = LP_EVO_SHIFT_MINERALS
-				location = this
-				owner = root
-			}
-			enable_special_project = {
-				name = LP_EVO_SHIFT_FOOD
-				location = this
-				owner = root
-			}
+			# if = {
+			# 	limit = {
+			# 		check_variable = {
+			# 			which = lp_growth_factor
+			# 			value > 5
+			# 		}
+			# 	}
+			# 	enable_special_project = {
+			# 		name = LP_EVO_SHIFT_GENERAL
+			# 		location = this
+			# 		owner = root
+			# 	}
+			# }
+			# enable_special_project = {
+			# 	name = LP_EVO_SHIFT_PHYSICS
+			# 	location = this
+			# 	owner = root
+			# }
+			# enable_special_project = {
+			# 	name = LP_EVO_SHIFT_SOCIETY
+			# 	location = this
+			# 	owner = root
+			# }
+			# enable_special_project = {
+			# 	name = LP_EVO_SHIFT_ENGINEERING
+			# 	location = this
+			# 	owner = root
+			# }
+			# enable_special_project = {
+			# 	name = LP_EVO_SHIFT_ENERGY
+			# 	location = this
+			# 	owner = root
+			# }
+			# enable_special_project = {
+			# 	name = LP_EVO_SHIFT_MINERALS
+			# 	location = this
+			# 	owner = root
+			# }
+			# enable_special_project = {
+			# 	name = LP_EVO_SHIFT_FOOD
+			# 	location = this
+			# 	owner = root
+			# }
 		}
 	}
 }

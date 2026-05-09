@@ -15,3 +15,7 @@ lp_set_growth_resource = {
 		value = owner.value:get_resource_amount|RESOURCE|lp_planetary_matter|PERCENTAGE|1|
 	}
 }
+
+lp_set_evo_flag = {
+	set_situation_flag = lp_evo_flag_$CHOICE$
+}

@@ -1,0 +1,5 @@
+
+db_lp = {
+	name = databank_lp
+	icon = GFX_text_databank_colony
+}

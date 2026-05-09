@@ -31,3 +31,60 @@ situation_event = {
 		destroy_situation = this
 	}
 }
+
+# Evo Shift destination choice
+situation_event = {
+	id = lp_situation.201
+	is_triggered_only = yes
+	auto_opens = yes
+
+	title = lp_evo_shift_chain_title
+	desc = lp_evo_shift_chain_desc
+	picture = GFX_evt_baol_grunur
+	show_sound = relic_activation_the_last_baol
+
+	immediate = {
+		set_situation_flag = lp_evo_flag_none
+	}
+
+	option = {
+		trigger = {
+			check_variable = {
+				which = lp_growth_factor
+				value > 5
+			}
+		}
+		name = lp_evo_shift_general
+		set_situation_flag = lp_evo_flag_general
+		custom_tooltip = lp_evo_shift_general_desc
+	}
+
+	inline_script = {
+		script = lp_evo_option
+		CHOICE = "growth"
+	}
+	inline_script = {
+		script = lp_evo_option
+		CHOICE = "physics"
+	}
+	inline_script = {
+		script = lp_evo_option
+		CHOICE = "society"
+	}
+	inline_script = {
+		script = lp_evo_option
+		CHOICE = "engineering"
+	}
+	inline_script = {
+		script = lp_evo_option
+		CHOICE = "energy"
+	}
+	inline_script = {
+		script = lp_evo_option
+		CHOICE = "minerals"
+	}
+	inline_script = {
+		script = lp_evo_option
+		CHOICE = "food"
+	}
+}

@@ -6,3 +6,16 @@ concept_lp_devour_planet = {
 concept_lp_planetary_mass = {
 	icon = "gfx/interface/icons/resources/lp_planetary_matter.dds"
 }
+
+concept_lp_deposit_evo_shift_physics = {
+	tooltip_override = d_living_planet_evo_shift_physics
+	icon = gfx/interface/icons/concepts/planet_classes/pc_hive.dds
+}
+concept_living_planet_evo_shift_society = {
+	tooltip_override = d_living_planet_evo_shift_society
+	icon = gfx/interface/icons/concepts/planet_classes/pc_hive.dds
+}
+concept_living_planet_evo_shift_engineering = {
+	tooltip_override = d_living_planet_evo_shift_engineering
+	icon = gfx/interface/icons/concepts/planet_classes/pc_hive.dds
+}

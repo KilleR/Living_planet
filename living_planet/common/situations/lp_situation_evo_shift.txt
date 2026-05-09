@@ -1,0 +1,158 @@
+lp_situation_evo_shift = {
+	picture = GFX_evt_circuitry_modification
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+	category = positive
+
+	on_start = {
+		set_variable = {
+			which = lp_evo_shift_type
+			value = generic
+		}
+	}
+
+	on_progress_complete = {
+		switch = {
+			trigger = has_situation_flag
+			lp_evo_flag_general ={
+				owner = {
+					change_variable = {
+						which = lp_growth_factor
+						value = -2
+					}
+				}
+			}
+			lp_evo_flag_physics = {
+				owner.capital_scope = {
+					add_deposit = d_living_planet_evo_shift_physics
+				}
+			}
+			inline_script = {
+				script = lp_evo_result_deposit
+				CHOICE = "growth"
+			}
+			inline_script = {
+				script = lp_evo_result_deposit
+				CHOICE = "physics"
+			}
+			inline_script = {
+				script = lp_evo_result_deposit
+				CHOICE = "society"
+			}
+			inline_script = {
+				script = lp_evo_result_deposit
+				CHOICE = "engineering"
+			}
+			inline_script = {
+				script = lp_evo_result_deposit
+				CHOICE = "energy"
+			}
+			inline_script = {
+				script = lp_evo_result_deposit
+				CHOICE = "minerals"
+			}
+			inline_script = {
+				script = lp_evo_result_deposit
+				CHOICE = "food"
+			}
+		}
+		destroy_situation = this
+	}
+
+	stages = {
+		lp_stage_evo_init = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 25
+
+		}
+		lp_stage_evo_change = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 50
+			on_first_enter = {
+				situation_event = {
+					id = lp_situation.201
+				}
+			}
+
+			triggered_modifier = {
+				potential = {
+					has_situation_flag = lp_evo_flag_energy
+				}
+				modifier = {
+					country_physics_research_produces_mult = 0.25
+				}
+			}
+		}
+	}
+	monthly_progress = {
+		base = 1
+	}
+	approach = {
+		name = lp_evo_approach_research
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip_with_params = {
+				description = lp_situation_evo_shift_approach
+				description_parameters = {
+					APPROACH = "research"
+				}
+			}
+		}
+		modifier = {
+			country_physics_research_produces_mult = -0.5
+			country_society_research_produces_mult = -0.5
+			country_engineering_research_produces_mult = -0.5
+		}
+	}
+	approach = {
+		name = lp_evo_approach_physics
+		icon = GFX_situation_approach_physics
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip_with_params = {
+				description = lp_situation_evo_shift_approach
+				description_parameters = {
+					APPROACH = "physics"
+				}
+			}
+		}
+		modifier = {
+			country_physics_research_produces_mult = -1
+		}
+	}
+	approach = {
+		name = lp_evo_approach_society
+		icon = GFX_situation_approach_society
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip_with_params = {
+				description = lp_situation_evo_shift_approach
+				description_parameters = {
+					APPROACH = "society"
+				}
+			}
+		}
+		modifier = {
+			country_society_research_produces_mult = -1
+		}
+	}
+	approach = {
+		name = lp_evo_approach_engineering
+		icon = GFX_situation_approach_engineering
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip_with_params = {
+				description = lp_situation_evo_shift_approach
+				description_parameters = {
+					APPROACH = "engineering"
+				}
+			}
+		}
+		modifier = {
+			country_engineering_research_produces_mult = -1
+		}
+	}
+}

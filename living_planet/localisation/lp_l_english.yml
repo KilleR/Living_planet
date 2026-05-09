@@ -10,6 +10,8 @@
   origin_living_planet_effects: "- Species Trait: ['trait:trait_living_planet']\nStart on a special $pc_hive$ with the ability consume other habitable worlds to increase the size of your homeworld.\n- Enables the §H$decision_lp_devour_planetary_matter$§! planetary decision:.\n  * Moves £planetsize£ from an empty habitable world to the §GLiving Planet§! at a cost of £influence£ 1 per month until the planet is entirely consumed.\n  * £planetsize£ Size requirement to grow the §GLiving Planet§! starts at 4 planetary_matter consumed.\n  * Planetary features consumed will add related features to the §GLiving Planet§! .\n- Owned £pops£ will automatically be moved to the §GLiving Planet§! from other worlds.\n- Gain an additional £job_synapse_drone£ $job_synapse_drone$, £job_spawning_drone£ $job_spawning_drone$ Job and £job_brain_drone£ $job_brain_drone$ on your homeworld for every £pops£ 20.\n- Gain unique planetary decisions to add additional jobs to your homeworld to help manage deviancy and fleet cap for £influence£ 100.\n"
   origin_living_planet_negative_effects: "- §RDue to the nature and size of the neural network, your drones are unable to live outside of your homeworld.§!\n- §RCannot settle planets.§!\n"
 
+  trait_auto_pc_living_planet_preference: "$trait_pc_living_planet_preference$""
+  trait_auto_pc_living_planet_preference_desc: "$trait_pc_living_planet_preference_desc$""
   trait_pc_living_planet_preference: "Living Planet"
   trait_pc_living_planet_preference_desc: "The species doesn't so much live on a planet, moreso it is a planet.\nIt cannot live on an independent biosphere outside it's native one"
   trait_pc_living_planet_desc: "This species is part of a living planet, and cannot inhabit other worlds"
@@ -25,6 +27,7 @@
 
   pc_living_planet: "Living Planet"
   pc_living_planet_desc: "A single hive mind so vast that it resembles a planet."
+  mod_pc_living_planet_habitability: "$pc_living_planet$ Habitability."
   
   district_living_planet_core:0 "Living Planet Core"
   district_living_planet_core_desc:0 "Coordinated core of the planet's brain"
@@ -35,16 +38,28 @@
   planet_devourer_DESC: "A collection of excavator drones, who's sole purpose is scouring planetary bodies for planetary matter, and returning them to the Living Planet."
   
   mod_planet_researchers_energy_upkeep_add: "§R£energy£ $energy$ upkeep for £job_researcher£ $job_researcher_plural$§!"
+  mod_pop_spawning_drone_bonus_workforce_mult: "$BONUS_WORKFORCE_FOR$ $job_spawning_drone_plural_with_icon$"
+  mod_pop_cat_complex_drone_bonus_workforce_mult: "$BONUS_WORKFORCE_FOR$ $pop_cat_complex_drone_plural$"
 
   ################
   ### Concepts ###
   ################
+
+  db_lp: "Living Planet Concept"
 
   concept_lp_devour_planet: "Devour Planets"
   concept_lp_devour_planet_desc: "As a living planet, you must consume the mass of habitable worlds to expand.\nThis is achieved by using the §H$decision_lp_devour_planetary_matter$§! Decision on a habitable world within your borders.\nA $planet_devourer$ will be placed over the planet, and it will begin extracting ['concept_lp_planetary_mass'] at the cost of $r_influence$.\n\n$planet_devourer$s reduce the size of the target planet over time, and will also remove features - converting them into small bonus features for the home planet."
 
   concept_lp_planetary_mass: "Planetary Mass"
   concept_lp_planetary_mass_desc: "$r_lp_planetary_matter$ is the resource required for us to grow.\nThe $lp_situation_growth$ situation will track growth over time.\nThe Living Planet will grow by one $concept_planet_size$ when it completes, and will then automatically restart.\n\nAt certain points in our growth, we will be able to undergo more significant changes.\nThese happen along the $lp_situation_complexity$ situation."
+
+  concept_lp_deposit: "Living Planet Deposits"
+  concept_lp_deposit_desc: "£blocker£ §H$concept_lp_deposit$§! represent represent the inner workings of your planet.\nThey are specialisations and unique functions that are created from special events, and choices.\n\nThese will provide bonus resources, or modifiers to the Living Planet."
+
+  concept_lp_deposit_evo_shift_physics: "$d_living_planet_evo_shift_physics$"
+  concept_lp_deposit_evo_shift_society: "$d_living_planet_evo_shift_society$"
+  concept_lp_deposit_evo_shift_engineering: "$d_living_planet_evo_shift_engineering$"
+
 
   ##################
   ### Modifiers ####
@@ -84,22 +99,22 @@
   lp_evo_shift_chain_title: "Evolutionary Shift"
   lp_evo_shift_chain_desc: "Sufficient planetary matter growth permits us to integrate a specific addition to our biosphere."
 
-  LP_EVO_SHIFT_GENERAL: "Planetary Matter Processing"
-  LP_EVO_SHIFT_GENERAL_DESC: "Spend our efforts in facilitating more efficient planetary planetary matter processing.\n\n§EEffect:\n§G-2§! £planetsize£ §YPlanetary Matter§! consumption required to increase §GLiving Planet§! £planetsize£ size.§!\n"
-  LP_EVO_SHIFT_PHYSICS: "Physics Specialisation"
-  LP_EVO_SHIFT_PHYSICS_DESC: "Spend our efforts increasing our ability to understand the way the universe works.\n\n§EEffect:\n§G+25%§! $physicist_jobs_bonus_workforce_mult$.§!\n§R+1 $energy_with_icon$ upkeep for $job_brain_drone_plural_with_icon$.§!\n"
-  LP_EVO_SHIFT_SOCIETY: "Society Specialisation"
-  LP_EVO_SHIFT_SOCIETY_DESC: "Spend our efforts on our evolutionary patterns.\n\n§EEffect:\n§G+25%§! $biologist_jobs_bonus_workforce_mult$.§!\n§R+1$energy_with_icon$ upkeep for $job_brain_drone_plural_with_icon$.§!\n"
-  LP_EVO_SHIFT_ENGINEERING: "Engineering Specialisation"
-  LP_EVO_SHIFT_ENGINEERING_DESC: "Spend our efforts generating new manufacturing patterns.\n\n§EEffect:\n§G+25%§! $engineer_jobs_bonus_workforce_mult$.§!\n§R+1 $energy_with_icon$ upkeep for $job_brain_drone_plural_with_icon$.§!\n"
-  LP_EVO_SHIFT_ENERGY: "Energy Specialisation"
-  LP_EVO_SHIFT_ENERGY_DESC: "Spend our efforts increasing the inductive potential of our synapses.\n\n§EEffect:\n§G+25%§! $technician_jobs_bonus_workforce_mult$.§!\n"
-  LP_EVO_SHIFT_MINERALS: "Minerals Specialisation"
-  LP_EVO_SHIFT_MINERALS_DESC: "Spend our efforts enhancing our mineral separation membranes.\n\n§EEffect:\n§G+25%§! $miner_jobs_bonus_workforce_mult$.§!\n"
-  LP_EVO_SHIFT_FOOD: "Food Specialisation"
-  LP_EVO_SHIFT_FOOD_DESC: "Spend our efforts developing more efficient digestive acids.\n\n§EEffect:\n§G+25%§! $farmer_jobs_bonus_workforce_mult$.§!\n"
-  LP_EVO_SHIFT_GROWTH: "Growth Specialisation"
-  LP_EVO_SHIFT_GROWTH_DESC: "Spend our efforts improving the speed we grow new planetary linkages.\n\n§EEffect:\n§G+25%§! £mod_pop_assembly_speed£ §Y$MOD_POP_ASSEMBLY_SPEED$§!.§!\n"
+  lp_evo_shift_general: "Planetary Matter Processing"
+  lp_evo_shift_general_desc: "Spend our efforts in facilitating more efficient planetary planetary matter processing.\n\n§EFinisher Effect:\n§G-2§! £planetsize£ §YPlanetary Matter§! consumption required to increase §GLiving Planet§! £planetsize£ size.§!\n"
+  lp_evo_shift_physics: "Physics Specialisation"
+  lp_evo_shift_physics_desc: "Spend our efforts increasing our ability to understand the way the universe works.\n\n§EFinisher Effect:\n§G+25%§! $physicist_jobs_bonus_workforce_mult$.§!\n§R+1 $energy_with_icon$ upkeep for $job_brain_drone_plural_with_icon$.§!\n"
+  lp_evo_shift_society: "Society Specialisation"
+  lp_evo_shift_society_desc: "Spend our efforts on our evolutionary patterns.\n\n§EFinisher Effect:\n§G+25%§! $biologist_jobs_bonus_workforce_mult$.§!\n§R+1 $energy_with_icon$ upkeep for $job_brain_drone_plural_with_icon$.§!\n"
+  lp_evo_shift_engineering: "Engineering Specialisation"
+  lp_evo_shift_engineering_desc: "Spend our efforts generating new manufacturing patterns.\n\n§EFinisher Effect:\n§G+25%§! $engineer_jobs_bonus_workforce_mult$.§!\n§R+1 $energy_with_icon$ upkeep for $job_brain_drone_plural_with_icon$.§!\n"
+  lp_evo_shift_energy: "Energy Specialisation"
+  lp_evo_shift_energy_desc: "Spend our efforts increasing the inductive potential of our synapses.\n\n§EFinisher Effect:\n§G+25%§! $technician_jobs_bonus_workforce_mult$.§!\n"
+  lp_evo_shift_minerals: "Minerals Specialisation"
+  lp_evo_shift_minerals_desc: "Spend our efforts enhancing our mineral separation membranes.\n\n§EFinisher Effect:\n§G+25%§! $miner_jobs_bonus_workforce_mult$.§!\n"
+  lp_evo_shift_food: "Food Specialisation"
+  lp_evo_shift_food_desc: "Spend our efforts developing more efficient digestive acids.\n\n§EFinisher Effect:\n§G+25%§! $farmer_jobs_bonus_workforce_mult$.§!\n"
+  lp_evo_shift_growth: "Growth Specialisation"
+  lp_evo_shift_growth_desc: "Spend our efforts improving the speed we grow new planetary linkages.\n\n§EFinisher Effect:\n§G+25%§! §Y$mod_pop_spawning_drone_bonus_workforce_mult$§!.§!\n"
   
   lp_lunar_shift_chain_title: "Evolutionary Shift - Consume The Moon!"
   lp_lunar_shift_chain_desc: "We have grown strong enough that we are able to pull our nearest moon into a controlled impact.\nWe expect its integration to bring a significant step forwards in our evolution."
@@ -121,14 +136,27 @@
   ###################
 
   lp_situation_growth: "Living Planet Growth"
+  lp_situation_growth_type: "LP_GROWTH_TYPE"
   lp_situation_growth_desc: "As the living planet grows, we will get opportunities to decide various evolutionary paths.\n\nFind habitable planets and devour them to grow.\n\nWe have [root.lp_pm_amount] $r_lp_planetary_matter$"
   lp_stage_growing: "We are processing $r_lp_planetary_matter$ in order to grow."
 
   lp_situation_growth_approach_standard: "Consume"
   lp_situation_growth_approach_standard_desc: "Process $r_lp_planetary_matter$ to increase our size."
+  lp_situation_growth_monthly_change_tooltip: "Progress towards our next growth:"
   lp_situation_growth_pause_desc: "We have no $r_lp_planetary_matter$!\nThe situation will pause until we have more.\n['concept_lp_devour_planet'] to generate more."
 
   lp_situation_growth_gain: "+1 £planetsize£ $concept_planet_size$"
+
+  lp_situation_evo_shift: "Evolutionary Shift!"
+  lp_situation_evo_shift_desc: "We are undergoing a great change!"
+  lp_situation_evo_shift_monthly_change_tooltip: "Progress towards Evolutionary Shift:"
+  lp_stage_evo_init: "The great change has begun, we are preparing to choose."
+  lp_stage_evo_change: "We have made our choice, now we will finalize the change."
+  lp_situation_evo_shift_approach: "Use $APPROACH$ to progress the shift."
+  lp_evo_approach_research: "All Research Divisions"
+  lp_evo_approach_physics: "Physics Research"
+  lp_evo_approach_society: "Society Research"
+  lp_evo_approach_engineering: "Engineering Research"
 
   lp_situation_complexity: ""
 

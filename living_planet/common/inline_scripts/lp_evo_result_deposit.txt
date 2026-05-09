@@ -1,0 +1,6 @@
+lp_evo_flag_$CHOICE$ = {
+	owner.capital_scope = {
+		add_deposit = d_living_planet_evo_shift_$CHOICE$
+	}
+}
+
