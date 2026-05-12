@@ -51,7 +51,7 @@ trait_pc_living_planet_preference = {
 trait_auto_pc_living_planet_preference = {
 	inline_script = {
 		script = traits/auto_preference_planet_class
-		PLANET_CLASS = pc_relic
+		PLANET_CLASS = pc_living_planet
 	}
 	modifier = {
 		# Dry

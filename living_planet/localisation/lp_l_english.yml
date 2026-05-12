@@ -12,6 +12,7 @@
 
   trait_auto_pc_living_planet_preference: "$trait_pc_living_planet_preference$""
   trait_auto_pc_living_planet_preference_desc: "$trait_pc_living_planet_preference_desc$""
+  trait_auto_pc_living_planet_preference_tt: "$trait_pc_living_planet_preference_desc$""
   trait_pc_living_planet_preference: "Living Planet"
   trait_pc_living_planet_preference_desc: "The species doesn't so much live on a planet, moreso it is a planet.\nIt cannot live on an independent biosphere outside it's native one"
   trait_pc_living_planet_desc: "This species is part of a living planet, and cannot inhabit other worlds"
@@ -89,7 +90,7 @@
   ####################
   
   lp_planet.011.name: "Evolutionary Shift"
-  lp_planet.011.desc: "We have gathered enough mass to make a choice about the future of our development.\nWe can pick a direction for our evolution, which will shape the future of our living planet.\n"
+  lp_planet.011.desc: "We have gathered enough mass to make a significant leap forward in the future of our development.\nWe can pick a direction for our evolution, which will shape the future of our living planet.\n\nIt will take us some time to make preparations, then we will be able to choose a direction for this undertaking."
   lp_planet.011.a: "Begin the shift!"
   lp_planet.011.a.tooltip: "Increasing complexity of our planet's neurostructure makes it more costly to integrate additional planetary matter.\n\n§EEffect:\n§!§RPlanetary planetary matter required to grow has increased by 1.§!\n\n"
   
@@ -115,18 +116,21 @@
   lp_evo_shift_food_desc: "Spend our efforts developing more efficient digestive acids.\n\n§EFinisher Effect:\n§G+25%§! $farmer_jobs_bonus_workforce_mult$.§!\n"
   lp_evo_shift_growth: "Growth Specialisation"
   lp_evo_shift_growth_desc: "Spend our efforts improving the speed we grow new planetary linkages.\n\n§EFinisher Effect:\n§G+25%§! §Y$mod_pop_spawning_drone_bonus_workforce_mult$§!.§!\n"
-  
-  lp_lunar_shift_chain_title: "Evolutionary Shift - Consume The Moon!"
-  lp_lunar_shift_chain_desc: "We have grown strong enough that we are able to pull our nearest moon into a controlled impact.\nWe expect its integration to bring a significant step forwards in our evolution."
-  
-  LP_LUNAR_SHIFT_GENERAL: "Pure Thought"
-  LP_LUNAR_SHIFT_GENERAL_DESC: "Process the lunar mass into a network fast-adapting synapses.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_general$ to the planet.\n§G+1§! $job_brain_drone_plural_with_icon$ Job per 10 £pops£ pops.§!\n"
-  LP_LUNAR_SHIFT_PHYSICS: "Physics Specialisation"
-  LP_LUNAR_SHIFT_PHYSICS_DESC: "Process the lunar mass into a physics-specialised synaptic cluster.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_physics$ to the planet.\n§G+1§! £job_brain_drone£ $job_brain_drone$ Job per 20 £pops£ pops.\n§G+2§! £physics£ $physics_research$ from £job_brain_drone£ $job_brain_drone_plural$.§!\n"
-  LP_LUNAR_SHIFT_SOCIETY: "Society Specialisation"
-  LP_LUNAR_SHIFT_SOCIETY_DESC: "Process the lunar mass into a society-specialised synaptic cluster.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_society$ to the planet.\n§G+1§! £job_brain_drone£ $job_brain_drone$ Job per 20 £pops£ pops.\n§G+2§! £society£ $society_research$ from £job_brain_drone£ $job_brain_drone_plural$.§!\n"
-  LP_LUNAR_SHIFT_ENGINEERING: "Engineering Specialisation"
-  LP_LUNAR_SHIFT_ENGINEERING_DESC: "Process the lunar mass into a engineering-specialised synaptic cluster.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_engineering$ to the planet.\n§G+1§! £job_brain_drone£ $job_brain_drone$ Job per 20 £pops£ pops.\n§G+2§! £engineering£ $engineering_research$ from £job_brain_drone£ $job_brain_drone_plural$.§!\n"
+
+  lp_lunar_shift_choice: "Allocate the Moon"
+  lp_lunar_shift_choice_desc: "Allocate the Moon's resources.\nHaving been our closest neighbour for all our existence, this integration provides a unique opportunity for some very specialised neural networking.\n\nThis will provide more opportunity for science."
+
+  lp_lunar_shift_general: "Pure Thought"
+  lp_lunar_shift_general_desc: "Process the lunar mass into a network fast-adapting synapses.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_general$ to the planet.\n§G+1§! $job_calculator_physicist_plural_with_icon$ Job per 30 £pops£ pops.\n§G+1§! $job_calculator_biologist_plural_with_icon$ Job per 30 £pops£ pops.\n§G+1§! $job_calculator_engineer_plural_with_icon$ Job per 30 £pops£ pops.§!"
+
+  lp_lunar_shift_physics: "Physics Specialisation"
+  lp_lunar_shift_physics_desc: "Process the lunar mass into a physics-specialised synaptic cluster.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_physics$ to the planet.\n§G+1§! $job_calculator_physicist_plural_with_icon$ Job per 60 £pops£ pops.\n§G+1§! $job_calculator_biologist_plural_with_icon$ Job per 60 £pops£ pops.\n§G+1§! $job_calculator_engineer_plural_with_icon$ Job per 60 £pops£ pops.\n§G+50%§! $physicist_jobs_bonus_workforce_mult$.§!\n"
+
+  lp_lunar_shift_society: "Society Specialisation"
+  lp_lunar_shift_society_desc: "Process the lunar mass into a society-specialised synaptic cluster.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_society$ to the planet.\n§G+1§! $job_calculator_physicist_plural_with_icon$ Job per 60 £pops£ pops.\n§G+1§! $job_calculator_biologist_plural_with_icon$ Job per 60 £pops£ pops.\n§G+1§! $job_calculator_engineer_plural_with_icon$ Job per 60 £pops£ pops.\n§G+50%§! $physicist_jobs_bonus_workforce_mult$.§!\n"
+
+  lp_lunar_shift_engineering: "Engineering Specialisation"
+  lp_lunar_shift_engineering_desc: "Process the lunar mass into a engineering-specialised synaptic cluster.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_engineering$ to the planet.\n§G+1§! $job_calculator_physicist_plural_with_icon$ Job per 60 £pops£ pops.\n§G+1§! $job_calculator_biologist_plural_with_icon$ Job per 60 £pops£ pops.\n§G+1§! $job_calculator_engineer_plural_with_icon$ Job per 60 £pops£ pops.\n§G+50%§! $physicist_jobs_bonus_workforce_mult$.§!\n"
 
   lp_system_shift_chain: "Evolutionary Shift - Become the Star System!"
   lp_system_shift_chain_desc: "TODO: desc"
@@ -148,6 +152,7 @@
   lp_situation_growth_gain: "+1 £planetsize£ $concept_planet_size$"
 
   lp_situation_evo_shift: "Evolutionary Shift!"
+  lp_situation_evo_shift_type: "Evolutionary Shift"
   lp_situation_evo_shift_desc: "We are undergoing a great change!"
   lp_situation_evo_shift_monthly_change_tooltip: "Progress towards Evolutionary Shift:"
   lp_stage_evo_init: "The great change has begun, we are preparing to choose."
@@ -158,10 +163,16 @@
   lp_evo_approach_society: "Society Research"
   lp_evo_approach_engineering: "Engineering Research"
 
-  lp_situation_complexity: ""
-
   lp_stage_nascence: "We have just achieved sentience. We must grow."
   LP_MESSAGE_SIZE_GAINED: "We have processed enough $r_lp_planetary_matter$ and have become larger!"
+
+  lp_situation_lunar_shift: "Evolutionary Shift - Consume The Moon!"
+  lp_situation_lunar_shift_desc: "We have grown strong enough that we are able to pull our nearest moon into a controlled impact.\nWe expect its integration to bring a significant step forwards in our evolution."
+  lp_situation_lunar_shift_monthly_change_tooltip: "Progress towards final integration of our moon."
+  lp_situation_lunar_shift_type: "Evolutionary Shift"
+
+  lp_stage_lunar_change: "We are prepared, and we will integrate the remnants of our moon."
+  lp_situation.300.a: "$ACKNOWLEDGED$"
 
   ####################
   ### Deposits #######

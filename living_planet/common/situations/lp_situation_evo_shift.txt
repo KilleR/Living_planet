@@ -64,7 +64,6 @@ lp_situation_evo_shift = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_green
 			end = 25
-
 		}
 		lp_stage_evo_change = {
 			icon = GFX_situation_stage_2
@@ -73,15 +72,6 @@ lp_situation_evo_shift = {
 			on_first_enter = {
 				situation_event = {
 					id = lp_situation.201
-				}
-			}
-
-			triggered_modifier = {
-				potential = {
-					has_situation_flag = lp_evo_flag_energy
-				}
-				modifier = {
-					country_physics_research_produces_mult = 0.25
 				}
 			}
 		}
@@ -93,6 +83,7 @@ lp_situation_evo_shift = {
 		name = lp_evo_approach_research
 		icon = GFX_situation_approach_research
 		icon_background = GFX_situation_approach_bg_green
+		default = yes
 		on_select = {
 			custom_tooltip_with_params = {
 				description = lp_situation_evo_shift_approach

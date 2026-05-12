@@ -12,6 +12,22 @@ event = {
 				has_origin = origin_living_planet
 			}
 
+			# Remove deprecated event chains
+			if = {
+				limit = {
+					has_event_chain = lp_evo_shift_chain
+				}
+				end_event_chain = lp_evo_shift_chain
+			}
+
+			# Remove deprecated event chains
+			if = {
+				limit = {
+					has_event_chain = lp_lunar_shift_chain
+				}
+				end_event_chain = lp_lunar_shift_chain
+			}
+
 			capital_scope = {
 				if = {
 					limit = {

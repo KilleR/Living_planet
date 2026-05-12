@@ -19,6 +19,13 @@ has_lp_growth_resources = {
 	}
 }
 
+lp_is_lunar_shift_ready = {
+	planet_size >= 30
+	NOT = {
+		has_planet_flag = lp_lunar_shift_done
+	}
+}
+
 planet_is_ecu_equivalent = {
 	NOT = {
 		has_deposit = d_machine_prototype_pc_machine

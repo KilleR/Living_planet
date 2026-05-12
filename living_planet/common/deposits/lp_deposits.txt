@@ -32,7 +32,7 @@ d_living_planet_proto_hive = {
 		owner = {
 			OR = {
 				has_ascension_perk = ap_hive_worlds
-				has_country_flag = lp_evo_shift_started
+				has_country_flag = lp_evo_shift_completed
 			}
 		}
 	}
@@ -275,9 +275,9 @@ d_living_planet_neural_net_general = {
 	icon = d_infestation
 
 	planet_modifier = {
-		job_calculator_engineer_per_pop = 0.03
-		job_calculator_physicist_per_pop = 0.03
-		job_calculator_biologist_per_pop = 0.03
+		job_calculator_physicist_per_pop = 0.0333
+		job_calculator_biologist_per_pop = 0.0333
+		job_calculator_engineer_per_pop = 0.0333
 	}
 }
 
@@ -289,9 +289,9 @@ d_living_planet_neural_net_physics = {
 	icon = d_infestation
 
 	planet_modifier = {
-		job_calculator_engineer_per_pop = 0.015
-		job_calculator_physicist_per_pop = 0.015
-		job_calculator_biologist_per_pop = 0.015
+		job_calculator_engineer_per_pop = 0.01666
+		job_calculator_physicist_per_pop = 0.01666
+		job_calculator_biologist_per_pop = 0.01666
 		physicist_jobs_bonus_workforce_mult = 0.5
 	}
 }
@@ -304,9 +304,9 @@ d_living_planet_neural_net_society = {
 	icon = d_infestation
 
 	planet_modifier = {
-		job_calculator_engineer_per_pop = 0.015
-		job_calculator_physicist_per_pop = 0.015
-		job_calculator_biologist_per_pop = 0.015
+		job_calculator_engineer_per_pop = 0.01666
+		job_calculator_physicist_per_pop = 0.01666
+		job_calculator_biologist_per_pop = 0.01666
 		biologist_jobs_bonus_workforce_mult = 0.5
 	}
 }
@@ -319,9 +319,9 @@ d_living_planet_neural_net_engineering = {
 	icon = d_infestation
 
 	planet_modifier = {
-		job_engineer_per_pop = 0.015
-		job_physicist_per_pop = 0.015
-		job_biologist_per_pop = 0.015
+		job_engineer_per_pop = 0.01666
+		job_physicist_per_pop = 0.01666
+		job_biologist_per_pop = 0.01666
 		engineer_jobs_bonus_workforce_mult = 0.5
 	}
 }

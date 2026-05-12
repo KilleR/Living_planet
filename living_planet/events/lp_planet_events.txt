@@ -304,35 +304,14 @@ planet_event = {
 		custom_tooltip = lp_planet.011.a.tooltip
 		if = {
 			limit = {
-				planet_size >= 30
-				NOT = {
-					has_planet_flag = lp_lunar_shift_done
-				}
+				lp_is_lunar_shift_ready = yes
 			}
 			set_planet_flag = lp_lunar_shift_done
-			begin_event_chain = {
-				event_chain = lp_lunar_shift_chain
-				target = ROOT
-			}
-			enable_special_project = {
-				name = LP_LUNAR_SHIFT_GENERAL
-				location = this
-				owner = root
-			}
-			enable_special_project = {
-				name = LP_LUNAR_SHIFT_PHYSICS
-				location = this
-				owner = root
-			}
-			enable_special_project = {
-				name = LP_LUNAR_SHIFT_SOCIETY
-				location = this
-				owner = root
-			}
-			enable_special_project = {
-				name = LP_LUNAR_SHIFT_ENGINEERING
-				location = this
-				owner = root
+			owner = {
+				start_situation = {
+					type = lp_situation_lunar_shift
+					target = this
+				}
 			}
 		}
 		#else_if = {
@@ -352,60 +331,16 @@ planet_event = {
 		#	}
 		#}
 		else = {
-			begin_event_chain = {
-				event_chain = lp_evo_shift_chain
-				target = ROOT
-			}
+			# begin_event_chain = {
+			# 	event_chain = lp_evo_shift_chain
+			# 	target = ROOT
+			# }
 			owner = {
 				start_situation = {
 					type = lp_situation_evo_shift
 					target = this
 				}
-				set_country_flag = lp_evo_shift_started
 			}
-			# if = {
-			# 	limit = {
-			# 		check_variable = {
-			# 			which = lp_growth_factor
-			# 			value > 5
-			# 		}
-			# 	}
-			# 	enable_special_project = {
-			# 		name = LP_EVO_SHIFT_GENERAL
-			# 		location = this
-			# 		owner = root
-			# 	}
-			# }
-			# enable_special_project = {
-			# 	name = LP_EVO_SHIFT_PHYSICS
-			# 	location = this
-			# 	owner = root
-			# }
-			# enable_special_project = {
-			# 	name = LP_EVO_SHIFT_SOCIETY
-			# 	location = this
-			# 	owner = root
-			# }
-			# enable_special_project = {
-			# 	name = LP_EVO_SHIFT_ENGINEERING
-			# 	location = this
-			# 	owner = root
-			# }
-			# enable_special_project = {
-			# 	name = LP_EVO_SHIFT_ENERGY
-			# 	location = this
-			# 	owner = root
-			# }
-			# enable_special_project = {
-			# 	name = LP_EVO_SHIFT_MINERALS
-			# 	location = this
-			# 	owner = root
-			# }
-			# enable_special_project = {
-			# 	name = LP_EVO_SHIFT_FOOD
-			# 	location = this
-			# 	owner = root
-			# }
 		}
 	}
 }

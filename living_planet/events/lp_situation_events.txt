@@ -88,3 +88,49 @@ situation_event = {
 		CHOICE = "food"
 	}
 }
+
+situation_event = {
+	id = lp_situation.300
+	is_triggered_only = yes
+	auto_opens = yes
+
+	title = lp_situation_lunar_shift
+	desc = lp_situation_lunar_shift_desc
+	picture = GFX_evt_glimpse_core
+	show_sound = relic_activation_the_last_baol
+
+	option = {
+		name = lp_situation.300.a
+	}
+}
+
+situation_event = {
+	id = lp_situation.301
+	is_triggered_only = yes
+	auto_opens = yes
+
+	title = lp_lunar_shift_choice
+	desc = lp_lunar_shift_choice_desc
+	picture = GFX_evt_glimpse_core
+	show_sound = relic_activation_the_last_baol
+
+	option = {
+		name = lp_lunar_shift_general
+		set_situation_flag = lp_lunar_flag_general
+		custom_tooltip = lp_lunar_shift_general_desc
+	}
+	option = {
+		name = lp_lunar_shift_physics
+		set_situation_flag = lp_lunar_flag_physics
+		custom_tooltip = lp_lunar_shift_physics_desc
+	}
+	option = {
+		name = lp_lunar_shift_society
+		set_situation_flag = lp_lunar_flag_society
+		custom_tooltip = lp_lunar_shift_society_desc
+	}
+	option = {
+		name = lp_lunar_shift_engineering
+		set_situation_flag = lp_lunar_flag_engineering
+		custom_tooltip = lp_lunar_shift_engineering_desc
+	}}
