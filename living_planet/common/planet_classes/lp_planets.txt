@@ -3,6 +3,7 @@ pc_living_planet = {
 	picture = pc_infested
 	entity_scale = @planet_standard_scale
 
+
 	icon = GFX_planet_type_hive
 	icon_large = GFX_planet_type_hive_big
 

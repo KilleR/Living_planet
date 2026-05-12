@@ -251,6 +251,15 @@ event = {
 					}
 				}
 			}
+
+			every_owned_planet = {
+				limit = {
+					is_capital = no
+					pop_amount < 100
+				}
+
+				destroy_colony = yes
+			}
 		}
 	}
 	
@@ -373,13 +382,6 @@ planet_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		space_owner = {
-			end_event_chain = lp_lunar_shift_chain
-			# abort_special_project = LP_LUNAR_SHIFT_GENERAL
-			# abort_special_project = LP_LUNAR_SHIFT_PHYSICS
-			# abort_special_project = LP_LUNAR_SHIFT_SOCIETY
-			# abort_special_project = LP_LUNAR_SHIFT_ENGINEERING
-		}
 		every_moon = {
 			remove_planet = yes
 		}

@@ -15,6 +15,9 @@ lp_situation_lunar_shift = {
 	on_progress_complete = {
 		owner = {
 			set_country_flag = lp_lunar_shift_completed
+			capital_scope = {
+				planet_event = { id = lp_planet.013 }
+			}
 		}
 		switch = {
 			trigger = has_situation_flag

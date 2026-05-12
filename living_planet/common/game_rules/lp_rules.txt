@@ -1,4 +1,5 @@
-
+#Root = country
+#This = species
 can_colonize_with_species = {
 	if = {
 		limit = {
@@ -7,5 +8,35 @@ can_colonize_with_species = {
 		custom_tooltip = {
 			always = no
 		}
+	}
+	has_colonization_control = {
+		type = colonization_control_no
+		country = root
+	}
+	OR = {
+		NOT = { has_trait = trait_self_modified }
+		is_same_species = root
+	}
+	NOR = {
+		has_trait = trait_pathogenic_genes
+		has_trait = trait_limited_cybernetic
+	}
+	if = {
+		limit = {
+			OR = {
+				is_sapient = no
+				has_trait = trait_zombie
+			}
+		}
+		custom_tooltip = {
+			always = no
+		}
+	}
+	else_if = {
+		limit = { has_trait = trait_hive_mind }
+		root = { is_hive_empire = yes }
+	}
+	else = {
+		always = yes
 	}
 }

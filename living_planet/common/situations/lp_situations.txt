@@ -9,9 +9,6 @@ lp_situation_growth = {
 	}
 	on_progress_complete = {
 		custom_tooltip = lp_situation_growth_gain
-		owner = {
-			set_country_flag = lp_evo_shift_completed
-		}
 		hidden_effect = {
 			situation_event = { id = lp_situation.101 }
 			owner = {

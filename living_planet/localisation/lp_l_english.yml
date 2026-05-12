@@ -10,6 +10,8 @@
   origin_living_planet_effects: "- Species Trait: ['trait:trait_living_planet']\nStart on a special $pc_hive$ with the ability consume other habitable worlds to increase the size of your homeworld.\n- Enables the §H$decision_lp_devour_planetary_matter$§! planetary decision:.\n  * Moves £planetsize£ from an empty habitable world to the §GLiving Planet§! at a cost of £influence£ 1 per month until the planet is entirely consumed.\n  * £planetsize£ Size requirement to grow the §GLiving Planet§! starts at 4 planetary_matter consumed.\n  * Planetary features consumed will add related features to the §GLiving Planet§! .\n- Owned £pops£ will automatically be moved to the §GLiving Planet§! from other worlds.\n- Gain an additional £job_synapse_drone£ $job_synapse_drone$, £job_spawning_drone£ $job_spawning_drone$ Job and £job_brain_drone£ $job_brain_drone$ on your homeworld for every £pops£ 20.\n- Gain unique planetary decisions to add additional jobs to your homeworld to help manage deviancy and fleet cap for £influence£ 100.\n"
   origin_living_planet_negative_effects: "- §RDue to the nature and size of the neural network, your drones are unable to live outside of your homeworld.§!\n- §RCannot settle planets.§!\n"
 
+  lp_cannot_colonize: "§R$TRIGGER_FAIL$Cannot colonize due being a §Y$origin_living_planet$§!§!"
+
   trait_auto_pc_living_planet_preference: "$trait_pc_living_planet_preference$""
   trait_auto_pc_living_planet_preference_desc: "$trait_pc_living_planet_preference_desc$""
   trait_auto_pc_living_planet_preference_tt: "$trait_pc_living_planet_preference_desc$""
@@ -19,9 +21,6 @@
   trait_living_planet: "Living Planet"
   trait_living_planet_desc: "This species exists as part of a great whole, a single active part of a Living Planet"
   trait_living_planet_custom_tooltip: "§RCannot colonise or live outside of a Living Planet§!"
-  
-  building_giga_gas_giant_habitation_module: "Gas Giant Habitation Module"
-  building_giga_gas_giant_habitation_module_desc: "Collection of facilities necessary to maintain a colony on a gas giant assembled by the original population of this planet. These facilities include reactors to provide power for the colony, docking bays to unload minerals collected from local moons and large climate-controlled hangars that can be used for hydroponic farms. In addition to that, these facilities serve as headquarters for resource distribution network and provide various services to the local populations."
   
   lp_colony.011.name: "Planetary Matter Consumed"
   lp_colony.011.desc: "Planetary matter has been extracted from the planet, and added to the size of our living world"
@@ -117,20 +116,22 @@
   lp_evo_shift_growth: "Growth Specialisation"
   lp_evo_shift_growth_desc: "Spend our efforts improving the speed we grow new planetary linkages.\n\n§EFinisher Effect:\n§G+25%§! §Y$mod_pop_spawning_drone_bonus_workforce_mult$§!.§!\n"
 
+  lp_evo_shift_completed_tt: "Can clear $d_living_planet_proto_hive$ blocker!"
+
   lp_lunar_shift_choice: "Allocate the Moon"
   lp_lunar_shift_choice_desc: "Allocate the Moon's resources.\nHaving been our closest neighbour for all our existence, this integration provides a unique opportunity for some very specialised neural networking.\n\nThis will provide more opportunity for science."
 
   lp_lunar_shift_general: "Pure Thought"
-  lp_lunar_shift_general_desc: "Process the lunar mass into a network fast-adapting synapses.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_general$ to the planet.\n§G+1§! $job_calculator_physicist_plural_with_icon$ Job per 30 £pops£ pops.\n§G+1§! $job_calculator_biologist_plural_with_icon$ Job per 30 £pops£ pops.\n§G+1§! $job_calculator_engineer_plural_with_icon$ Job per 30 £pops£ pops.§!"
+  lp_lunar_shift_general_desc: "Process the lunar mass into a network fast-adapting synapses.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_general$ to the planet.\n§G+1§! $job_calculator_physicist_swap_plural_with_icon$ Job per 30 £pops£ pops.\n§G+1§! $job_calculator_biologist_swap_plural_with_icon$ Job per 30 £pops£ pops.\n§G+1§! $job_calculator_engineer_swap_plural_with_icon$ Job per 30 £pops£ pops.§!"
 
   lp_lunar_shift_physics: "Physics Specialisation"
-  lp_lunar_shift_physics_desc: "Process the lunar mass into a physics-specialised synaptic cluster.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_physics$ to the planet.\n§G+1§! $job_calculator_physicist_plural_with_icon$ Job per 60 £pops£ pops.\n§G+1§! $job_calculator_biologist_plural_with_icon$ Job per 60 £pops£ pops.\n§G+1§! $job_calculator_engineer_plural_with_icon$ Job per 60 £pops£ pops.\n§G+50%§! $physicist_jobs_bonus_workforce_mult$.§!\n"
+  lp_lunar_shift_physics_desc: "Process the lunar mass into a physics-specialised synaptic cluster.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_physics$ to the planet.\n§G+1§! $job_calculator_physicist_swap_plural_with_icon$ Job per 60 £pops£ pops.\n§G+1§! $job_calculator_biologist_swap_plural_with_icon$ Job per 60 £pops£ pops.\n§G+1§! $job_calculator_engineer_swap_plural_with_icon$ Job per 60 £pops£ pops.\n§G+50%§! $physicist_jobs_bonus_workforce_mult$.§!\n"
 
   lp_lunar_shift_society: "Society Specialisation"
-  lp_lunar_shift_society_desc: "Process the lunar mass into a society-specialised synaptic cluster.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_society$ to the planet.\n§G+1§! $job_calculator_physicist_plural_with_icon$ Job per 60 £pops£ pops.\n§G+1§! $job_calculator_biologist_plural_with_icon$ Job per 60 £pops£ pops.\n§G+1§! $job_calculator_engineer_plural_with_icon$ Job per 60 £pops£ pops.\n§G+50%§! $physicist_jobs_bonus_workforce_mult$.§!\n"
+  lp_lunar_shift_society_desc: "Process the lunar mass into a society-specialised synaptic cluster.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_society$ to the planet.\n§G+1§! $job_calculator_physicist_swap_plural_with_icon$ Job per 60 £pops£ pops.\n§G+1§! $job_calculator_biologist_swap_plural_with_icon$ Job per 60 £pops£ pops.\n§G+1§! $job_calculator_engineer_swap_plural_with_icon$ Job per 60 £pops£ pops.\n§G+50%§! $biologist_jobs_bonus_workforce_mult$.§!\n"
 
   lp_lunar_shift_engineering: "Engineering Specialisation"
-  lp_lunar_shift_engineering_desc: "Process the lunar mass into a engineering-specialised synaptic cluster.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_engineering$ to the planet.\n§G+1§! $job_calculator_physicist_plural_with_icon$ Job per 60 £pops£ pops.\n§G+1§! $job_calculator_biologist_plural_with_icon$ Job per 60 £pops£ pops.\n§G+1§! $job_calculator_engineer_plural_with_icon$ Job per 60 £pops£ pops.\n§G+50%§! $physicist_jobs_bonus_workforce_mult$.§!\n"
+  lp_lunar_shift_engineering_desc: "Process the lunar mass into a engineering-specialised synaptic cluster.\n\n§EEffect:\nAdds a $d_living_planet_neural_net_engineering$ to the planet.\n§G+1§! $job_calculator_physicist_swap_plural_with_icon$ Job per 60 £pops£ pops.\n§G+1§! $job_calculator_biologist_swap_plural_with_icon$ Job per 60 £pops£ pops.\n§G+1§! $job_calculator_engineer_swap_plural_with_icon$ Job per 60 £pops£ pops.\n§G+50%§! $engineer_jobs_bonus_workforce_mult$.§!\n"
 
   lp_system_shift_chain: "Evolutionary Shift - Become the Star System!"
   lp_system_shift_chain_desc: "TODO: desc"
@@ -181,8 +182,9 @@
   d_living_planet_neural_net: "Living Planet Central Cluster"
   d_living_planet_neural_net_desc: "The beating heart of the living planet, providing the neural network required to coordinate all the planet's drones"
 
-  d_living_planet_proto_hive: "Incomplete Hive World"
+  d_living_planet_proto_hive: "£blocker£ Prototype Hive World"
   d_living_planet_proto_hive_desc: "Our neural pathways are not yet complete, some areas are primitive and still developing.\nWe need to advance to understand how to  perfect ourself."
+  d_living_planet_proto_hive_no_evo_shift: "At least one $lp_situation_evo_shift$ completed."
 
   # From Devouring
   d_living_planet_minerals: "Mineral Processing Nodules"

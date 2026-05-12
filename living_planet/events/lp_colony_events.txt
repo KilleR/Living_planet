@@ -14,40 +14,29 @@ country_event = {
 	immediate = {
 		capital_scope = {
 			clear_blockers = yes
-			while = {
-				count = 3
-				add_district = {
-					district_type = district_hive_1
-				}
-			}
-			add_zone = {
-				district = district_hive_1
-				zone = zone_energy_hive
-			}
-			while = {
-				count = 2
-				add_district = {
-					district_type = district_hive_2
-				}
-			}
-			add_zone = {
-				district = district_hive_2
-				zone = zone_minerals_hive
-			}
-			while = {
-				count = 4
-				add_district = {
-					district_type = district_hive_3
-				}
-			}
-			add_zone = {
-				district = district_hive_3
-				zone = zone_food_hive
-			}
 
 			add_blocker = {
 				type = d_living_planet_proto_hive
 			}
+
+			# Shipsets
+			inline_script = "game_start/shipsets"
+
+			# Species
+			inline_script = "game_start/species_lithoids"
+			inline_script = "game_start/species_hive_void_dwellers"
+			inline_script = "game_start/species_machine_void_dwellers"
+			inline_script = "game_start/species_individual_machine_void_dwellers"
+			inline_script = "game_start/species_subspecies" ## Set subspecies flags
+
+			##Civics
+			inline_script = "game_start/civics"
+
+			# Tankbound civic (removes every farming districts so we want to do that at the end)
+			inline_script = "game_start/civic_tankbound"
+
+			# Apply rural districts depending on variable count
+			inline_script = "game_start/lp_rural_districts_placement"
 		}
 	}
 }

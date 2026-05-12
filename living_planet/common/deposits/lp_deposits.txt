@@ -32,7 +32,11 @@ d_living_planet_proto_hive = {
 		owner = {
 			OR = {
 				has_ascension_perk = ap_hive_worlds
-				has_country_flag = lp_evo_shift_completed
+				custom_tooltip = {
+					has_country_flag = lp_evo_shift_completed
+					fail_text = d_living_planet_proto_hive_no_evo_shift
+					text = d_living_planet_proto_hive_no_evo_shift
+				}
 			}
 		}
 	}

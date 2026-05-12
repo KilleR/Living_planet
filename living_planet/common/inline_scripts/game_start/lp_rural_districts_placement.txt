@@ -1,0 +1,67 @@
+# This script added a number of rural districts of each type set by a variable
+# Flags are used to determine if the district type is uncapped or not.
+# Otherwise planet class is used in some special cases.
+# Finally the variables and flags are cleared
+
+# Generators
+if = {
+	limit = {
+		check_variable = {
+			which = energy_districts
+			value >= 1
+		}
+	}
+	while = {
+		count = energy_districts
+		add_district = district_hive_1
+	}
+	add_zone = {
+		district = district_hive_1
+		zone = zone_energy_hive
+	}
+}
+
+# Mining
+if = {
+	limit = {
+		check_variable = {
+			which = mining_districts
+			value >= 1
+		}
+	}
+		while = {
+			count = mining_districts
+			add_district = district_hive_2
+		}
+		add_zone = {
+			district = district_hive_2
+			zone = zone_minerals_hive
+		}
+}
+
+# Agriculture
+if = {
+	limit = {
+		check_variable = {
+			which = farming_districts
+			value >= 1
+		}
+	}
+	while = {
+		count = farming_districts
+		add_district = district_hive_3
+	}
+	add_zone = {
+		district = district_hive_3
+		zone = zone_food_hive
+	}
+}
+
+# Clear variables and flags
+clear_variable = energy_districts
+clear_variable = mining_districts
+clear_variable = farming_districts
+remove_planet_flag = uncapped_energy
+remove_planet_flag = uncapped_mining
+remove_planet_flag = uncapped_farming
+remove_planet_flag = wilderness_planet
