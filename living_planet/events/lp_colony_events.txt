@@ -24,9 +24,7 @@ country_event = {
 
 			# Species
 			inline_script = "game_start/species_lithoids"
-			inline_script = "game_start/species_hive_void_dwellers"
-			inline_script = "game_start/species_machine_void_dwellers"
-			inline_script = "game_start/species_individual_machine_void_dwellers"
+			inline_script = "game_start/species_infernals"
 			inline_script = "game_start/species_subspecies" ## Set subspecies flags
 
 			##Civics
