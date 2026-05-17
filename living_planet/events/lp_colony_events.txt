@@ -19,6 +19,7 @@ country_event = {
 				type = d_living_planet_proto_hive
 			}
 
+			inline_script = "game_start/rural_districts_initializer"
 			# Shipsets
 			inline_script = "game_start/shipsets"
 
@@ -35,6 +36,7 @@ country_event = {
 
 			# Apply rural districts depending on variable count
 			inline_script = "game_start/lp_rural_districts_placement"
+			give_starting_resources_effect = yes
 		}
 	}
 }

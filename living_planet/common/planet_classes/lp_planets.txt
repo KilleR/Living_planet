@@ -18,7 +18,6 @@ pc_living_planet = {
 
 	modifier = {
 		planet_jobs_produces_mult = 0.10
-		job_spawning_drone_add = 100
 		job_spawning_drone_per_pop = 0.05
 		job_coordinator_per_pop = 0.05
 	}

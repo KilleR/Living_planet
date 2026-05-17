@@ -26,6 +26,9 @@ country_event = {
 	
 	immediate = {
 		remove_megastructure = from
+		from.planet = {
+			remove_modifier = living_planet_devoured
+		}
 	}
 }
 

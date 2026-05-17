@@ -27,6 +27,36 @@ d_living_planet_proto_hive = {
 		planet_housing_mult = -0.33
 	}
 
+	resources = {
+		produces = {
+			trigger = {
+				owner = {
+					NOR = {
+						is_lithoid = yes
+						is_infernal = yes
+					}
+				}
+			}
+			food = 20
+		}
+		produces = {
+			trigger = {
+				owner = {
+					is_lithoid = yes
+				}
+			}
+			minerals = 20
+		}
+		produces = {
+			trigger = {
+				owner = {
+					is_infernal = yes
+				}
+			}
+			alloys = 10
+		}
+	}
+
 	can_be_cleared = {
 		exists = owner
 		owner = {

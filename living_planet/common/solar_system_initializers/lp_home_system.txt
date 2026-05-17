@@ -65,7 +65,7 @@ living_planet_home_system = {
 		class = pc_living_planet
 		orbit_distance = 0
 		orbit_angle = { min = 60 max = 180 }
-		size = 12
+		size = 15
 		modifiers = none
 		
 		starting_planet = yes
