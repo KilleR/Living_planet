@@ -353,9 +353,9 @@ d_living_planet_neural_net_engineering = {
 	icon = d_infestation
 
 	planet_modifier = {
-		job_engineer_per_pop = 0.01666
-		job_physicist_per_pop = 0.01666
-		job_biologist_per_pop = 0.01666
+		job_calculator_engineer_per_pop = 0.01666
+		job_calculator_physicist_per_pop = 0.01666
+		job_calculator_biologist_per_pop = 0.01666
 		engineer_jobs_bonus_workforce_mult = 0.5
 	}
 }
