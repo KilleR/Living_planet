@@ -1,0 +1,10 @@
+
+# Starlit Citadel
+part = {
+	location = 0
+	localization = "START_SCREEN_LIVING_PLANET"
+
+	trigger = {
+		has_origin = origin_living_planet
+	}
+}

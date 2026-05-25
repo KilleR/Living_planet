@@ -45,7 +45,7 @@ living_planet_home_system = {
 		class = pc_shattered
 		orbit_distance = 20
 		orbit_angle = { min = 60 max = 180 }
-		size = { min = 20 max = 22 }
+		size = { min = 12 max = 14 }
 		has_ring = no
 	}
 	
@@ -62,19 +62,19 @@ living_planet_home_system = {
 	### planet : Living Planet
 	change_orbit = 25
 	planet = {
-		class = pc_living_planet
+		class = ideal_planet_class
 		orbit_distance = 0
 		orbit_angle = { min = 60 max = 180 }
 		size = 15
 		modifiers = none
 		
 		starting_planet = yes
-		flags = { ignore_startup_effect lp_living_planet }
+		flags = { lp_living_planet }
 		
 		moon = {
 			class = pc_shattered
 			count = 1
-			orbit_distance = 15
+			orbit_distance = 12
 			size = { min = 2 max = 3 }
 			orbit_angle = { min = 90 max = 270 }
 		}

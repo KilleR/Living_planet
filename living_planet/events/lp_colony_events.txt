@@ -8,6 +8,9 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		capital_scope = {
+			is_planet_class = pc_living_planet
+		}
 		has_origin = origin_living_planet
 		is_ai = no
 	}
@@ -37,6 +40,31 @@ country_event = {
 			# Apply rural districts depending on variable count
 			inline_script = "game_start/lp_rural_districts_placement"
 			give_starting_resources_effect = yes
+		}
+	}
+}
+
+# Colony Creation
+country_event = {
+	id = lp_colony.002
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = origin_living_planet
+		is_ai = no
+	}
+	immediate = {
+		capital_scope = {
+			clear_blockers = yes
+			add_modifier = {
+				modifier = pm_living_planet
+			}
+			add_deposit = d_living_planet_base_food
+		}
+		add_resource = {
+			lp_planetary_matter = 6
 		}
 	}
 }

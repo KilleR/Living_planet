@@ -133,4 +133,5 @@ situation_event = {
 		name = lp_lunar_shift_engineering
 		set_situation_flag = lp_lunar_flag_engineering
 		custom_tooltip = lp_lunar_shift_engineering_desc
-	}}
+	}
+}

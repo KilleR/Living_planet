@@ -4,8 +4,17 @@ living_planet_growth_disabled = {
 }
 
 living_planet_devoured = {
-	icon_frame = 3
-	icon = "gfx/interface/icons/planet_modifiers/pm_starvation.dds"
+	icon_frame = 2
+	icon = "gfx/interface/icons/planet_modifiers/lp_planet_devoured.dds"
+}
+
+pm_living_planet = {
+	icon_frame = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_surface.dds"
+	planet_jobs_produces_mult = 0.10
+	job_spawning_drone_per_pop = 0.05
+	job_coordinator_per_pop = 0.05
+	planet_building_capacity_add = 1
 }
 
 # living_planet_evo_shift_physics = {

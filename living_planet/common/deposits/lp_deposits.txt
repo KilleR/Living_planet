@@ -73,6 +73,45 @@ d_living_planet_proto_hive = {
 
 }
 
+d_living_planet_base_food = {
+	category = deposit_cat_rare_resource
+
+	icon = "d_spawning_complex_blocker"
+
+	is_for_colonizable = yes
+	potential = { always = no }
+
+	resources = {
+		produces = {
+			trigger = {
+				owner = {
+					NOR = {
+						is_lithoid = yes
+						is_infernal = yes
+					}
+				}
+			}
+			food = 20
+		}
+		produces = {
+			trigger = {
+				owner = {
+					is_lithoid = yes
+				}
+			}
+			minerals = 20
+		}
+		produces = {
+			trigger = {
+				owner = {
+					is_infernal = yes
+				}
+			}
+			alloys = 10
+		}
+	}
+}
+
 d_living_planet_minerals = {
 	is_for_colonizable = yes
 	category = deposit_cat_minerals
@@ -80,11 +119,8 @@ d_living_planet_minerals = {
 	potential = { always = no }
 	icon = d_crystalline_caverns
 
-	resources = {
-		category = planet_deposits
-		produces = {
-			minerals = 4
-		}
+	planet_modifier = {
+		district_mining_max_add = 1
 	}
 }
 d_living_planet_energy = {
@@ -94,11 +130,8 @@ d_living_planet_energy = {
 	potential = { always = no }
 	icon = d_tempestous_mountain
 
-	resources = {
-		category = planet_deposits
-		produces = {
-			energy = 4
-		}
+	planet_modifier = {
+		district_generator_max_add = 1
 	}
 }
 d_living_planet_food = {
@@ -108,11 +141,8 @@ d_living_planet_food = {
 	potential = { always = no }
 	icon = d_fungal_caves
 
-	resources = {
-		category = planet_deposits
-		produces = {
-			food = 4
-		}
+	planet_modifier = {
+		district_farming_max_add = 1
 	}
 }
 d_living_planet_rare = {
@@ -143,6 +173,16 @@ d_living_planet_unity = {
 		produces = {
 			unity = 2
 		}
+	}
+}
+d_living_planet_volcanic = {
+	is_for_colonizable = yes
+	category = deposit_cat_misc
+	potential = { always = no }
+	icon = d_city_ruins
+
+	planet_modifier = {
+		district_polytechnic_max_add = 1
 	}
 }
 d_living_planet_megastructure = {

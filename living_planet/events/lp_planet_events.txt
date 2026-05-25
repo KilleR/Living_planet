@@ -1,5 +1,7 @@
 namespace = lp_planet
 
+@lp_planet_scaling = 20
+
 # Planet devouring
 event = {
 	id = lp_planet.001
@@ -85,11 +87,28 @@ event = {
 									OR = {
 										has_deposit_category = deposit_cat_blockers
 										has_deposit_category = deposit_cat_blockers_natural
-										has_deposit_category = deposit_cat_misc
 									}
 								}
 								event_target:event_capital = {
 									add_deposit = d_living_planet_unity
+								}
+							}
+							if = {
+								limit = {
+									OR = {
+										has_deposit_category = deposit_cat_misc
+									}
+								}
+								event_target:event_capital = {
+									if = {
+										limit = {
+											is_planet_class = pc_volcanic
+										}
+										add_deposit = d_living_planet_volcanic
+									}
+									else = {
+										add_deposit = d_living_planet_unity
+									}
 								}
 							}
 							remove_deposit = yes
@@ -290,7 +309,7 @@ planet_event = {
 			owner.capital_scope = {
 				change_variable = {
 					which = lp_evolutionary_shift
-					value = 10
+					value = @lp_planet_scaling
 				}
 				change_variable = {
 					which = lp_growth_factor

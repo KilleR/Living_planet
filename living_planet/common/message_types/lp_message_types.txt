@@ -12,7 +12,7 @@ message_type = {
 
 message_type = {
 	key = MESSAGE_TYPE_LP_GROWTH
-	icon = "GFX_message_terraforming"
+	icon = "GFX_message_lp_growth"
 	icon_frame = 1
 
 	name = "MESSAGE_LP_GROWTH_TITLE"
