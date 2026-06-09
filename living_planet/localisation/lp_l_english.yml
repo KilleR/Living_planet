@@ -217,7 +217,36 @@
   d_living_planet_warrior_district_desc: "Large muscular spines for destroying surface parasites."
   d_living_planet_sentient_metal_district: "Sentient Metal Vats"
   d_living_planet_sentient_metal_district_desc: "Secondary neural-infused fabricators for generating Sentient Metal"
-  
+
+  # Districts
+  district_lp_harmony: "Harmonization Cluster"
+  district_lp_harmony_plural: "$d_living_planet_patrol_district$"
+  district_lp_harmony_desc: "$d_living_planet_patrol_district_desc$"
+
+  district_lp_forge: "Forge"
+  district_lp_forge_plural: "Forges"
+  district_lp_forge_desc: "Forges provide the planet with the necessary production of alloys capable of space exploration."
+
+  district_lp_brains: "Introspection Cluster"
+  district_lp_brains_plural: "$d_living_planet_brain_district$"
+  district_lp_brains_desc: "$d_living_planet_brain_district_desc$"
+
+  district_lp_refinery: "Exotic Matter Sluice"
+  district_lp_refinery_plural: "Exotic Matter Sluices"
+  district_lp_refinery_desc: "Specialised webbing for filtering and refining exotic resources."
+
+  district_lp_defense: "Defensive Spines"
+  district_lp_defense_plural: "Defensive Spines"
+  district_lp_defense_desc: "Large muscular spines for destroying surface parasites."
+
+  # Zones
+  zone_lp_volatile_motes: "Volatile Motes Traps"
+  zone_lp_volatile_motes_desc: "Priority lattices for trapping and creating rare volatile motes."
+  zone_lp_rare_crystals: "Rare Crystal Nuclei"
+  zone_lp_rare_crystals_desc: "Nucleation points for fabrication of rare crystals."
+  zone_lp_exotic_gases: "Exotic Gas Vacuoles"
+  zone_lp_exotic_gases_desc: "Spaces for condensing and extracting exotic gasses."
+
   # Evo shift deposits
   d_living_planet_evo_shift_physics: "Evolutionary Shift - Physics Specialisation"
   d_living_planet_evo_shift_physics_desc: "Specialised neuronal pathways"

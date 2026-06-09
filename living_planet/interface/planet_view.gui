@@ -1,4 +1,5 @@
 @tab_height = -42
+@district_rows = 5
 
 guiTypes = {
 	## DEMOGRAPHICS SIZES ##
@@ -93,7 +94,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "planet_view"
 		orientation = upper_left
-		size = { width = 1162 height = 680 }
+		size = { width = 1162 height = 880 }
 		moveable = yes
 		position = { x = 100 y = 100 }
 		clipping = no
@@ -117,7 +118,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "planet_view_bg"
-			size = { width = 850 height = 613 }
+			size = { width = 850 height = 813 }
 			position = { x = 0 y = 9 }
 
 			background = {
@@ -135,7 +136,7 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "portrait"
-				position = { x= -9 y = -37}
+				position = { x= -9 y = -37 }
 				size = { width = 850 height = 240 }
 				moveable = no
 				clipping = yes
@@ -731,7 +732,7 @@ guiTypes = {
 		###Planet Summary Content
 		containerWindowType = {
 			name = "summary_window"
-			size = { width = 500 height = 400 }
+			size = { width = -320 height = 100% }
 			position = { x = 0 y = 200 }
 
 			containerWindowType = {
@@ -893,20 +894,30 @@ guiTypes = {
 
 				containerWindowType = {
 					name = "districts_grid_window"
-					size = { width = 830 height = 173 }
-					position = { x = 4 y = 267 }
+					size = { width = 851 height = 363 }
+					position = { x = 4 y = 270 }
+					# orientation = lower_left
+					# origo = lower_left
+					verticalScrollbar = "right_vertical_slider"
+					smooth_scrolling = yes
+
+					background = {
+						name = "districts_window_background"
+						spriteType = "GFX_dark_area_cut"
+					}
 
 					# Districts Buttons
 					# uses planet_district_entry_width_N according to district type
 					gridBoxType = {
 						name = "districts_grid_box"
 						position = { x = 0 y = 0 }
-						size = { width = 830 height = 175 }
+						size = { width = 870 height = @[ district_rows * 182 ] }
+						# size = { width = 870 height = 100% }
 						format = "UPPER_LEFT"
-						slotsize = { width = 281 height = 155 }
+						slotsize = { width = 281 height = 170 }
 						add_horizontal = yes
 						max_slots_horizontal = 3
-						max_slots_vertical = 1
+						# max_slots_vertical = 1
 					}
 				}
 
@@ -1261,7 +1272,7 @@ guiTypes = {
 
         containerWindowType = {
             name = "management_window"
-            size = { width = 500 height = 400 }
+            size = { width = 500 height = 600 }
             position = { x = 0 y = 200 }
 
             #<--------------------- Planet Features/Deposits --------------------------->
@@ -1269,7 +1280,7 @@ guiTypes = {
             containerWindowType = {
                 name = "deposits_window"
                 position = { x = 5 y = 53 }
-                size = { width = 290 height = 383 }
+                size = { width = 290 height = 583 }
 
 				containerWindowType = {
                     name = "deposits_summary_window"
@@ -1351,7 +1362,7 @@ guiTypes = {
                     name = "deposits_list"
                     position = { x = 10 y = 45 }
                     background = ""
-                    size = { x = 270 y = 333 }
+                    size = { x = 270 y = 533 }
                     scrollbarType = "standardlistbox_slider"
                     borderSize = { x = 0 y = 0 }
                     orientation = "UPPER_LEFT"
@@ -1377,7 +1388,7 @@ guiTypes = {
             containerWindowType = {
                 name = "demographics_window"
                 position = { x = 300 y = 53 }
-				size = { width = 545 height = 383 }
+				size = { width = 545 height = 583 }
 
 				containerWindowType = {
                     name = "demographics_header_window"
@@ -1410,7 +1421,7 @@ guiTypes = {
                     name = "demographics_list"
                     background = ""
 					position = { x = 5 y = 45 }
-                    size = { x = 530 y = 333 }
+                    size = { x = 530 y = 533 }
                     scrollbarType = "standardlistbox_slider"
                     borderSize = { x = 0 y = 0 }
                     orientation = "UPPER_LEFT"
@@ -1741,7 +1752,7 @@ guiTypes = {
 			#Jobs Art BG Box  ------ 5 px all around for art pading
 			containerWindowType = {
 				name = "Jobs_BG"
-				size = { width = 1148 height = 380 }
+				size = { width = 1148 height = 580 }
 				position = { x = 3 y = 50 }
 
 				background = {
@@ -1821,7 +1832,7 @@ guiTypes = {
 				name = "pop_categories_list" # Uses planet_pop_category_entry
 				position = { x = 20 y = 100 }
 				background = ""
-				size = { x = 1123 y = 326 }
+				size = { x = 1123 y = 526 }
 				scrollbarType = "standardlistbox_slider"
 				borderSize = { x = 0 y = 0 }
 				orientation = "UPPER_LEFT"
@@ -1998,12 +2009,12 @@ guiTypes = {
 		# Armies -------------------- COMBAT SCREEN ------------------------->
 		containerWindowType = {
 			name = "armies_window"
-			size = { width = 500 height = 400 }
+			size = { width = 500 height = 600 }
 			position = { x = 0 y = 200 }
 
 			containerWindowType = {
 				name = "ground_combat_window"
-				size = { width = 500 height = 400 }
+				size = { width = 500 height = 600 }
 				position = { x = 65 y = 0 }
 
 				# Defender
@@ -2289,13 +2300,13 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "defenses_window"
-				size = { width = 500 height = 400 }
+				size = { width = 500 height = 600 }
 				position = { x = 0 y = 0 }
 
 				#Armies Art BG Box  ------ 5 px all around for art pading
 				containerWindowType = {
 					name = "Armies_BG"
-					size = { width = 845 height = 390 }
+					size = { width = 845 height = 590 }
 					position = { x = 5 y = 50 }
 
 					background = {
@@ -2449,7 +2460,7 @@ guiTypes = {
 					#Armies List
 					containerWindowType = {
 						name = "planet_armies"
-						size = { width = 495 height = 235 }
+						size = { width = 495 height = 435 }
 						position = { x = 0 y = 43 }
 
 						background = {
@@ -2473,7 +2484,7 @@ guiTypes = {
 						smoothListBoxType = {
 							name = "armies_list"
 							position = { x = 4 y = 5 }
-							size = { x = 487.5 y = 225 }
+							size = { x = 487.5 y = 425 }
 							spacing = 4
 							scrollbartype = "standardlistbox_slider"
 							autohide_scrollbar = yes
@@ -2485,7 +2496,7 @@ guiTypes = {
 				containerWindowType = {
 					name = "recruitment_list_window"
 					position = { x = 520 y = 60 }
-					size = { width = 320 height = 380 }
+					size = { width = 320 height = 580 }
 
 					# Recruitment List header
 					buttonType = {
@@ -2511,7 +2522,7 @@ guiTypes = {
 					# Recruitment list
 					containerWindowType = {
 						name = "recruitment_window"
-						size = { width = 320 height = 325 }
+						size = { width = 320 height = 525 }
 						position = { x = 0 y = 43 }
 
 						background = {
@@ -2524,7 +2535,7 @@ guiTypes = {
 							name = "recruitment_list"
 							position = { x = 4 y = 5 }
 							background = "GFX_tiles_dark_area_cut_8"
-							size = { x = 312.5 y = 315 }
+							size = { x = 312.5 y = 515 }
 							scrollbarType = "standardlistbox_slider"
 							spacing = 6
 						}
@@ -2685,19 +2696,19 @@ guiTypes = {
 		# Holdings tab / Corporate tab -------------------- HOLDINGS SCREEN ------------------------->
 		containerWindowType = {
 			name = "corporate_window"
-			size = { width = 500 height = 400 }
+			size = { width = 500 height = 600 }
 			position = { x = 0 y = 200 }
 
 			containerWindowType = {
 				name = "holdings_container"
-				size = { width = 850 height = 380 }
+				size = { width = 850 height = 480 }
 				position = { x = 0 y = 55 }
 
 				smoothListBoxType = {
 					name = "holding_type_box"
 					orientation = upper_left
 					spacing = 5
-					size = { x = 841 y = 370 }
+					size = { x = 841 y = 570 }
 					position = { x = 5 y = 0 }
 					scrollbartype = "standardlistbox_slider_horizontal"
 					horizontal = 1
@@ -7624,7 +7635,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "empty_text_container"
-			size = { width = 417 height = 350 }
+			size = { width = 417 height = 550 }
 			position = { x = 0 y = 20 }
 
 			instantTextBoxType = {

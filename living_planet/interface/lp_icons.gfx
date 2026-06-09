@@ -3,4 +3,9 @@ spriteTypes = {
 		name = "GFX_message_lp_growth"
 		texturefile = "gfx/interface/icons/message/message_lp_growth.dds"
 	}
+
+	spriteType = {
+		name = "GFX_district_lp_mixed_refinery"
+		textureFile = "gfx/interface/icons/resources/lp_mixed_refinery.dds"
+	}
 }

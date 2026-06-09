@@ -33,6 +33,7 @@ decision_lp_add_brain_district = {
 	owned_planets_only = yes
 	
 	potential = {
+		always = no
 		is_capital = yes
 		space_owner = {
 			has_origin = origin_living_planet
@@ -62,6 +63,7 @@ decision_lp_add_patrol_district = {
 	owned_planets_only = yes
 	
 	potential = {
+		always = no
 		is_capital = yes
 		space_owner = {
 			has_origin = origin_living_planet
@@ -112,5 +114,6 @@ decision_lp_add_warrior_district = {
 	
 	effect = {
 		add_deposit = d_living_planet_warrior_district
+		add_district = district_photosynthesis_fields_uncapped
 	}
 }

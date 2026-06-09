@@ -1,0 +1,65 @@
+
+# Harmonization Cluster
+slot_lp_harmonization = {
+	include = {
+		zone_urban
+	}
+
+	unlock = {
+		always = yes
+	}
+	start = zone_urban
+}
+
+# Research District
+slot_lp_research = {
+	include = {
+		zone_urban
+		zone_research
+		zone_research_physics
+		zone_research_society
+		zone_research_engineering
+	}
+
+	unlock = {
+		always = yes
+	}
+}
+
+# Forges
+slot_lp_forge = {
+	include = {
+		zone_urban
+		zone_foundry
+	}
+
+	unlock = {
+		always = yes
+	}
+}
+
+# Refinery
+slot_lp_refinery = {
+	include = {
+		zone_urban
+		zone_lp_volatile_motes
+		zone_lp_rare_crystals
+		zone_lp_exotic_gases
+	}
+
+	unlock = {
+		always = yes
+	}
+}
+
+# Defense
+slot_lp_defense = {
+	include = {
+		zone_urban
+		zone_fortress
+	}
+
+	unlock = {
+		always = yes
+	}
+}

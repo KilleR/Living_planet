@@ -1,6 +1,242 @@
 @base_cost = 300
 @city_cost = 500
 
+district_lp_harmony = {
+	expansion_planner = no
+	base_buildtime = 240
+	overlay_icon = GFX_district_knights
+	icon = district_resort_zoo
+	district_background = district_arcology_leisure
+	gridbox = district_arcology_leisure
+
+	zone_slots = {
+		slot_lp_harmonization
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		exists = owner
+		has_modifier = pm_living_planet
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @base_cost
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	planet_modifier = {
+		job_patrol_drone_add = 200
+		planet_housing_add = 200
+	}
+}
+
+district_lp_brains = {
+	expansion_planner = no
+	base_buildtime = 240
+	overlay_icon = GFX_district_research
+	icon = district_research
+
+	zone_slots = {
+		slot_lp_research
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		exists = owner
+		has_modifier = pm_living_planet
+	}
+	allow = {
+		owner = {
+			OR = {
+				has_technology = tech_physics_1
+				has_technology = tech_society_1
+				has_technology = tech_engineering_1
+			}
+		}
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @base_cost
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	planet_modifier = {
+		job_calculator_physicist_add = 60
+		job_calculator_biologist_add = 60
+		job_calculator_engineer_add = 60
+		planet_housing_add = 200
+	}
+}
+
+district_lp_forge = {
+	expansion_planner = no
+	base_buildtime = 240
+	overlay_icon = GFX_district_alloys
+	icon = district_industrial
+
+	zone_slots = {
+		slot_lp_forge
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		exists = owner
+		has_modifier = pm_living_planet
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @base_cost
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	planet_modifier = {
+		job_fabricator_add = 200
+		planet_housing_add = 200
+	}
+}
+
+district_lp_refinery = {
+	expansion_planner = no
+	base_buildtime = 300
+	overlay_icon = GFX_district_lp_mixed_refinery
+	icon = district_industrial
+
+	zone_slots = {
+		slot_lp_refinery
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		exists = owner
+		has_modifier = pm_living_planet
+	}
+	allow = {
+		owner = {
+			has_technology = tech_exotic_gases
+			has_technology = tech_rare_crystals
+			has_technology = tech_volatile_motes
+		}
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @base_cost
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 300
+		job_gas_refiner_drone_add = 100
+		job_translucer_drone_add = 100
+		job_chemist_drone_add = 100
+	}
+}
+
+district_lp_defense = {
+	expansion_planner = no
+	base_buildtime = 240
+	overlay_icon = GFX_district_fortress
+	icon = district_arcology_fortress
+
+	zone_slots = {
+		slot_lp_defense
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		exists = owner
+		has_modifier = pm_living_planet
+	}
+
+	prerequisites = {
+		tech_global_defense_grid
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @base_cost
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	planet_modifier = {
+		job_soldier_or_warrior_add = 200
+		planet_housing_add = 200
+	}
+}
+
+district_lp_default = {
+	expansion_planner = no
+	base_buildtime = 240
+	overlay_icon = GFX_district_research
+	icon = district_research
+
+	zone_slots = {
+		slot_lp_research
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+		exists = owner
+		has_modifier = pm_living_planet
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @base_cost
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 200
+	}
+}
+
 #district_living_planet_core = {
 #	base_buildtime = 600
 #	ai_weight = { weight = 1000 }

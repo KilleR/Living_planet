@@ -1,0 +1,50 @@
+zone_lp_volatile_motes = {
+	icon = GFX_district_specialization_volatile_motes
+	base_buildtime = 360
+
+	district_planet_modifier = {
+		job_chemist_drone_add = 100
+		planet_housing_add = -200
+	}
+
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	show_in_tech = tech_mine_volatile_motes
+}
+
+zone_lp_rare_crystals = {
+	icon = GFX_district_specialization_rare_crystals
+	base_buildtime = 360
+
+	district_planet_modifier = {
+		job_translucer_drone_add = 100
+		planet_housing_add = -200
+	}
+
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	show_in_tech = tech_mine_volatile_motes
+}
+
+zone_lp_exotic_gases = {
+	icon = GFX_district_specialization_exotic_gases
+	base_buildtime = 360
+
+	district_planet_modifier = {
+		job_gas_refiner_drone_add = 100
+		planet_housing_add = -200
+	}
+
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	show_in_tech = tech_mine_volatile_motes
+}
