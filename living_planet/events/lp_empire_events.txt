@@ -37,3 +37,63 @@ country_event = {
 		}
 	}
 }
+
+# Check for Volcanic Terraforming eligibility
+event = {
+	id = lp_empire.010
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_country = {
+			has_origin = origin_living_planet
+			capital_scope = {
+				is_planet_class = pc_volcanic
+			}
+		}
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				has_origin = origin_living_planet
+				capital_scope = {
+					is_planet_class = pc_volcanic
+				}
+				has_technology = tech_volcanic_terraforming
+				NOT = {
+					has_country_flag = lp_volcanic_terraforming
+				}
+			}
+
+			country_event = {
+				id = lp_empire.011
+			}
+		}
+	}
+}
+
+# Grant Volcanic Terraforming
+country_event = {
+	id = lp_empire.011
+	is_triggered_only = yes
+
+	picture = GFX_evt_inf_cataclysmic_eruption
+	title = lp_empire.011.name
+	desc = lp_empire.011.desc
+
+	show_sound = event_plasma_volcanoes
+	
+	option = {
+		name = lp_empire.011.a
+	}
+
+	immediate = {
+		set_country_flag = lp_volcanic_terraforming
+	}
+
+	after = {
+		custom_tooltip = lp_empire.011.a.desc
+		set_country_flag = allow_terraforming_into_volcanic
+	}
+}

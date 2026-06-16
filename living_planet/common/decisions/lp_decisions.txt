@@ -93,6 +93,7 @@ decision_lp_add_warrior_district = {
 	owned_planets_only = yes
 	
 	potential = {
+		always = no
 		is_capital = yes
 		space_owner = {
 			has_origin = origin_living_planet
@@ -114,6 +115,79 @@ decision_lp_add_warrior_district = {
 	
 	effect = {
 		add_deposit = d_living_planet_warrior_district
-		add_district = district_photosynthesis_fields_uncapped
+	}
+}
+
+decision_lp_volcanise = {
+	icon = decision_exploding_planet
+	owned_planets_only = yes
+
+	potential = {
+		is_capital = yes
+		is_planet_class = pc_volcanic
+		hidden_trigger = {
+			NOT = {
+				has_deposit = d_active_volcano
+				owner = {
+					has_technology = tech_volcano
+				}
+			}
+		}
+		space_owner = {
+			has_origin = origin_living_planet
+			has_technology = tech_terrestrial_sculpting
+		}
+	}
+
+	allow = {
+	}
+
+	effect = {
+		owner = {
+			add_tech_progress = {
+				tech = tech_volcano
+				progress = 0
+			}
+		}
+		add_blocker = {
+			type = d_active_volcano
+		}
+	}
+}
+
+decision_lp_volcanise_2 = {
+	icon = decision_exploding_planet
+	owned_planets_only = yes
+
+	potential = {
+		is_capital = yes
+		is_planet_class = pc_volcanic
+		hidden_trigger = {
+			NOT = {
+				has_deposit = d_active_volcano
+				owner = {
+					has_technology = tech_volcano
+				}
+			}
+		}
+		space_owner = {
+			has_origin = origin_living_planet
+			has_technology = tech_terrestrial_sculpting
+		}
+	}
+
+	allow = {
+	}
+
+	effect = {
+		owner = {
+			add_tech_progress = {
+				tech = tech_volcano
+				progress = 0
+			}
+		}
+		add_blocker = {
+			type = d_active_volcano
+		}
 	}
 }

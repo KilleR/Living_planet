@@ -25,6 +25,7 @@ on_monthly_pulse = {
 	events = {
 		lp_planet.001
 		lp_planet.004
+		lp_empire.010
 	}
 }
 

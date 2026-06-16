@@ -86,11 +86,19 @@
   decision_lp_add_patrol_district_desc: "Neuroplastic remodelling to weed out intrusive thought, and process rogue ideas."
   decision_lp_add_warrior_district: "Evolve: Grow Defensive Spines"
   decision_lp_add_warrior_district_desc: "Grow muscular spines to aid in destroying surface parasites."
+
+  decision_lp_volcanise: "Ignite Volcanoes"
+  decision_lp_volcanise_desc: "Rip open a small tectonic plate to create a new volcano on our surface\n\n§HMeta: This allows the §H['technology:tech_volcanic_terraforming']§! to appear.§!"
   
   ####################
   ### Events #########
   ####################
-  
+
+  lp_empire.011.name: "Volcanic Planets"
+  lp_empire.011.desc: "After intense study into §H$terraforming$§! and our own nature as a §H$pc_volcanic$§!, we can now finally embark on safely splitting the tectonics on other habitable worlds, to transform them into §H$pc_volcanic_plural$§!.\n\nThis will let us extract more §H['district:district_polytechnic']§! capacity by devouring them."
+  lp_empire.011.a: "Burn them, carefully."
+  lp_empire.011.a.desc: "We can now terraform to §H$pc_volcanic_plural$§!."
+
   lp_planet.011.name: "Evolutionary Shift"
   lp_planet.011.desc: "We have gathered enough mass to make a significant leap forward in the future of our development.\nWe can pick a direction for our evolution, which will shape the future of our living planet.\n\nIt will take us some time to make preparations, then we will be able to choose a direction for this undertaking."
   lp_planet.011.a: "Begin the shift!"
@@ -138,6 +146,8 @@
 
   lp_system_shift_chain: "Evolutionary Shift - Become the Star System!"
   lp_system_shift_chain_desc: "TODO: desc"
+
+
 
   ###################
   ### Situations ####
