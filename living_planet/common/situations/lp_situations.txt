@@ -12,7 +12,7 @@ lp_situation_growth = {
 		hidden_effect = {
 			situation_event = { id = lp_situation.101 }
 			owner = {
-				capital_scope = {
+				capital_scope.planet? = {
 					planet_event = { id = lp_planet.010 }
 				}
 			}

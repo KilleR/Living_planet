@@ -8,14 +8,14 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		capital_scope = {
+		capital_scope.planet? = {
 			is_planet_class = pc_living_planet
 		}
 		has_origin = origin_living_planet
 		is_ai = no
 	}
 	immediate = {
-		capital_scope = {
+		capital_scope.planet? = {
 			clear_blockers = yes
 
 			add_blocker = {
@@ -56,7 +56,7 @@ country_event = {
 		is_ai = no
 	}
 	immediate = {
-		capital_scope = {
+		capital_scope.planet? = {
 			clear_blockers = yes
 			add_modifier = {
 				modifier = pm_living_planet

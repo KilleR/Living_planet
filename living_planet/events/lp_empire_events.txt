@@ -47,7 +47,7 @@ event = {
 	trigger = {
 		any_country = {
 			has_origin = origin_living_planet
-			capital_scope = {
+			capital_scope.planet? = {
 				is_planet_class = pc_volcanic
 			}
 		}
@@ -57,7 +57,7 @@ event = {
 		every_country = {
 			limit = {
 				has_origin = origin_living_planet
-				capital_scope = {
+				capital_scope.planet? = {
 					is_planet_class = pc_volcanic
 				}
 				has_technology = tech_volcanic_terraforming

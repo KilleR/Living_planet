@@ -430,18 +430,18 @@ d_living_planet_system_production = {
 	}
 }
 
-d_living_planet_system_ships = {
-	is_for_colonizable = yes
-	category = deposit_cat_rare
-	drop_weight = { weight = 0 }
-	potential = { always = no }
-	icon = d_infestation
-
-	country_modifier = {
-		country_ship_upgrade_cost_mult = -0.2
-		country_ship_cost_mult = -0.5
-		country_space_fauna_ship_cost_mult = -0.5
-		pop_category_drones_unity_produces_add = 1
-		ship_cost_mult = -0.5
-	}
-}
+# d_living_planet_system_ships = {
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
+# 	drop_weight = { weight = 0 }
+# 	potential = { always = no }
+# 	icon = d_infestation
+#
+# 	country_modifier = {
+# 		country_ship_upgrade_cost_mult = -0.2
+# 		country_ship_cost_mult = -0.5
+# 		country_space_fauna_ship_cost_mult = -0.5
+# 		pop_category_drones_unity_produces_add = 1
+# 		ship_cost_mult = -0.5
+# 	}
+# }

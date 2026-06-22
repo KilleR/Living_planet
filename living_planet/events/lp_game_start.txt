@@ -28,7 +28,7 @@ event = {
 				end_event_chain = lp_lunar_shift_chain
 			}
 
-			capital_scope = {
+			capital_scope.planet? = {
 				if = {
 					limit = {
 						check_variable = {

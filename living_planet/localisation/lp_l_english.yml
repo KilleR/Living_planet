@@ -249,6 +249,10 @@
   district_lp_defense_plural: "Defensive Spines"
   district_lp_defense_desc: "Large muscular spines for destroying surface parasites."
 
+  district_lp_default: "DNT: default district"
+  district_lp_default_plural: "DNT: default district plural"
+  district_lp_default_desc: "DNT: default district description"
+
   # Zones
   zone_lp_volatile_motes: "Volatile Motes Traps"
   zone_lp_volatile_motes_desc: "Priority lattices for trapping and creating rare volatile motes."

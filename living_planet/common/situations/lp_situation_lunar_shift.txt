@@ -15,7 +15,7 @@ lp_situation_lunar_shift = {
 	on_progress_complete = {
 		owner = {
 			set_country_flag = lp_lunar_shift_completed
-			capital_scope = {
+			capital_scope.planet? = {
 				planet_event = { id = lp_planet.013 }
 			}
 		}
@@ -23,22 +23,22 @@ lp_situation_lunar_shift = {
 			trigger = has_situation_flag
 
 			lp_lunar_flag_general = {
-				owner.capital_scope = {
+				owner.capital_scope.planet? = {
 					add_deposit = d_living_planet_neural_net_general
 				}
 			}
 			lp_lunar_flag_physics = {
-				owner.capital_scope = {
+				owner.capital_scope.planet? = {
 					add_deposit = d_living_planet_neural_net_physics
 				}
 			}
 			lp_lunar_flag_society = {
-				owner.capital_scope = {
+				owner.capital_scope.planet? = {
 					add_deposit = d_living_planet_neural_net_society
 				}
 			}
 			lp_lunar_flag_engineering = {
-				owner.capital_scope = {
+				owner.capital_scope.planet? = {
 					add_deposit = d_living_planet_neural_net_engineering
 				}
 			}

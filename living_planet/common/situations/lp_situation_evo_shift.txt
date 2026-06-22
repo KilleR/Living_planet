@@ -27,7 +27,7 @@ lp_situation_evo_shift = {
 				}
 			}
 			lp_evo_flag_physics = {
-				owner.capital_scope = {
+				owner.capital_scope.planet? = {
 					add_deposit = d_living_planet_evo_shift_physics
 				}
 			}

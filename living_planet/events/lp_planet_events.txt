@@ -39,7 +39,7 @@ event = {
 				else = {
 					planet = {
 						space_owner = {
-							capital_scope = {
+							capital_scope.planet? = {
 								save_event_target_as = event_capital
 							}
 						}
